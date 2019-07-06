@@ -6,5 +6,7 @@
             "email": "muhzaini30@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo_sqlite": "^0.0.0"
+    }
 }
