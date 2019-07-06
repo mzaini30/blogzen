@@ -4,12 +4,23 @@
 	<title>{% block judul %}{% endblock %}Zen</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{{ base_url() }}aset/vendor/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="navbar navbar-default">
-		<div class="navbar-heading">
-			<div class="container">
+		<div class="container">
+			<div class="navbar-header">
 				<a href="{{ site_url() }}" class="navbar-brand">Zen</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				{% block isi %}{% endblock %}
+			</div>
+			<div class="col-sm-3">
+				{% include 'include/sidebar.twig' %}
 			</div>
 		</div>
 	</div>
