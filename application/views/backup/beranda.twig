@@ -1,0 +1,17 @@
+{% extends 'layout/default.twig' %}
+
+{% block judul %}
+    Backup -
+{% endblock %}
+
+{% block isi %}
+	<div class="form-group">
+        <label for="">Backup</label>
+        <textarea name="" id="" cols="30" rows="10" class="form-control" readonly="">
+        	DELETE FROM `postingan`;
+	            {% for x in postingan %}
+	            	INSERT INTO `postingan` VALUES (null,'{{ x.judul | replace({'\'': '\'\''}) }}','{{ x.slug }}','{{ x.isi | replace({'\'': '\'\''}) }}','{{ x.waktu }}');
+	            {% endfor %}
+        </textarea>
+    </div>
+{% endblock %}

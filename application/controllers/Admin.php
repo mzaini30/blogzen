@@ -23,4 +23,9 @@ class Admin extends CI_Controller {
 			redirect(site_url());
 		}
 	}
+
+	public function amankan(){
+		$postingan = $this->db->get('postingan')->result();
+		$this->twig->display('backup/beranda', compact('postingan'));
+	}
 }

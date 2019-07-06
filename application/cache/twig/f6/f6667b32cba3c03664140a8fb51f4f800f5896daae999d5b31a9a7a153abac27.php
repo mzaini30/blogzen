@@ -21,6 +21,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
         $this->blocks = [
             'judul' => [$this, 'block_judul'],
             'isi' => [$this, 'block_isi'],
+            'menu' => [$this, 'block_menu'],
             'head' => [$this, 'block_head'],
         ];
     }
@@ -64,42 +65,31 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     \t</div>
     </div>
 
-    <div id=\"disqus_thread\"></div>
-    <script>
-
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-    var disqus_config = function () {
-    this.page.url = '";
-        // line 23
-        echo twig_escape_filter($this->env, site_url(), "html", null, true);
-        echo "baca/";
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
-        echo "';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = '";
-        // line 24
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
-        echo "'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://zenheroku.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
-                                
+    ";
+        // line 37
+        echo "                                
 ";
     }
 
-    // line 38
+    // line 40
+    public function block_menu($context, array $blocks = [])
+    {
+        // line 41
+        echo "    ";
+        if ((($context["status"] ?? null) == "masuk")) {
+            // line 42
+            echo "        <div class=\"panel panel-default\">
+            <div class=\"panel-heading\">Postingan</div>
+            <div class=\"list-group\"></div>
+        </div>
+    ";
+        }
+    }
+
+    // line 49
     public function block_head($context, array $blocks = [])
     {
-        // line 39
+        // line 50
         echo "    <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
@@ -120,7 +110,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
     public function getDebugInfo()
     {
-        return array (  103 => 39,  100 => 38,  83 => 24,  77 => 23,  62 => 11,  57 => 9,  54 => 8,  51 => 7,  44 => 4,  41 => 3,  31 => 1,);
+        return array (  93 => 50,  90 => 49,  81 => 42,  78 => 41,  75 => 40,  70 => 37,  63 => 11,  58 => 9,  55 => 8,  52 => 7,  45 => 4,  42 => 3,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -147,27 +137,38 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     \t</div>
     </div>
 
-    <div id=\"disqus_thread\"></div>
-    <script>
+    {#
+        <div id=\"disqus_thread\"></div>
+        <script>
 
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-    var disqus_config = function () {
-    this.page.url = '{{ site_url() }}baca/{{ data.slug }}';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = '{{ data.slug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
+        var disqus_config = function () {
+        this.page.url = '{{ site_url() }}baca/{{ data.slug }}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{ data.slug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
 
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://zenheroku.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zenheroku.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+    #}
                                 
+{% endblock %}
+
+{% block menu %}
+    {% if status == 'masuk' %}
+        <div class=\"panel panel-default\">
+            <div class=\"panel-heading\">Postingan</div>
+            <div class=\"list-group\"></div>
+        </div>
+    {% endif %}
 {% endblock %}
 
 {% block head %}

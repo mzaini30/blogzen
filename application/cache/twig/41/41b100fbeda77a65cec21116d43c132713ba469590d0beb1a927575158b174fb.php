@@ -24,6 +24,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
             'judul' => [$this, 'block_judul'],
             'head' => [$this, 'block_head'],
             'isi' => [$this, 'block_isi'],
+            'menu' => [$this, 'block_menu'],
         ];
     }
 
@@ -77,6 +78,9 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
         // line 29
         $this->loadTemplate("include/sidebar.twig", "layout/default.twig", 29)->display($context);
         // line 30
+        echo "\t\t\t\t";
+        $this->displayBlock('menu', $context, $blocks);
+        // line 31
         echo "\t\t\t</div>
 \t\t</div>
 \t</div>
@@ -99,6 +103,11 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
     {
     }
 
+    // line 30
+    public function block_menu($context, array $blocks = [])
+    {
+    }
+
     public function getTemplateName()
     {
         return "layout/default.twig";
@@ -111,7 +120,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 
     public function getDebugInfo()
     {
-        return array (  98 => 26,  93 => 13,  88 => 9,  80 => 30,  78 => 29,  74 => 27,  72 => 26,  62 => 19,  55 => 14,  53 => 13,  49 => 12,  43 => 9,  33 => 1,);
+        return array (  107 => 30,  102 => 26,  97 => 13,  92 => 9,  84 => 31,  81 => 30,  79 => 29,  75 => 27,  73 => 26,  63 => 19,  56 => 14,  54 => 13,  50 => 12,  44 => 9,  34 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -153,6 +162,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 \t\t\t</div>
 \t\t\t<div class=\"col-sm-3\">
 \t\t\t\t{% include 'include/sidebar.twig' %}
+\t\t\t\t{% block menu %}{% endblock %}
 \t\t\t</div>
 \t\t</div>
 \t</div>

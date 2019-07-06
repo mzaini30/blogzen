@@ -46,10 +46,14 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 \t\t\t<a href=\"";
             // line 8
             echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "backup\" class=\"list-group-item\">Backup</a>
+\t\t\t<a href=\"";
+            // line 9
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
             echo "keluar\" class=\"list-group-item\">Logout</a>\t
 \t\t";
         }
-        // line 10
+        // line 11
         echo "\t</div>
 </div>";
     }
@@ -66,7 +70,7 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 
     public function getDebugInfo()
     {
-        return array (  53 => 10,  48 => 8,  43 => 7,  37 => 5,  35 => 4,  30 => 1,);
+        return array (  57 => 11,  52 => 9,  48 => 8,  43 => 7,  37 => 5,  35 => 4,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -86,6 +90,7 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 \t\t\t<a href=\"{{ site_url() }}masuk\" class=\"list-group-item\">Login</a>    
 \t\t{% else %}
 \t\t\t<a href=\"{{ site_url() }}tulisan-baru\" class=\"list-group-item\">Tulisan Baru</a>
+\t\t\t<a href=\"{{ site_url() }}backup\" class=\"list-group-item\">Backup</a>
 \t\t\t<a href=\"{{ site_url() }}keluar\" class=\"list-group-item\">Logout</a>\t
 \t\t{% endif %}
 \t</div>
