@@ -29,17 +29,22 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<!DOCTYPE html>
+        echo "<!-- 
+
+\tWebsite ini dibuat oleh Zen - 081545143654
+
+ -->
+<!DOCTYPE html>
 <html>
 <head>
 \t<title>";
-        // line 4
+        // line 9
         $this->displayBlock('judul', $context, $blocks);
         echo "Zen</title>
 \t<meta charset=\"utf-8\">
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">
 \t<link rel=\"stylesheet\" href=\"";
-        // line 7
+        // line 12
         echo twig_escape_filter($this->env, base_url(), "html", null, true);
         echo "aset/vendor/bootstrap/css/bootstrap.min.css\">
 </head>
@@ -48,7 +53,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 \t\t<div class=\"container\">
 \t\t\t<div class=\"navbar-header\">
 \t\t\t\t<a href=\"";
-        // line 13
+        // line 18
         echo twig_escape_filter($this->env, site_url(), "html", null, true);
         echo "\" class=\"navbar-brand\">Zen</a>
 \t\t\t</div>
@@ -58,15 +63,15 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-sm-9\">
 \t\t\t\t";
-        // line 20
+        // line 25
         $this->displayBlock('isi', $context, $blocks);
-        // line 21
+        // line 26
         echo "\t\t\t</div>
 \t\t\t<div class=\"col-sm-3\">
 \t\t\t\t";
-        // line 23
-        $this->loadTemplate("include/sidebar.twig", "layout/default.twig", 23)->display($context);
-        // line 24
+        // line 28
+        $this->loadTemplate("include/sidebar.twig", "layout/default.twig", 28)->display($context);
+        // line 29
         echo "\t\t\t</div>
 \t\t</div>
 \t</div>
@@ -74,12 +79,12 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 </html>";
     }
 
-    // line 4
+    // line 9
     public function block_judul($context, array $blocks = [])
     {
     }
 
-    // line 20
+    // line 25
     public function block_isi($context, array $blocks = [])
     {
     }
@@ -96,7 +101,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 
     public function getDebugInfo()
     {
-        return array (  83 => 20,  78 => 4,  70 => 24,  68 => 23,  64 => 21,  62 => 20,  52 => 13,  43 => 7,  37 => 4,  32 => 1,);
+        return array (  88 => 25,  83 => 9,  75 => 29,  73 => 28,  69 => 26,  67 => 25,  57 => 18,  48 => 12,  42 => 9,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -109,7 +114,12 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
+        return new Source("<!-- 
+
+\tWebsite ini dibuat oleh Zen - 081545143654
+
+ -->
+<!DOCTYPE html>
 <html>
 <head>
 \t<title>{% block judul %}{% endblock %}Zen</title>
