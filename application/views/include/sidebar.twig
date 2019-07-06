@@ -1,11 +1,11 @@
 <div class="panel panel-default">
 	<div class="panel-heading">Admin</div>
 	<div class="list-group">
-		{% if status == 'masuk' %}
-			<a href="#!" class="list-group-item">Tulisan Baru</a>
-			<a href="{{ site_url() }}keluar" class="list-group-item">Logout</a>	
-		{% else %}
+		{% if status == 'nggak masuk' %}
 			<a href="{{ site_url() }}masuk" class="list-group-item">Login</a>    
+		{% else %}
+			<a href="{{ site_url() }}tulisan-baru" class="list-group-item">Tulisan Baru</a>
+			<a href="{{ site_url() }}keluar" class="list-group-item">Logout</a>	
 		{% endif %}
 	</div>
 </div>

@@ -1,0 +1,21 @@
+{% extends 'layout/default.twig' %}
+
+{% block judul %}
+    Tulisan Baru -
+{% endblock %}
+
+{% block isi %}
+	<form method="post">
+    	<div class="form-group">
+    		<label for="">Judul</label>
+    		<input type="text" class="form-control" required="" name="judul">
+    	</div>
+    	<div class="form-group">
+    		<label for="">Isi</label>
+            <textarea id="" cols="30" rows="10" class="form-control" required="" name="isi"></textarea>
+    	</div>
+    	<div class="form-group">
+    		<input type="submit" class="btn btn-success" value="Oke">
+    	</div>
+    </form>
+{% endblock %}

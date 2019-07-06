@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* login/beranda.twig */
-class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d6b65f extends \Twig\Template
+/* postingan/tulisan_baru.twig */
+class __TwigTemplate_cd8fbfb42ee22f026e0cf82fdc92d21db69e8441f1797ff7bf35c4b58fa6b57f extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -32,7 +32,7 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        $this->parent = $this->loadTemplate("layout/default.twig", "login/beranda.twig", 1);
+        $this->parent = $this->loadTemplate("layout/default.twig", "postingan/tulisan_baru.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -40,7 +40,7 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
     public function block_judul($context, array $blocks = [])
     {
         // line 4
-        echo "    Masuk -
+        echo "    Tulisan Baru -
 ";
     }
 
@@ -48,23 +48,14 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
     public function block_isi($context, array $blocks = [])
     {
         // line 8
-        echo "\t";
-        if (($context["pesan"] ?? null)) {
-            // line 9
-            echo "\t\t<div class=\"alert alert-warning\">";
-            echo twig_escape_filter($this->env, ($context["pesan"] ?? null), "html", null, true);
-            echo "</div>
-\t";
-        }
-        // line 11
-        echo "    <form method=\"post\">
+        echo "\t<form method=\"post\">
     \t<div class=\"form-group\">
-    \t\t<label for=\"\">Username</label>
-    \t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"username\">
+    \t\t<label for=\"\">Judul</label>
+    \t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"judul\">
     \t</div>
     \t<div class=\"form-group\">
-    \t\t<label for=\"\">Password</label>
-    \t\t<input type=\"password\" class=\"form-control\" required=\"\" name=\"password\">
+    \t\t<label for=\"\">Isi</label>
+            <textarea id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" required=\"\" name=\"isi\"></textarea>
     \t</div>
     \t<div class=\"form-group\">
     \t\t<input type=\"submit\" class=\"btn btn-success\" value=\"Oke\">
@@ -75,7 +66,7 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
 
     public function getTemplateName()
     {
-        return "login/beranda.twig";
+        return "postingan/tulisan_baru.twig";
     }
 
     public function isTraitable()
@@ -85,7 +76,7 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
 
     public function getDebugInfo()
     {
-        return array (  60 => 11,  54 => 9,  51 => 8,  48 => 7,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  51 => 8,  48 => 7,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -101,26 +92,23 @@ class __TwigTemplate_97cb9b32e91fb74265520f7d7cdde64f9154ef085506b6cbd8c5021d67d
         return new Source("{% extends 'layout/default.twig' %}
 
 {% block judul %}
-    Masuk -
+    Tulisan Baru -
 {% endblock %}
 
 {% block isi %}
-\t{% if pesan %}
-\t\t<div class=\"alert alert-warning\">{{ pesan }}</div>
-\t{% endif %}
-    <form method=\"post\">
+\t<form method=\"post\">
     \t<div class=\"form-group\">
-    \t\t<label for=\"\">Username</label>
-    \t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"username\">
+    \t\t<label for=\"\">Judul</label>
+    \t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"judul\">
     \t</div>
     \t<div class=\"form-group\">
-    \t\t<label for=\"\">Password</label>
-    \t\t<input type=\"password\" class=\"form-control\" required=\"\" name=\"password\">
+    \t\t<label for=\"\">Isi</label>
+            <textarea id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" required=\"\" name=\"isi\"></textarea>
     \t</div>
     \t<div class=\"form-group\">
     \t\t<input type=\"submit\" class=\"btn btn-success\" value=\"Oke\">
     \t</div>
     </form>
-{% endblock %}", "login/beranda.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/login/beranda.twig");
+{% endblock %}", "postingan/tulisan_baru.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/postingan/tulisan_baru.twig");
     }
 }

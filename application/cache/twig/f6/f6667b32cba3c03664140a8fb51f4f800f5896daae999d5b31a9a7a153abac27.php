@@ -11,14 +11,15 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* pembaca/beranda.twig */
-class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc165800195cec9 extends \Twig\Template
+/* pembaca/detail.twig */
+class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94adadbe5 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
         parent::__construct($env);
 
         $this->blocks = [
+            'judul' => [$this, 'block_judul'],
             'isi' => [$this, 'block_isi'],
             'head' => [$this, 'block_head'],
         ];
@@ -32,35 +33,41 @@ class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc16580019
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        $this->parent = $this->loadTemplate("layout/default.twig", "pembaca/beranda.twig", 1);
+        $this->parent = $this->loadTemplate("layout/default.twig", "pembaca/detail.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     // line 3
-    public function block_isi($context, array $blocks = [])
+    public function block_judul($context, array $blocks = [])
     {
         // line 4
+        echo "    ";
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["data"] ?? null), 0, [], "array"), "judul", []), "html", null, true);
+        echo " -
+";
+    }
+
+    // line 7
+    public function block_isi($context, array $blocks = [])
+    {
+        // line 8
         echo "    ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["data"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["x"]) {
-            // line 5
-            echo "    \t<a href=\"";
-            echo twig_escape_filter($this->env, site_url(), "html", null, true);
-            echo "baca/";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "slug", []), "html", null, true);
-            echo "\" class=\"bukan-link\">
-\t        <div class=\"panel panel-default\">
-\t        \t<div class=\"panel-heading\">";
-            // line 7
+            // line 9
+            echo "        <div class=\"panel panel-default\">
+        \t<div class=\"panel-heading\">";
+            // line 10
             echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "judul", []), "html", null, true);
             echo "</div>
-\t        \t<div class=\"panel-body\">";
-            // line 8
+        \t<div class=\"panel-body\">
+\t\t\t\t<div class=\"konten\">";
+            // line 12
             echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "isi", []), "html", null, true);
             echo "</div>
-\t        </div>
-\t    </a>
+        \t</div>
+        </div>
     ";
         }
         $_parent = $context['_parent'];
@@ -68,18 +75,13 @@ class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc16580019
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
-    // line 14
+    // line 18
     public function block_head($context, array $blocks = [])
     {
-        // line 15
-        echo "    <style type=\"text/css\">
-\t\t.bukan-link,
-\t\t.bukan-link:hover,
-\t\t.bukan-link:focus,
-\t\t.bukan-link:visited,
-\t\t.bukan-link:active {
-\t\t\ttext-decoration: none;
-\t\t\tcolor: inherit;
+        // line 19
+        echo "    <style>
+\t\t.konten {
+\t\t\twhite-space: pre-wrap;
 \t\t}
     </style>
 ";
@@ -87,7 +89,7 @@ class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc16580019
 
     public function getTemplateName()
     {
-        return "pembaca/beranda.twig";
+        return "pembaca/detail.twig";
     }
 
     public function isTraitable()
@@ -97,7 +99,7 @@ class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc16580019
 
     public function getDebugInfo()
     {
-        return array (  75 => 15,  72 => 14,  60 => 8,  56 => 7,  48 => 5,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  82 => 19,  79 => 18,  67 => 12,  62 => 10,  59 => 9,  54 => 8,  51 => 7,  44 => 4,  41 => 3,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -112,28 +114,27 @@ class __TwigTemplate_4bc458dc680df35fbdd524e923880ad02abcd204e15d8898afc16580019
     {
         return new Source("{% extends 'layout/default.twig' %}
 
+{% block judul %}
+    {{ data[0].judul }} -
+{% endblock %}
+
 {% block isi %}
     {% for x in data %}
-    \t<a href=\"{{ site_url() }}baca/{{ x.slug }}\" class=\"bukan-link\">
-\t        <div class=\"panel panel-default\">
-\t        \t<div class=\"panel-heading\">{{ x.judul }}</div>
-\t        \t<div class=\"panel-body\">{{ x.isi }}</div>
-\t        </div>
-\t    </a>
+        <div class=\"panel panel-default\">
+        \t<div class=\"panel-heading\">{{ x.judul }}</div>
+        \t<div class=\"panel-body\">
+\t\t\t\t<div class=\"konten\">{{ x.isi }}</div>
+        \t</div>
+        </div>
     {% endfor %}
 {% endblock %}
 
 {% block head %}
-    <style type=\"text/css\">
-\t\t.bukan-link,
-\t\t.bukan-link:hover,
-\t\t.bukan-link:focus,
-\t\t.bukan-link:visited,
-\t\t.bukan-link:active {
-\t\t\ttext-decoration: none;
-\t\t\tcolor: inherit;
+    <style>
+\t\t.konten {
+\t\t\twhite-space: pre-wrap;
 \t\t}
     </style>
-{% endblock %}", "pembaca/beranda.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/pembaca/beranda.twig");
+{% endblock %}", "pembaca/detail.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/pembaca/detail.twig");
     }
 }

@@ -1,0 +1,24 @@
+{% extends 'layout/default.twig' %}
+
+{% block judul %}
+    {{ data[0].judul }} -
+{% endblock %}
+
+{% block isi %}
+    {% for x in data %}
+        <div class="panel panel-default">
+        	<div class="panel-heading">{{ x.judul }}</div>
+        	<div class="panel-body">
+				<div class="konten">{{ x.isi }}</div>
+        	</div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block head %}
+    <style>
+		.konten {
+			white-space: pre-wrap;
+		}
+    </style>
+{% endblock %}

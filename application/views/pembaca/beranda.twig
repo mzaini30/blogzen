@@ -1,5 +1,25 @@
 {% extends 'layout/default.twig' %}
 
 {% block isi %}
-    <p>Hello World</p>
+    {% for x in data %}
+    	<a href="{{ site_url() }}baca/{{ x.slug }}" class="bukan-link">
+	        <div class="panel panel-default">
+	        	<div class="panel-heading">{{ x.judul }}</div>
+	        	<div class="panel-body">{{ x.isi }}</div>
+	        </div>
+	    </a>
+    {% endfor %}
+{% endblock %}
+
+{% block head %}
+    <style type="text/css">
+		.bukan-link,
+		.bukan-link:hover,
+		.bukan-link:focus,
+		.bukan-link:visited,
+		.bukan-link:active {
+			text-decoration: none;
+			color: inherit;
+		}
+    </style>
 {% endblock %}

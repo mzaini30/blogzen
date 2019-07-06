@@ -15,6 +15,13 @@ class Pembaca extends CI_Controller {
 
 	public function index(){
 		$status = $this->status;
-		$this->twig->display('pembaca/beranda', compact('status'));
+		$data = $this->db->order_by('id', 'DESC')->get('postingan')->result();
+		$this->twig->display('pembaca/beranda', compact('status', 'data'));
+	}
+
+	public function detail($slug){
+		$data = $this->db->get_where('postingan', compact('slug'))->result();
+		$status = $this->status;
+		$this->twig->display('pembaca/detail', compact('data', 'status'));
 	}
 }
