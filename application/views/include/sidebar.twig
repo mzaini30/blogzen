@@ -3,9 +3,9 @@
 	<div class="list-group">
 		{% if status == 'masuk' %}
 			<a href="#!" class="list-group-item">Tulisan Baru</a>
-			<a href="#!" class="list-group-item">Logout</a>	
+			<a href="{{ site_url() }}keluar" class="list-group-item">Logout</a>	
 		{% else %}
-			<a href="#!" class="list-group-item">Login</a>    
+			<a href="{{ site_url() }}masuk" class="list-group-item">Login</a>    
 		{% endif %}
 	</div>
 </div>

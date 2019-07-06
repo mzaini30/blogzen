@@ -6,7 +6,7 @@ class Pembaca extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		if ($this->session->userdata('status') == 'apakah_masuk'){
+		if ($this->session->userdata('status') == 'masuk'){
 			$this->status = 'masuk';
 		} else {
 			$this->status = 'nggak masuk';

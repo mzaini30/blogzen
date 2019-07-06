@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'pembaca';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['keluar'] = 'login/keluar';
+$route['masuk'] = 'login';

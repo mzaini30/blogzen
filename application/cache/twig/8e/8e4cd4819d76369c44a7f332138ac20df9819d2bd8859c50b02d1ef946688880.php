@@ -35,11 +35,16 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
         if ((($context["status"] ?? null) == "masuk")) {
             // line 5
             echo "\t\t\t<a href=\"#!\" class=\"list-group-item\">Tulisan Baru</a>
-\t\t\t<a href=\"#!\" class=\"list-group-item\">Logout</a>\t
+\t\t\t<a href=\"";
+            // line 6
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "keluar\" class=\"list-group-item\">Logout</a>\t
 \t\t";
         } else {
             // line 8
-            echo "\t\t\t<a href=\"#!\" class=\"list-group-item\">Login</a>    
+            echo "\t\t\t<a href=\"";
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "masuk\" class=\"list-group-item\">Login</a>    
 \t\t";
         }
         // line 10
@@ -59,7 +64,7 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 
     public function getDebugInfo()
     {
-        return array (  46 => 10,  42 => 8,  37 => 5,  35 => 4,  30 => 1,);
+        return array (  51 => 10,  45 => 8,  40 => 6,  37 => 5,  35 => 4,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -77,9 +82,9 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 \t<div class=\"list-group\">
 \t\t{% if status == 'masuk' %}
 \t\t\t<a href=\"#!\" class=\"list-group-item\">Tulisan Baru</a>
-\t\t\t<a href=\"#!\" class=\"list-group-item\">Logout</a>\t
+\t\t\t<a href=\"{{ site_url() }}keluar\" class=\"list-group-item\">Logout</a>\t
 \t\t{% else %}
-\t\t\t<a href=\"#!\" class=\"list-group-item\">Login</a>    
+\t\t\t<a href=\"{{ site_url() }}masuk\" class=\"list-group-item\">Login</a>    
 \t\t{% endif %}
 \t</div>
 </div>", "include/sidebar.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/include/sidebar.twig");
