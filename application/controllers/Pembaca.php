@@ -23,7 +23,7 @@ class Pembaca extends CI_Controller {
 	}
 
 	public function detail($slug){
-		$data = $this->db->get_where('postingan', compact('slug'))->result();
+		$data = $this->db->get_where('postingan', compact('slug'))->result()[0];
 		$status = $this->status;
 		$this->twig->display('pembaca/detail', compact('data', 'status'));
 	}

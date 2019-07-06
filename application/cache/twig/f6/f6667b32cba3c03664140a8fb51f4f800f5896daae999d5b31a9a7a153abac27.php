@@ -42,7 +42,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     {
         // line 4
         echo "    ";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["data"] ?? null), 0, [], "array"), "judul", []), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "judul", []), "html", null, true);
         echo " -
 ";
     }
@@ -51,34 +51,55 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     public function block_isi($context, array $blocks = [])
     {
         // line 8
-        echo "    ";
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["data"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["x"]) {
-            // line 9
-            echo "        <div class=\"panel panel-default\">
-        \t<div class=\"panel-heading\">";
-            // line 10
-            echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "judul", []), "html", null, true);
-            echo "</div>
-        \t<div class=\"panel-body\">
-\t\t\t\t<div class=\"konten\">";
-            // line 12
-            echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "isi", []), "html", null, true);
-            echo "</div>
-        \t</div>
-        </div>
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['x'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo "    <div class=\"panel panel-default\">
+    \t<div class=\"panel-heading\">";
+        // line 9
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "judul", []), "html", null, true);
+        echo "</div>
+    \t<div class=\"panel-body\">
+\t\t\t<div class=\"konten\">";
+        // line 11
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "isi", []), "html", null, true);
+        echo "</div>
+    \t</div>
+    </div>
+
+    <div id=\"disqus_thread\"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    var disqus_config = function () {
+    this.page.url = '";
+        // line 23
+        echo twig_escape_filter($this->env, site_url(), "html", null, true);
+        echo "baca/";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+        echo "';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '";
+        // line 24
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+        echo "'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zenheroku.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+                                
+";
     }
 
-    // line 18
+    // line 38
     public function block_head($context, array $blocks = [])
     {
-        // line 19
+        // line 39
         echo "    <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
@@ -99,7 +120,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
     public function getDebugInfo()
     {
-        return array (  82 => 19,  79 => 18,  67 => 12,  62 => 10,  59 => 9,  54 => 8,  51 => 7,  44 => 4,  41 => 3,  31 => 1,);
+        return array (  103 => 39,  100 => 38,  83 => 24,  77 => 23,  62 => 11,  57 => 9,  54 => 8,  51 => 7,  44 => 4,  41 => 3,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -115,18 +136,38 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
         return new Source("{% extends 'layout/default.twig' %}
 
 {% block judul %}
-    {{ data[0].judul }} -
+    {{ data.judul }} -
 {% endblock %}
 
 {% block isi %}
-    {% for x in data %}
-        <div class=\"panel panel-default\">
-        \t<div class=\"panel-heading\">{{ x.judul }}</div>
-        \t<div class=\"panel-body\">
-\t\t\t\t<div class=\"konten\">{{ x.isi }}</div>
-        \t</div>
-        </div>
-    {% endfor %}
+    <div class=\"panel panel-default\">
+    \t<div class=\"panel-heading\">{{ data.judul }}</div>
+    \t<div class=\"panel-body\">
+\t\t\t<div class=\"konten\">{{ data.isi }}</div>
+    \t</div>
+    </div>
+
+    <div id=\"disqus_thread\"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    var disqus_config = function () {
+    this.page.url = '{{ site_url() }}baca/{{ data.slug }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ data.slug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zenheroku.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+                                
 {% endblock %}
 
 {% block head %}
