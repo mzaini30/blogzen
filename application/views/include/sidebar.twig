@@ -1,3 +1,18 @@
+<form action="{{ site_url() }}cari" method="get">
+	<div class="form-group">
+		<input type="text" class="form-control" required="" name="kata_kunci" placeholder="Cari">
+	</div>
+</form>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Tulisan Lainnya</div>
+	<div class="list-group">
+		{% for x in lainnya %}
+		    <a href="{{ site_url() }}baca/{{ x.slug }}" class="list-group-item">{{ x.judul }}</a>
+		{% endfor %}
+	</div>
+</div>
+
 <div class="panel panel-default">
 	<div class="panel-heading">Admin</div>
 	<div class="list-group">

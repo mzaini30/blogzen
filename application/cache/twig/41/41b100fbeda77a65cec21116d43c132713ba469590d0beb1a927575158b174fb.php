@@ -85,10 +85,14 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
         echo "\t\t\t</div>
 \t\t</div>
 \t</div>
-\t";
+\t<script src=\"";
         // line 34
-        $this->displayBlock('skrip', $context, $blocks);
+        echo twig_escape_filter($this->env, base_url(), "html", null, true);
+        echo "aset/vendor/jquery/jquery.min.js\"></script>
+\t";
         // line 35
+        $this->displayBlock('skrip', $context, $blocks);
+        // line 36
         echo "</body>
 </html>";
     }
@@ -113,7 +117,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
     {
     }
 
-    // line 34
+    // line 35
     public function block_skrip($context, array $blocks = [])
     {
     }
@@ -130,7 +134,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 
     public function getDebugInfo()
     {
-        return array (  117 => 34,  112 => 30,  107 => 26,  102 => 13,  97 => 9,  92 => 35,  90 => 34,  85 => 31,  82 => 30,  80 => 29,  76 => 27,  74 => 26,  64 => 19,  57 => 14,  55 => 13,  51 => 12,  45 => 9,  35 => 1,);
+        return array (  121 => 35,  116 => 30,  111 => 26,  106 => 13,  101 => 9,  96 => 36,  94 => 35,  90 => 34,  85 => 31,  82 => 30,  80 => 29,  76 => 27,  74 => 26,  64 => 19,  57 => 14,  55 => 13,  51 => 12,  45 => 9,  35 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -176,6 +180,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 \t\t\t</div>
 \t\t</div>
 \t</div>
+\t<script src=\"{{ base_url() }}aset/vendor/jquery/jquery.min.js\"></script>
 \t{% block skrip %}{% endblock %}
 </body>
 </html>", "layout/default.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/layout/default.twig");

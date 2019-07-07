@@ -9,7 +9,13 @@
     	<div class="panel-heading">{{ data.judul }}</div>
     	<div class="panel-body">
 			<div class="konten">{{ data.isi }}</div>
+            {% if status == 'masuk' %}
+                <br>
+                <a href="{{ site_url() }}baca/{{ data.slug }}/edit" class="btn btn-warning">Edit</a>
+                <a href="#!" class="btn btn-danger hapus">Hapus</a>
+            {% endif %}
     	</div>
+        <div class="panel-footer waktu">Beberapa detik yang lalu</div>
     </div>
 
     
@@ -37,32 +43,38 @@
                                 
 {% endblock %}
 
-{% block menu %}
-    {% if status == 'masuk' %}
-        <div class="panel panel-default">
-            <div class="panel-heading">Postingan</div>
-            <div class="list-group">
-                <a href="{{ site_url() }}baca/{{ data.slug }}/edit" class="list-group-item">Edit</a>
-                <a href="#!" class="list-group-item hapus">Hapus</a>
-            </div>
-        </div>
-    {% endif %}
-{% endblock %}
-
 {% block head %}
     <style>
 		.konten {
 			white-space: pre-wrap;
 		}
+        .waktu:first-letter {
+            text-transform: uppercase;
+        }
     </style>
 {% endblock %}
 
 {% block skrip %}
-    <script src="{{ base_url() }}aset/vendor/jquery/jquery.min.js"></script>
     <script src="{{ base_url() }}aset/vendor/swal/sweetalert2.js"></script>
+    <script src="{{ base_url() }}aset/vendor/moment/moment-with-locales.js"></script>
     <script>
         $('.hapus').click(function(x){
             x.preventDefault();
+            Swal.fire({
+                title: 'Hapus?',
+                text: 'Beneran hapus kah ni?',
+                type: 'warning',
+                showCancelButton: true
+            }).then(function(x){
+                if (x.value) {
+                    location.href = '{{ site_url() }}baca/{{ data.slug }}/hapus'
+                }
+            })
         });
+        moment.locale('id')
+        $('.waktu').html(moment('{{ data.waktu }}').fromNow())
+        setInterval(function(){
+            $('.waktu').html(moment('{{ data.waktu }}').fromNow())
+        }, 60000);
     </script>
 {% endblock %}

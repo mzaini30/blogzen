@@ -21,7 +21,6 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
         $this->blocks = [
             'judul' => [$this, 'block_judul'],
             'isi' => [$this, 'block_isi'],
-            'menu' => [$this, 'block_menu'],
             'head' => [$this, 'block_head'],
             'skrip' => [$this, 'block_skrip'],
         ];
@@ -63,7 +62,23 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
         // line 11
         echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "isi", []), "html", null, true);
         echo "</div>
-    \t</div>
+            ";
+        // line 12
+        if ((($context["status"] ?? null) == "masuk")) {
+            // line 13
+            echo "                <br>
+                <a href=\"";
+            // line 14
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "baca/";
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+            echo "/edit\" class=\"btn btn-warning\">Edit</a>
+                <a href=\"#!\" class=\"btn btn-danger hapus\">Hapus</a>
+            ";
+        }
+        // line 17
+        echo "    \t</div>
+        <div class=\"panel-footer waktu\">Beberapa detik yang lalu</div>
     </div>
 
     
@@ -76,13 +91,13 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
         var disqus_config = function () {
         this.page.url = '";
-        // line 24
+        // line 30
         echo twig_escape_filter($this->env, site_url(), "html", null, true);
         echo "baca/";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
         echo "';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = '";
-        // line 25
+        // line 31
         echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
         echo "'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
@@ -100,56 +115,62 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 ";
     }
 
-    // line 40
-    public function block_menu($context, array $blocks = [])
-    {
-        // line 41
-        echo "    ";
-        if ((($context["status"] ?? null) == "masuk")) {
-            // line 42
-            echo "        <div class=\"panel panel-default\">
-            <div class=\"panel-heading\">Postingan</div>
-            <div class=\"list-group\">
-                <a href=\"";
-            // line 45
-            echo twig_escape_filter($this->env, site_url(), "html", null, true);
-            echo "baca/";
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
-            echo "/edit\" class=\"list-group-item\">Edit</a>
-                <a href=\"#!\" class=\"list-group-item hapus\">Hapus</a>
-            </div>
-        </div>
-    ";
-        }
-    }
-
-    // line 52
+    // line 46
     public function block_head($context, array $blocks = [])
     {
-        // line 53
+        // line 47
         echo "    <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
 \t\t}
+        .waktu:first-letter {
+            text-transform: uppercase;
+        }
     </style>
 ";
     }
 
-    // line 60
+    // line 57
     public function block_skrip($context, array $blocks = [])
     {
-        // line 61
+        // line 58
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, base_url(), "html", null, true);
-        echo "aset/vendor/jquery/jquery.min.js\"></script>
-    <script src=\"";
-        // line 62
-        echo twig_escape_filter($this->env, base_url(), "html", null, true);
         echo "aset/vendor/swal/sweetalert2.js\"></script>
+    <script src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, base_url(), "html", null, true);
+        echo "aset/vendor/moment/moment-with-locales.js\"></script>
     <script>
         \$('.hapus').click(function(x){
             x.preventDefault();
+            Swal.fire({
+                title: 'Hapus?',
+                text: 'Beneran hapus kah ni?',
+                type: 'warning',
+                showCancelButton: true
+            }).then(function(x){
+                if (x.value) {
+                    location.href = '";
+        // line 70
+        echo twig_escape_filter($this->env, site_url(), "html", null, true);
+        echo "baca/";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+        echo "/hapus'
+                }
+            })
         });
+        moment.locale('id')
+        \$('.waktu').html(moment('";
+        // line 75
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "waktu", []), "html", null, true);
+        echo "').fromNow())
+        setInterval(function(){
+            \$('.waktu').html(moment('";
+        // line 77
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "waktu", []), "html", null, true);
+        echo "').fromNow())
+        }, 60000);
     </script>
 ";
     }
@@ -166,7 +187,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
     public function getDebugInfo()
     {
-        return array (  147 => 62,  142 => 61,  139 => 60,  130 => 53,  127 => 52,  115 => 45,  110 => 42,  107 => 41,  104 => 40,  86 => 25,  80 => 24,  64 => 11,  59 => 9,  56 => 8,  53 => 7,  46 => 4,  43 => 3,  33 => 1,);
+        return array (  171 => 77,  166 => 75,  156 => 70,  142 => 59,  137 => 58,  134 => 57,  122 => 47,  119 => 46,  101 => 31,  95 => 30,  80 => 17,  72 => 14,  69 => 13,  67 => 12,  63 => 11,  58 => 9,  55 => 8,  52 => 7,  45 => 4,  42 => 3,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -190,7 +211,13 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     \t<div class=\"panel-heading\">{{ data.judul }}</div>
     \t<div class=\"panel-body\">
 \t\t\t<div class=\"konten\">{{ data.isi }}</div>
+            {% if status == 'masuk' %}
+                <br>
+                <a href=\"{{ site_url() }}baca/{{ data.slug }}/edit\" class=\"btn btn-warning\">Edit</a>
+                <a href=\"#!\" class=\"btn btn-danger hapus\">Hapus</a>
+            {% endif %}
     \t</div>
+        <div class=\"panel-footer waktu\">Beberapa detik yang lalu</div>
     </div>
 
     
@@ -218,33 +245,39 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
                                 
 {% endblock %}
 
-{% block menu %}
-    {% if status == 'masuk' %}
-        <div class=\"panel panel-default\">
-            <div class=\"panel-heading\">Postingan</div>
-            <div class=\"list-group\">
-                <a href=\"{{ site_url() }}baca/{{ data.slug }}/edit\" class=\"list-group-item\">Edit</a>
-                <a href=\"#!\" class=\"list-group-item hapus\">Hapus</a>
-            </div>
-        </div>
-    {% endif %}
-{% endblock %}
-
 {% block head %}
     <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
 \t\t}
+        .waktu:first-letter {
+            text-transform: uppercase;
+        }
     </style>
 {% endblock %}
 
 {% block skrip %}
-    <script src=\"{{ base_url() }}aset/vendor/jquery/jquery.min.js\"></script>
     <script src=\"{{ base_url() }}aset/vendor/swal/sweetalert2.js\"></script>
+    <script src=\"{{ base_url() }}aset/vendor/moment/moment-with-locales.js\"></script>
     <script>
         \$('.hapus').click(function(x){
             x.preventDefault();
+            Swal.fire({
+                title: 'Hapus?',
+                text: 'Beneran hapus kah ni?',
+                type: 'warning',
+                showCancelButton: true
+            }).then(function(x){
+                if (x.value) {
+                    location.href = '{{ site_url() }}baca/{{ data.slug }}/hapus'
+                }
+            })
         });
+        moment.locale('id')
+        \$('.waktu').html(moment('{{ data.waktu }}').fromNow())
+        setInterval(function(){
+            \$('.waktu').html(moment('{{ data.waktu }}').fromNow())
+        }, 60000);
     </script>
 {% endblock %}", "pembaca/detail.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/pembaca/detail.twig");
     }

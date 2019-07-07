@@ -11,12 +11,15 @@ class Login extends CI_Controller {
 		} else {
 			$this->status = 'nggak masuk';
 		}
+
+		$this->lainnya = $this->db->order_by('id', 'RANDOM')->limit(10)->get('postingan')->result();
 	}
 
 	public function index(){
 		if (!$_POST) {
 			$status = $this->status;
-			$this->twig->display('login/beranda', compact('status'));
+			$lainnya = $this->lainnya;
+			$this->twig->display('login/beranda', compact('status', 'lainnya'));
 		} else {
 			$data = (array) $this->input->post();
 			$cek = $this->db->get_where('akun', $data)->num_rows();

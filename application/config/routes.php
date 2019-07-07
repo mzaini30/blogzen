@@ -53,11 +53,11 @@ $route['default_controller'] = 'pembaca';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['keluar'] = 'login/keluar';
-$route['masuk'] = 'login';
-
-$route['backup'] = 'admin/amankan';
-
 $route['baca/(:any)'] = 'pembaca/detail/$1';
 $route['baca/(:any)/edit'] = 'admin/edit/$1';
+$route['baca/(:any)/hapus'] = 'admin/hapus/$1';
+$route['backup'] = 'admin/amankan';
+$route['cari'] = 'pembaca/cari';
+$route['keluar'] = 'login/keluar';
+$route['masuk'] = 'login';
 $route['tulisan-baru'] = 'admin/tulisan_baru';

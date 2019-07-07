@@ -27,33 +27,66 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<div class=\"panel panel-default\">
+        echo "<form action=\"";
+        echo twig_escape_filter($this->env, site_url(), "html", null, true);
+        echo "cari\" method=\"get\">
+\t<div class=\"form-group\">
+\t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"kata_kunci\" placeholder=\"Cari\">
+\t</div>
+</form>
+
+<div class=\"panel panel-default\">
+\t<div class=\"panel-heading\">Tulisan Lainnya</div>
+\t<div class=\"list-group\">
+\t\t";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["lainnya"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["x"]) {
+            // line 11
+            echo "\t\t    <a href=\"";
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "baca/";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "slug", []), "html", null, true);
+            echo "\" class=\"list-group-item\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["x"], "judul", []), "html", null, true);
+            echo "</a>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['x'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "\t</div>
+</div>
+
+<div class=\"panel panel-default\">
 \t<div class=\"panel-heading\">Admin</div>
 \t<div class=\"list-group\">
 \t\t";
-        // line 4
+        // line 19
         if ((($context["status"] ?? null) == "nggak masuk")) {
-            // line 5
+            // line 20
             echo "\t\t\t<a href=\"";
             echo twig_escape_filter($this->env, site_url(), "html", null, true);
             echo "masuk\" class=\"list-group-item\">Login</a>    
 \t\t";
         } else {
-            // line 7
+            // line 22
             echo "\t\t\t<a href=\"";
             echo twig_escape_filter($this->env, site_url(), "html", null, true);
             echo "tulisan-baru\" class=\"list-group-item\">Tulisan Baru</a>
 \t\t\t<a href=\"";
-            // line 8
+            // line 23
             echo twig_escape_filter($this->env, site_url(), "html", null, true);
             echo "backup\" class=\"list-group-item\">Backup</a>
 \t\t\t<a href=\"";
-            // line 9
+            // line 24
             echo twig_escape_filter($this->env, site_url(), "html", null, true);
             echo "keluar\" class=\"list-group-item\">Logout</a>\t
 \t\t";
         }
-        // line 11
+        // line 26
         echo "\t</div>
 </div>";
     }
@@ -70,7 +103,7 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 
     public function getDebugInfo()
     {
-        return array (  57 => 11,  52 => 9,  48 => 8,  43 => 7,  37 => 5,  35 => 4,  30 => 1,);
+        return array (  90 => 26,  85 => 24,  81 => 23,  76 => 22,  70 => 20,  68 => 19,  60 => 13,  47 => 11,  43 => 10,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -83,7 +116,22 @@ class __TwigTemplate_0f632bcd03e7e5758dfea400b2ef44643a66d5320b718be1fab420a56d2
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"panel panel-default\">
+        return new Source("<form action=\"{{ site_url() }}cari\" method=\"get\">
+\t<div class=\"form-group\">
+\t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"kata_kunci\" placeholder=\"Cari\">
+\t</div>
+</form>
+
+<div class=\"panel panel-default\">
+\t<div class=\"panel-heading\">Tulisan Lainnya</div>
+\t<div class=\"list-group\">
+\t\t{% for x in lainnya %}
+\t\t    <a href=\"{{ site_url() }}baca/{{ x.slug }}\" class=\"list-group-item\">{{ x.judul }}</a>
+\t\t{% endfor %}
+\t</div>
+</div>
+
+<div class=\"panel panel-default\">
 \t<div class=\"panel-heading\">Admin</div>
 \t<div class=\"list-group\">
 \t\t{% if status == 'nggak masuk' %}
