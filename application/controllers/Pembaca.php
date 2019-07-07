@@ -39,4 +39,20 @@ class Pembaca extends CI_Controller {
 		$status = $this->status;
 		$this->twig->display('pembaca/beranda', compact('data', 'status', 'lainnya', 'kata_kunci'));
 	}
+
+	public function rss(){
+		$data['feed_name'] = 'MyWebsite.com'; // your website
+	    $data['encoding'] = 'utf-8'; // the encoding
+	    $data['feed_url'] = 'https://blogzen.herokuapp.com/rss'; // the url to your feed
+	    $data['page_description'] = 'Websitenya Zen'; // some description
+	    $data['page_language'] = 'en-en'; // the language
+	    $data['creator_email'] = 'muhzaini30@gmail.com'; // your email
+	    $data['posts'] = $this->db->limit(10)->get('postingan')->result();
+	    foreach ($data['posts'] as $x) {
+	      	$x->judul = xml_convert($x->judul);
+	    }  
+	    $data['waktu'] = gmdate("Y", time());  
+	    header("Content-Type: application/rss+xml"); // important!
+	    $this->twig->display('pembaca/rss', $data);
+	}
 }

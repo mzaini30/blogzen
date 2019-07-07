@@ -60,4 +60,5 @@ $route['backup'] = 'admin/amankan';
 $route['cari'] = 'pembaca/cari';
 $route['keluar'] = 'login/keluar';
 $route['masuk'] = 'login';
+$route['rss'] = 'pembaca/rss';
 $route['tulisan-baru'] = 'admin/tulisan_baru';
