@@ -23,6 +23,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
             'isi' => [$this, 'block_isi'],
             'menu' => [$this, 'block_menu'],
             'head' => [$this, 'block_head'],
+            'skrip' => [$this, 'block_skrip'],
         ];
     }
 
@@ -115,21 +116,41 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
             echo "baca/";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
             echo "/edit\" class=\"list-group-item\">Edit</a>
+                <a href=\"#!\" class=\"list-group-item hapus\">Hapus</a>
             </div>
         </div>
     ";
         }
     }
 
-    // line 51
+    // line 52
     public function block_head($context, array $blocks = [])
     {
-        // line 52
+        // line 53
         echo "    <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
 \t\t}
     </style>
+";
+    }
+
+    // line 60
+    public function block_skrip($context, array $blocks = [])
+    {
+        // line 61
+        echo "    <script src=\"";
+        echo twig_escape_filter($this->env, base_url(), "html", null, true);
+        echo "aset/vendor/jquery/jquery.min.js\"></script>
+    <script src=\"";
+        // line 62
+        echo twig_escape_filter($this->env, base_url(), "html", null, true);
+        echo "aset/vendor/swal/sweetalert2.js\"></script>
+    <script>
+        \$('.hapus').click(function(x){
+            x.preventDefault();
+        });
+    </script>
 ";
     }
 
@@ -145,7 +166,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
     public function getDebugInfo()
     {
-        return array (  128 => 52,  125 => 51,  114 => 45,  109 => 42,  106 => 41,  103 => 40,  85 => 25,  79 => 24,  63 => 11,  58 => 9,  55 => 8,  52 => 7,  45 => 4,  42 => 3,  32 => 1,);
+        return array (  147 => 62,  142 => 61,  139 => 60,  130 => 53,  127 => 52,  115 => 45,  110 => 42,  107 => 41,  104 => 40,  86 => 25,  80 => 24,  64 => 11,  59 => 9,  56 => 8,  53 => 7,  46 => 4,  43 => 3,  33 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -203,6 +224,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
             <div class=\"panel-heading\">Postingan</div>
             <div class=\"list-group\">
                 <a href=\"{{ site_url() }}baca/{{ data.slug }}/edit\" class=\"list-group-item\">Edit</a>
+                <a href=\"#!\" class=\"list-group-item hapus\">Hapus</a>
             </div>
         </div>
     {% endif %}
@@ -214,6 +236,16 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 \t\t\twhite-space: pre-wrap;
 \t\t}
     </style>
+{% endblock %}
+
+{% block skrip %}
+    <script src=\"{{ base_url() }}aset/vendor/jquery/jquery.min.js\"></script>
+    <script src=\"{{ base_url() }}aset/vendor/swal/sweetalert2.js\"></script>
+    <script>
+        \$('.hapus').click(function(x){
+            x.preventDefault();
+        });
+    </script>
 {% endblock %}", "pembaca/detail.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/pembaca/detail.twig");
     }
 }

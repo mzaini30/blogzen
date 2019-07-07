@@ -40,26 +40,36 @@ class __TwigTemplate_cd8fbfb42ee22f026e0cf82fdc92d21db69e8441f1797ff7bf35c4b58fa
     public function block_judul($context, array $blocks = [])
     {
         // line 4
-        echo "    Tulisan Baru -
-";
+        echo "    ";
+        if ((($context["status"] ?? null) == "edit")) {
+            // line 5
+            echo "        ";
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "judul", []), "html", null, true);
+            echo " -
+    ";
+        } else {
+            // line 7
+            echo "        Tulisan Baru -
+    ";
+        }
     }
 
-    // line 7
+    // line 11
     public function block_isi($context, array $blocks = [])
     {
-        // line 8
+        // line 12
         echo "\t<form method=\"post\">
     \t<div class=\"form-group\">
     \t\t<label for=\"\">Judul</label>
     \t\t<input type=\"text\" class=\"form-control\" required=\"\" name=\"judul\" value=\"";
-        // line 11
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "judul", []), "html", null, true);
         echo "\">
     \t</div>
     \t<div class=\"form-group\">
     \t\t<label for=\"\">Isi</label>
             <textarea id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" required=\"\" name=\"isi\">";
-        // line 15
+        // line 19
         echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "isi", []), "html", null, true);
         echo "</textarea>
     \t</div>
@@ -82,7 +92,7 @@ class __TwigTemplate_cd8fbfb42ee22f026e0cf82fdc92d21db69e8441f1797ff7bf35c4b58fa
 
     public function getDebugInfo()
     {
-        return array (  63 => 15,  56 => 11,  51 => 8,  48 => 7,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  73 => 19,  66 => 15,  61 => 12,  58 => 11,  52 => 7,  46 => 5,  43 => 4,  40 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -98,7 +108,11 @@ class __TwigTemplate_cd8fbfb42ee22f026e0cf82fdc92d21db69e8441f1797ff7bf35c4b58fa
         return new Source("{% extends 'layout/default.twig' %}
 
 {% block judul %}
-    Tulisan Baru -
+    {% if status == 'edit' %}
+        {{ data.judul }} -
+    {% else %}
+        Tulisan Baru -
+    {% endif %}
 {% endblock %}
 
 {% block isi %}

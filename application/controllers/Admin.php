@@ -32,7 +32,8 @@ class Admin extends CI_Controller {
 	public function edit($slug){
 		if (!$_POST) {
 			$data = $this->db->get_where('postingan', compact('slug'))->result()[0];
-			$this->twig->display('postingan/tulisan_baru', compact('data'));
+			$status = 'edit';
+			$this->twig->display('postingan/tulisan_baru', compact('data', 'status'));
 		} else {
 			$data = (object) $this->input->post();
 			$this->db->update('postingan', $data, compact('slug'));

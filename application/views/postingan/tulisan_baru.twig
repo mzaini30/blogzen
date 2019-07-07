@@ -1,7 +1,11 @@
 {% extends 'layout/default.twig' %}
 
 {% block judul %}
-    Tulisan Baru -
+    {% if status == 'edit' %}
+        {{ data.judul }} -
+    {% else %}
+        Tulisan Baru -
+    {% endif %}
 {% endblock %}
 
 {% block isi %}

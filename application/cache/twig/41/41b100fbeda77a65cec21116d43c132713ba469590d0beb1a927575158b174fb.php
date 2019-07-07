@@ -25,6 +25,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
             'head' => [$this, 'block_head'],
             'isi' => [$this, 'block_isi'],
             'menu' => [$this, 'block_menu'],
+            'skrip' => [$this, 'block_skrip'],
         ];
     }
 
@@ -84,7 +85,11 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
         echo "\t\t\t</div>
 \t\t</div>
 \t</div>
-</body>
+\t";
+        // line 34
+        $this->displayBlock('skrip', $context, $blocks);
+        // line 35
+        echo "</body>
 </html>";
     }
 
@@ -108,6 +113,11 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
     {
     }
 
+    // line 34
+    public function block_skrip($context, array $blocks = [])
+    {
+    }
+
     public function getTemplateName()
     {
         return "layout/default.twig";
@@ -120,7 +130,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 
     public function getDebugInfo()
     {
-        return array (  107 => 30,  102 => 26,  97 => 13,  92 => 9,  84 => 31,  81 => 30,  79 => 29,  75 => 27,  73 => 26,  63 => 19,  56 => 14,  54 => 13,  50 => 12,  44 => 9,  34 => 1,);
+        return array (  117 => 34,  112 => 30,  107 => 26,  102 => 13,  97 => 9,  92 => 35,  90 => 34,  85 => 31,  82 => 30,  80 => 29,  76 => 27,  74 => 26,  64 => 19,  57 => 14,  55 => 13,  51 => 12,  45 => 9,  35 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -166,6 +176,7 @@ class __TwigTemplate_5fdf4c65a189ec4ef83ecd38f22923bd01e39dcc7261c4cb0e672e432b3
 \t\t\t</div>
 \t\t</div>
 \t</div>
+\t{% block skrip %}{% endblock %}
 </body>
 </html>", "layout/default.twig", "/mnt/C48455A884559E2C/web/blogzen/application/views/layout/default.twig");
     }
