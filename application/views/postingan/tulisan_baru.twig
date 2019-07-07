@@ -8,11 +8,11 @@
 	<form method="post">
     	<div class="form-group">
     		<label for="">Judul</label>
-    		<input type="text" class="form-control" required="" name="judul">
+    		<input type="text" class="form-control" required="" name="judul" value="{{ data.judul }}">
     	</div>
     	<div class="form-group">
     		<label for="">Isi</label>
-            <textarea id="" cols="30" rows="10" class="form-control" required="" name="isi"></textarea>
+            <textarea id="" cols="30" rows="10" class="form-control" required="" name="isi">{{ data.isi }}</textarea>
     	</div>
     	<div class="form-group">
     		<input type="submit" class="btn btn-success" value="Oke">

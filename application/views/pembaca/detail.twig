@@ -41,7 +41,10 @@
     {% if status == 'masuk' %}
         <div class="panel panel-default">
             <div class="panel-heading">Postingan</div>
-            <div class="list-group"></div>
+            <div class="list-group">
+                <a href="{{ site_url() }}baca/{{ data.slug }}/edit" class="list-group-item">Edit</a>
+                <a href="#!" class="list-group-item hapus">Hapus</a>
+            </div>
         </div>
     {% endif %}
 {% endblock %}
@@ -52,4 +55,14 @@
 			white-space: pre-wrap;
 		}
     </style>
+{% endblock %}
+
+{% block skrip %}
+    <script src="{{ base_url() }}aset/vendor/jquery/jquery.min.js"></script>
+    <script src="{{ base_url() }}aset/vendor/swal/sweetalert2.js"></script>
+    <script>
+        $('.hapus').click(function(x){
+            x.preventDefault();
+        });
+    </script>
 {% endblock %}

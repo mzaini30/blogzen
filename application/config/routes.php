@@ -57,6 +57,7 @@ $route['keluar'] = 'login/keluar';
 $route['masuk'] = 'login';
 
 $route['backup'] = 'admin/amankan';
-$route['tulisan-baru'] = 'admin/tulisan_baru';
 
 $route['baca/(:any)'] = 'pembaca/detail/$1';
+$route['baca/(:any)/edit'] = 'admin/edit/$1';
+$route['tulisan-baru'] = 'admin/tulisan_baru';

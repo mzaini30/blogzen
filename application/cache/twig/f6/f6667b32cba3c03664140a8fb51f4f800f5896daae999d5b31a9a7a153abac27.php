@@ -65,9 +65,37 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     \t</div>
     </div>
 
-    ";
-        // line 37
-        echo "                                
+    
+        <div id=\"disqus_thread\"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+        this.page.url = '";
+        // line 24
+        echo twig_escape_filter($this->env, site_url(), "html", null, true);
+        echo "baca/";
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+        echo "';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '";
+        // line 25
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+        echo "'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://zenheroku.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+    
+                                
 ";
     }
 
@@ -80,16 +108,23 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
             // line 42
             echo "        <div class=\"panel panel-default\">
             <div class=\"panel-heading\">Postingan</div>
-            <div class=\"list-group\"></div>
+            <div class=\"list-group\">
+                <a href=\"";
+            // line 45
+            echo twig_escape_filter($this->env, site_url(), "html", null, true);
+            echo "baca/";
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "slug", []), "html", null, true);
+            echo "/edit\" class=\"list-group-item\">Edit</a>
+            </div>
         </div>
     ";
         }
     }
 
-    // line 49
+    // line 51
     public function block_head($context, array $blocks = [])
     {
-        // line 50
+        // line 52
         echo "    <style>
 \t\t.konten {
 \t\t\twhite-space: pre-wrap;
@@ -110,7 +145,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
 
     public function getDebugInfo()
     {
-        return array (  93 => 50,  90 => 49,  81 => 42,  78 => 41,  75 => 40,  70 => 37,  63 => 11,  58 => 9,  55 => 8,  52 => 7,  45 => 4,  42 => 3,  32 => 1,);
+        return array (  128 => 52,  125 => 51,  114 => 45,  109 => 42,  106 => 41,  103 => 40,  85 => 25,  79 => 24,  63 => 11,  58 => 9,  55 => 8,  52 => 7,  45 => 4,  42 => 3,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -137,7 +172,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     \t</div>
     </div>
 
-    {#
+    
         <div id=\"disqus_thread\"></div>
         <script>
 
@@ -158,7 +193,7 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
         })();
         </script>
         <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
-    #}
+    
                                 
 {% endblock %}
 
@@ -166,7 +201,9 @@ class __TwigTemplate_dfa8fc8ffea4ab836cc2c3ad0eab627eea9b35947e3897f239a11cf94ad
     {% if status == 'masuk' %}
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\">Postingan</div>
-            <div class=\"list-group\"></div>
+            <div class=\"list-group\">
+                <a href=\"{{ site_url() }}baca/{{ data.slug }}/edit\" class=\"list-group-item\">Edit</a>
+            </div>
         </div>
     {% endif %}
 {% endblock %}
