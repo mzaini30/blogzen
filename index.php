@@ -1,2 +1,2 @@
 <?php
-echo "Halo semuanya";
+header("Location: https://mzaini30.com");
