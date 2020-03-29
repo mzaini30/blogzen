@@ -24,6 +24,6 @@ Beh, kalau domain dotcom mah, tiap tahun mesti bayar tuh 120 ribu. Walaupun mura
 
 	{{< highlight javascript >}}
 	"kucing": "myblog.github.io/kucing",
-	{{< /highlight }}>
+	{{< /highlight >}}
 	
 	Ingat ya, harus berurutan ya ngelistnya.
