@@ -9,7 +9,7 @@ categories:
 
 Siapa sih yang nggak mau sama gratisan? Apalagi kalau gratis domain? Wow banget nggak tuh?
 
-Nah, untungnya nih ya, `js.org` menyediakan domain gratis. Misalnya aja kayak blogku ini, [blgozen.js.org](https://blogzen.js.org). Jadi, domain ini gratis selamanya, yang penting selama nggak dipakai untuk melakukan aktivitas ilegal.
+Nah, untungnya nih ya, `js.org` menyediakan domain gratis. Misalnya aja kayak blogku ini, [blogzen.js.org](https://blogzen.js.org). Jadi, domain ini gratis selamanya, yang penting selama nggak dipakai untuk melakukan aktivitas ilegal.
 
 Beh, kalau domain dotcom mah, tiap tahun mesti bayar tuh 120 ribu. Walaupun murah, duit ya tetep duit kan ya? Maunya sih gratis.
 
