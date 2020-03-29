@@ -1,0 +1,8 @@
+{{ $acak := index (seq 999 | shuffle) 0 }}
+
+<div class="tes-{{ $acak }}"></div>
+<script src="/pug.js"></script>
+<script>
+  pug = require("pug")
+  document.querySelector(".tes-{{ $acak }}").innerHTML = pug.render("{{ .Inner }}")
+</script>

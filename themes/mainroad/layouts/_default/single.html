@@ -1,0 +1,64 @@
+{{ define "main" }}
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">{{ .Title }}</h1>
+			{{- with .Params.lead }}
+			<p class="post__lead">{{ . }}</p>
+			{{- end }}
+			{{ with partial "post_meta.html" . -}}
+			<div class="post__meta meta">{{ . }}</div>
+			{{- end }}
+		</header>
+		{{- if .Params.thumbnail }}
+		<figure class="post__thumbnail">
+			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
+		</figure>
+		{{- end }}
+		{{- partial "post_toc.html" . -}}
+		<div class="content post__content clearfix">
+			{{- if .Params.cari }}
+				<div class="hasil-pencarian"></div>
+				<script type="text/javascript">
+					yang_dicari = location.search.split('?q=')[1]
+					fetch('/index.json').then(res => res.json()).then(data => {
+						teks = []
+						for (x of data){
+							if (x.content.includes(yang_dicari) || x.date.includes(yang_dicari) || x.description.includes(yang_dicari) || x.permalink.includes(yang_dicari) || x.thumbnail.includes(yang_dicari) || x.title.includes(yang_dicari)){
+								teks.push(`
+									<article class="list__item post">
+										<figure class="list__thumbnail">
+											<a href="${x.permalink}">
+												<img src="${x.thumbnail}" alt="${x.title}" />
+											</a>
+										</figure>
+										<header class="list__header">
+											<h3 class="list__title post__title ">
+												<a href="${x.permalink}" rel="bookmark">
+													${x.title}
+												</a>
+											</h3>
+										</header>
+										<div class="content list__excerpt post__content clearfix">
+											${x.summary}
+										</div>
+									</article>`)
+							}
+						}
+						document.querySelector('.hasil-pencarian').innerHTML = teks.join('')
+					})
+				</script>
+			{{- end }}
+			{{ .Content }}
+		</div>
+		{{- if .Params.tags }}
+		<footer class="post__footer">
+			{{ partial "post_tags.html" . }}
+		</footer>
+		{{- end }}
+	</article>
+</main>
+{{ partial "authorbox.html" . }}
+{{ partial "post_nav.html" . }}
+{{ partial "comments.html" . }}
+{{ end }}
