@@ -22,6 +22,8 @@ Beh, kalau domain dotcom mah, tiap tahun mesti bayar tuh 120 ribu. Walaupun mura
 - Buat CNAME yang berisi domain JS.ORG yang mau kamu gunakan. Misalnya aja `kucing.js.org`.
 - Masukkan domain website yang ingin kamu pesan [di list JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format:
 
-	```javascript
+	{{< highlight javascript >}}
 	"kucing": "myblog.github.io/kucing",
-	```
+	{{< /highlight }}>
+	
+	Ingat ya, harus berurutan ya ngelistnya.
