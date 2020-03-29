@@ -20,10 +20,6 @@ Beh, kalau domain dotcom mah, tiap tahun mesti bayar tuh 120 ribu. Walaupun mura
 	Oh ya, kalau yang berbasis Github ini, kan yang kita tau dia cuma pakai Jekyll, sebenarnya bisa aja sih pakai SSG lain. Misalnya aja [Hugo](/post/deploy-hugo-di-github/). Kamu juga bisa pakai SSG lainnya seperti Hexo, Gitbook, Vuepress, React Static, Gridsome, Gatsby, Next JS, Nuxt JS, dan lain sebagainya. Kamu bisa cek [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) yang memuat berbagai Github Action yang bisa digunakan untuk deploy.
 
 - Buat CNAME yang berisi domain JS.ORG yang mau kamu gunakan. Misalnya aja `kucing.js.org`.
-- Masukkan domain website yang ingin kamu pesan [di list JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format:
+- Masukkan domain website yang ingin kamu pesan [di list JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format: `"kucing": "myblog.github.io/kucing",`
 
-	{{< highlight javascript >}}
-	"kucing": "myblog.github.io/kucing",
-	{{< /highlight >}}
-	
 	Ingat ya, harus berurutan ya ngelistnya.
