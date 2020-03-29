@@ -1,4 +1,4 @@
-baseurl = "https://mzaini30.com/"
+baseurl = "https://blogzen.js.org/"
 title = "Zen"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
