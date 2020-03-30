@@ -35,3 +35,13 @@ Atau contoh yang lebih panjang sedikit deh:
 	console.log(sekarang_ini)
 </script>
 ```
+
+Nah, sekarang kita akan mendapatkan waktu saat ini di console browser kita.
+
+Selain menampilkan secara eksplisit kode Javascript kita, kita bisa juga meletakkan kode Javascript di eksternal (file terpisah) lalu memanggilnya di file HTML kita. Kodenya seperti ini:
+
+```html
+<script src='app.js'></script>
+```
+
+Nah, `app.js` itu adalah file Javascript yang ingin kita panggil di file HTML kita.
