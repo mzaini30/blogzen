@@ -24,5 +24,8 @@ Berikut ini adalah beberapa keuntungan jika kamu hosting di Github:
 	Oh iya, kalau kamu ingin menggunakan Github Pages yang gratis ini, berarti repositori yang kamu miliki untuk menampilkannya itu harus publik, nggak bisa private. Kalau private, berarti kamu harus bayar berapa dolar gitu setiap bulannya ke Github. Ya, nggak masalah sih. Toh, kalau misalnya konten-konten ingin kita tampilkan ke website, berarti kan memang untuk publik kan?
 
 - Memori penyimpanan yang besar
+
+	Github bukan menyediakan ukuran repositori yang unlimited. Ya tetap ada batasannya sih. Batasan tiap repositori itu 1 GB. Kalau lebih dari itu ya nggak tau juga sih soalnya nggak pernah cari infonya. Tapi kan 1 GB itu besar banget apalagi kalau kita ngeblog kan teks aja. Gambarnya upload ke tempat lain.
+
 - Memori maksimal satu file yang besar
 - Bisa edit offline
