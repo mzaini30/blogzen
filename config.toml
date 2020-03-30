@@ -63,6 +63,10 @@ pygmentsStyle = "monokai"
   title = "Portofolio"
   url = "https://mzaini30.js.org"
   icon = "svg/instagram.svg" # Optional. Path relative to "layouts/partials"
+[[Params.widgets.social.custom]]
+  title = "Sponsor"
+  url = "https://karyakarsa.com/checkout/3751"
+  icon = "svg/telegram.svg" # Optional. Path relative to "layouts/partials"
 
 # [[Params.widgets.social.custom]]
   # title = "My Home Page"
