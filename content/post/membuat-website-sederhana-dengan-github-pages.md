@@ -12,3 +12,17 @@ Pertama, kamu harus punya akun dulu di Github. Kalau belum ada, buat aja dulu.
 Nah, perhatikan tuh nama usernamemu apa. Misalnya aja `kucing`.
 
 Berarti, kamu buat repositori baru dengan nama `kucing.github.io`. Secara otomatis, kamu memiliki website dengan alamat `http://kucing.github.io`.
+
+## Apa sih keuntungan hosting di Github?
+
+Berikut ini adalah beberapa keuntungan jika kamu hosting di Github:
+
+- Gratis
+
+	Yap, ini adalah pamungkas dari segala sesuatu. Siapa sih yang nggak mau serba gratis? Bahkan, domain aja ada yang [gratis](/post/yuk-dapatkan-domain-gratis-js-dot-org/). Jadi ya kalau bisa gratis, kenapa sih harus sewa? Hehehehe...
+
+	Oh iya, kalau kamu ingin menggunakan Github Pages yang gratis ini, berarti repositori yang kamu miliki untuk menampilkannya itu harus publik, nggak bisa private. Kalau private, berarti kamu harus bayar berapa dolar gitu setiap bulannya ke Github. Ya, nggak masalah sih. Toh, kalau misalnya konten-konten ingin kita tampilkan ke website, berarti kan memang untuk publik kan?
+
+- Memori penyimpanan yang besar
+- Memori maksimal satu file yang besar
+- Bisa edit offline
