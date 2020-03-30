@@ -2,7 +2,7 @@
 title: "Apa Sih Kehebatannya Javascript"
 description: "Yuk kita mengupas kehebatannya Javascript"
 date: "2020-03-31T05:58:53+08:00"
-thumbnail: ""
+thumbnail: "https://cdn1.macworld.co.uk/cmsdata/features/3640222/learn_javascript_on_mac_thumb800.jpg"
 categories:
   - "website"
 ---
