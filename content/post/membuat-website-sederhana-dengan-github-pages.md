@@ -27,5 +27,6 @@ Berikut ini adalah beberapa keuntungan jika kamu hosting di Github:
 
 	Github bukan menyediakan ukuran repositori yang unlimited. Ya tetap ada batasannya sih. Batasan tiap repositori itu 1 GB. Kalau lebih dari itu ya nggak tau juga sih soalnya nggak pernah cari infonya. Tapi kan 1 GB itu besar banget apalagi kalau kita ngeblog kan teks aja. Gambarnya upload ke tempat lain.
 
-- Memori maksimal satu file yang besar
 - Bisa edit offline
+
+	Karena secara defaultnya Github Pages ini mendukung Jekyll, jadi kamu bisa install dan jalankan Jekyll di laptopmu untuk mengisi repositorimu.
