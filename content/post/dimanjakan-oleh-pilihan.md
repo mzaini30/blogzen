@@ -26,4 +26,4 @@ Ya, itulah kita. Selalu pintar mencari alasan. Apakah dengan alasan itu membuat 
 
 Di postingan itu intinya ya bukan kita tu bisa atau nggak bisa dalam menyelesaikan suatu quest. Bukan juga mau atau nggak mau. Tapi kita **harus maju** karena memang kita harus menyelesaikannya.
 
-Asli memang tulisan itu inspiratif banget buatku. Jadi memang **mulai aja dulu** bener-bener penting dalam menghadapi berbagaj quest di hadapan kita.
+Asli memang tulisan itu inspiratif banget buatku. Jadi memang **mulai aja dulu** bener-bener penting dalam menghadapi berbagai quest di hadapan kita.
