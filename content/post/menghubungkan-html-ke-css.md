@@ -1,6 +1,6 @@
 ---
 title: "Menghubungkan Html Ke Css"
-description: ""
+description: "Ini adalah cara menghubungkan HTML ke CSS"
 date: "2020-03-31T08:02:27+08:00"
 thumbnail: ""
 categories:
