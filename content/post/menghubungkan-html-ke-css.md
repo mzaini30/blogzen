@@ -15,3 +15,9 @@ style.css
 ```
 
 Bagaimana cara menghubungkannya?
+
+Jadi, di `index.html`, masukkan kode seperti di bawah ini (di antara `<head>` dan `</head>`):
+
+```html
+<link rel='stylesheet' href='style.css'>
+```
