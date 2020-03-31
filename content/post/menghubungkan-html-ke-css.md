@@ -2,9 +2,9 @@
 title: "Menghubungkan Html Ke Css"
 description: "Ini adalah cara menghubungkan HTML ke CSS"
 date: "2020-03-31T08:02:27+08:00"
-thumbnail: ""
+thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/548px-CSS.3.svg.png"
 categories:
-  - ""
+  - "website"
 ---
 
 Misalnya kita punya file:
