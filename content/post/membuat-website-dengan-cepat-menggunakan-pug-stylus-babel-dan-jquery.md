@@ -495,3 +495,5 @@ olah_data();
 ```
 
 Lihat kan? Ternyata membuat website itu mudah banget.
+
+Source code dari latihan ini bisa dilihat di <https://github.com/mzaini30/latihan-pug>
