@@ -1,5 +1,5 @@
 ---
-title: "Membuat Website Dengan Cepat Menggunakan Pug, Stylus, dan Babel"
+title: "Membuat Website Dengan Cepat Menggunakan Pug, Markdown, Stylus, dan Babel"
 description: "Masih pakai HTML untuk membuat website? Coba deh cara ini"
 date: "2020-03-31T08:32:15+08:00"
 thumbnail: "https://stylus-lang.net/Application/Home/View/Public/img/stylus-logo.svg"
