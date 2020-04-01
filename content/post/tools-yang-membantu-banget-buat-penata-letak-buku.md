@@ -48,18 +48,18 @@ print("""Bagaimana kondisi PDFnya?
 jawaban = int(input("> "))
 
 if jawaban == 1:
-    halaman = int(input("Halaman pertama: "))
+  halaman = int(input("Halaman pertama: "))
 
-    while True:
-        cari = int(input("Halaman yang dicari: "))
-        print(f"Cari {cari + halaman - 1}")
+  while True:
+    cari = int(input("Halaman yang dicari: "))
+    print(f"Cari {cari + halaman - 1}")
 
 elif jawaban == 2:
-    halaman = int(input("Nomor halaman pertama: "))
+  halaman = int(input("Nomor halaman pertama: "))
 
-    while True:
-        cari = int(input("Halaman yang dicari: "))
-        print(f"Cari {cari - halaman + 1}")
+  while True:
+    cari = int(input("Halaman yang dicari: "))
+    print(f"Cari {cari - halaman + 1}")
 ```
 
 Nah, file itu kamu taro di `~/bin/` biar gampang diaksesnya karena itu Pathnya Linux.
