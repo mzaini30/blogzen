@@ -21,6 +21,6 @@ Jadi, sebenarnya, memiliki ide itu gampang karena **ide itu selalu datang**. Cum
 
 Makanya, aku membuat [situs](https://mzaini30.js.org/ide/) supaya kita bisa cekatan dalam menangkap ide.
 
-{{< web "mzaini30.github.io/ide" >}}
+{{< web "mzaini30.js.org/ide" >}}
 
 Jadi, dengan website itu, kita bisa segera mencatat kalau ide datang. Jadi ada ide, catat. Dapat ide lagi, langsung catat. Begitu seterusnya sehingga kita nggak akan pernah kehabisan ide untuk melakukan sesuatu.
