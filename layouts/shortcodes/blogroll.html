@@ -2,38 +2,7 @@
 	<h2>{{ .nama }}</h2>
 	<p>
 		<a href="//{{ .link }}">
-			<img class="lazyload" src="https://i.ibb.co/F0zbyrb/IMG-20200318-075012.jpg" data-src="https://s-ssl.wordpress.com/mshots/v1/{{ .link }}?w=400" loading="lazy" />
+			<img src="https://s-ssl.wordpress.com/mshots/v1/{{ .link }}?w=400" target='_blank'>
 		</a>
 	</p>
 {{ end }}
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var lazyImages = [].slice.call(document.querySelectorAll(".lazyload"));
-
-        if ("IntersectionObserver" in window) {
-            let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-                        let lazyImage = entry.target;
-                        if (lazyImage.dataset.src != undefined)
-                            lazyImage.src = lazyImage.dataset.src;
-                        if (lazyImage.dataset.srcset != undefined)
-                            lazyImage.srcset = lazyImage.dataset.srcset;
-
-                        lazyImage.classList.add("lazyloaded");
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function (lazyImage) {
-                lazyImageObserver.observe(lazyImage);
-            });
-        } else {
-            // Possibly fall back to a more compatible method here
-            console.log("Browser Not supported, please upgrade!");
-        }
-    });
-</script>
