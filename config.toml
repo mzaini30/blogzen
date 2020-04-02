@@ -60,6 +60,10 @@ pygmentsStyle = "monokai"
 
 # Custom social links
 [[Params.widgets.social.custom]]
+  title = "Blogroll"
+  url = "/page/blogroll"
+  icon = "svg/email.svg" # Optiona
+[[Params.widgets.social.custom]]
   title = "Portofolio"
   url = "https://mzaini30.js.org"
   icon = "svg/instagram.svg" # Optional. Path relative to "layouts/partials"

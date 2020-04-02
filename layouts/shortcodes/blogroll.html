@@ -1,0 +1,8 @@
+{{ range .Site.Data.blogroll }}
+	<h2>{{ .nama }}</h2>
+	<p>
+		<a href="//{{ .link }}">
+			<img src="https://s-ssl.wordpress.com/mshots/v1/{{ .link }}?w=900">
+		</a>
+	</p>
+{{ end }}
