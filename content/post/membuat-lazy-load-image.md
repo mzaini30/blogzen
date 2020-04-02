@@ -7,6 +7,14 @@ categories:
   - "website"
 ---
 
+Pernah nggak, kamu membuat suatu artikel yang banyak sekali gambarnya? Mungkin 10 gambar. Atau, 20 gambar. Apa 100 gambar? Beh.
+
+Terus bagaimana cara mengatasinya? Kan, nanti jadinya lambat banget tuh websitenya.
+
+Nah, kita pakai teknik lazy load supaya nanti dari 100 gambar yang berbeda-beda itu, yang kita muat satu gambar aja. Entah itu gambar animasi loading. Atau gambar apa lah itu. Nah, baru nanti satu per satu dia muncul gambar aslinya.
+
+## Mulai ngoding
+
 Berikut ini kode HTML untuk gambarnya:
 
 ```html
