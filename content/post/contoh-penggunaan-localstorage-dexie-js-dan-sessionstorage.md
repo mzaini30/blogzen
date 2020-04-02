@@ -2,7 +2,7 @@
 title: "Contoh Penggunaan localStorage, Dexie JS, Dan sessionStorage"
 description: "Ini adalah berbagai penyimpanan local di browser"
 date: "2020-04-02T04:51:18Z"
-thumbnail: "https://meridadesignblog.com/wp-content/uploads/2016/10/dexie-js.jpg"
+thumbnail: "http://www.essentialsql.com/wp-content/uploads/2014/05/database-parts.jpg"
 categories:
   - "website"
 ---
