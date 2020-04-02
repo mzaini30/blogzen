@@ -7,4 +7,6 @@ categories:
   - "website"
 ---
 
-{{< blogroll >}}
+[Tambahkan situsmu](https://github.com/mzaini30/blogzen/blob/master/data/blogroll.yml)
+
+{{< blogroll >}} 
