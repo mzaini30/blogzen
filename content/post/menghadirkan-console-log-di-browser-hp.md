@@ -1,10 +1,10 @@
 ---
 title: "Menghadirkan Console Log Di Browser Hp"
-description: ""
+description: "Bingung ya nggak ada console.log() di HP?"
 date: "2020-04-02T21:46:51Z"
-thumbnail: ""
+thumbnail: "https://www.cbronline.com/wp-content/uploads/2017/03/hoodedhacker.jpg"
 categories:
-  - ""
+  - "website"
 ---
 
 Pernah nggak kamu mengerjakan suatu proyek website terus kodenya nggak berjalan sesuai keinginan, tapi kan di HP nggak ada `console.log()`. Terus gimana dong?
