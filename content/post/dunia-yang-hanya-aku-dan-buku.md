@@ -1,10 +1,10 @@
 ---
 title: "Dunia Yang Hanya Aku Dan Buku"
-description: ""
+description: "Tanpa kamu"
 date: "2020-04-02T14:53:22Z"
-thumbnail: ""
+thumbnail: "https://i.ibb.co/F0zbyrb/IMG-20200318-075012.jpg"
 categories:
-  - ""
+  - "menulis"
 ---
 
 Oke, aku ngetik di HP lagi...
