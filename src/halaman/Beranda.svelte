@@ -1,12 +1,11 @@
-<form>
+<form on:submit|preventDefault={cari}>
 	<div class="form-group">
-		<label for="cari">Cari</label>
-		<input type="search" id="cari" class="form-control" placeholder="Cari apa?" required="" name="">
+		<input type="search" class="form-control" bind:value={teks_cari} placeholder="Cari apa?" required name="">
 	</div>
 </form>
-<div class="list-group list-postingan">
+<div class="list-group jarak-bawah">
 	{#each Array(10) as _}
-		<a href="/" class="list-group-item list-group-item-action" use:link>Hello world</a>
+		<a href="/hello-world" class="list-group-item list-group-item-action" use:link>Hello world</a>
 	{/each}
 </div>
 <div class="bawah">
@@ -18,17 +17,19 @@
 </div>
 
 <script type="text/javascript">
-	import {link} from 'svelte-spa-router'
+	import {link, push} from 'svelte-spa-router'
 	let login = false
+	let teks_cari = ''
+	const cari = () => push(`/cari/${encodeURIComponent(teks_cari)}`)
 </script>
 
 <style type="text/css">
-	.bawah {
+	:global(.bawah) {
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
 	}
-	.list-postingan {
-		margin-bottom: 80px;
+	:global(.jarak-bawah) {
+		margin-bottom: 80px !important;
 	}
 </style>

@@ -5,17 +5,18 @@
 	<a href="/" class="navbar-brand" use:link>Blog Zen</a>
 </div>
 <div class="container">
-	<Router {routes}/>
+	<Router {routes} on:routeLoaded={route_loaded}/>
 </div>
 
 <script type="text/javascript">
 	import {link} from 'svelte-spa-router'
 	import Router from 'svelte-spa-router'
 	import {routes} from './routes.js'
+	const route_loaded = () => window.scrollTo(0, 0)
 </script>
 
 <style type="text/css">
 	.container {
-		padding-top: 50px;
+		padding-top: 70px;
 	}
 </style>
