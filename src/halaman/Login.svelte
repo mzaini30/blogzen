@@ -31,6 +31,7 @@
 			if (y == 'salah'){
 				username = ''
 				password = ''
+				ref.focus()
 			} else {
 				localStorage.setItem('token', y)
 				push('/')

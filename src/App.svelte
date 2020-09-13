@@ -1,7 +1,7 @@
 <svelte:head>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<script type="text/javascript">
-		api = 'http://localhost/blogzen'
+		api = 'https://mzaini30.nasihosting.com/blogzen'
 	</script>
 </svelte:head>
 <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">

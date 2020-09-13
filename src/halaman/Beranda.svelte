@@ -12,7 +12,7 @@
 	{#if login == false}
 		<a href="/login" use:link class="btn btn-info">&#x2618;</a>
 	{:else}
-		<button class="btn btn-danger">&#x2623;</button>
+		<button class="btn btn-danger" on:click={keluar}>&#x2623;</button>
 		<a href="/tulis" use:link class="btn btn-info">&#x270E;</a>
 	{/if}
 </div>
@@ -23,6 +23,10 @@
 	let login = false
 	let teks_cari = ''
 	let data = []
+	const keluar = () => {
+		localStorage.removeItem('token')
+		login = false
+	}
 	onMount(() => {
 		if (localStorage.token) {
 			login = true
