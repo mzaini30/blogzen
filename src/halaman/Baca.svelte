@@ -25,18 +25,12 @@
 		if (localStorage.token) {
 			login = true
 		}
-		fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
+		fetch(`${api}/index.php/postingan/detail/${params.slug}?${Math.random()}`).then(x => x.json()).then(y => data = y)
 	})
 	const hapus = () => {
 		const tanya = confirm('Hapus kah?')
 		if (tanya){
-			fetch(`${api}/index.php/admin/${localStorage.token}/hapus/${params.slug}`).then(push('/'))
+			fetch(`${api}/index.php/admin/${localStorage.token}/hapus/${params.slug}?${Math.random()}`).then(push('/'))
 		}
 	}
 </script>
-
-<style type="text/css">
-	:global(blockquote) {
-		font-style: italic;
-	}
-</style>

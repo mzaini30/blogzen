@@ -34,7 +34,7 @@
 		if (localStorage.token) {
 			login = true
 		}
-		fetch(`${api}/index.php/postingan/semua`).then(x => x.json()).then(y => data = y)
+		fetch(`${api}/index.php/postingan/semua?${Math.random()}`).then(x => x.json()).then(y => data = y)
 	})
 	const cari = () => push(`/cari/${encodeURIComponent(teks_cari)}`)
 </script>

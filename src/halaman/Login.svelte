@@ -27,7 +27,7 @@
 		let body = new FormData
 		body.append('username', username)
 		body.append('password', password)
-		fetch(`${api}/index.php/login/cek`, {
+		fetch(`${api}/index.php/login/cek?${Math.random()}`, {
 			method: 'post', 
 			body
 		}).then(x => x.json()).then(y => {
