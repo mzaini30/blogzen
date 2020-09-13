@@ -21,11 +21,11 @@
 		judul: '',
 		isi: ''
 	}
-	onMount(() => {
+	onMount(async () => {
 		if (localStorage.token) {
 			login = true
 		}
-		fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
+		await fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
 	})
 	const hapus = () => {
 		const tanya = confirm('Hapus kah?')

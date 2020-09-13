@@ -30,11 +30,11 @@
 		localStorage.removeItem('token')
 		login = false
 	}
-	onMount(() => {
+	onMount(async () => {
 		if (localStorage.token) {
 			login = true
 		}
-		fetch(`${api}/index.php/postingan/semua`).then(x => x.json()).then(y => data = y)
+		await fetch(`${api}/index.php/postingan/semua`).then(x => x.json()).then(y => data = y)
 	})
 	const cari = () => push(`/cari/${encodeURIComponent(teks_cari)}`)
 </script>
