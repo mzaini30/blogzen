@@ -8,6 +8,9 @@
 		<a href="/login" use:link class="btn btn-info">&#x2618;</a>
 	{/if}
 </div>
+<svelte:head>
+	<title>{data.judul}</title>
+</svelte:head>
 
 <script type="text/javascript">
 	import {link, push} from 'svelte-spa-router'

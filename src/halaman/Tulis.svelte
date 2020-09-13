@@ -9,6 +9,9 @@
 		<input type="submit" class="btn btn-success float-right" value="&#x2714;" name="">
 	</div>
 </form>
+<svelte:head>
+	<title>Tulis</title>
+</svelte:head>
 
 <script type="text/javascript">
 	import {onMount} from 'svelte'

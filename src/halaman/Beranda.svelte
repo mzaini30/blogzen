@@ -16,6 +16,9 @@
 		<a href="/tulis" use:link class="btn btn-info">&#x270E;</a>
 	{/if}
 </div>
+<svelte:head>
+	<title>Blog Zen</title>
+</svelte:head>
 
 <script type="text/javascript">
 	import {link, push} from 'svelte-spa-router'

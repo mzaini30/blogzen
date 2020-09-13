@@ -12,6 +12,9 @@
 		<input type="submit" name="" class="btn btn-success" value="&#x2714;">
 	</div>
 </form>
+<svelte:head>
+	<title>Login</title>
+</svelte:head>
 
 <script type="text/javascript">
 	import {push} from 'svelte-spa-router'
