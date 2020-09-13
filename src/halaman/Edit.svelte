@@ -23,9 +23,9 @@
 		markdown: ''
 	}
 	export let params = {}
-	onMount(async () => {
+	onMount(() => {
 		ref.focus()
-		await fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
+		fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
 		const ukur_tinggi = () => tinggi_textarea.style.height = `${window.innerHeight - 200}px`
 		window.addEventListener('resize', ukur_tinggi)
 		ukur_tinggi()
