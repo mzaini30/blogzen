@@ -4,22 +4,31 @@
 	</div>
 </form>
 <div class="list-group jarak-bawah">
-	{#each Array(10) as _}
-		<a href="/hello-world" class="list-group-item list-group-item-action" use:link>Hello world</a>
+	{#each data as x}
+		<a href="/{x.slug}" class="list-group-item list-group-item-action" use:link>{x.judul}</a>
 	{/each}
 </div>
 <div class="bawah">
 	{#if login == false}
 		<a href="/login" use:link class="btn btn-info">&#x2618;</a>
 	{:else}
+		<button class="btn btn-danger">&#x2623;</button>
 		<a href="/tulis" use:link class="btn btn-info">&#x270E;</a>
 	{/if}
 </div>
 
 <script type="text/javascript">
 	import {link, push} from 'svelte-spa-router'
+	import {onMount} from 'svelte'
 	let login = false
 	let teks_cari = ''
+	let data = []
+	onMount(() => {
+		if (localStorage.token) {
+			login = true
+		}
+		fetch(`${api}/index.php/postingan/semua`).then(x => x.json()).then(y => data = y)
+	})
 	const cari = () => push(`/cari/${encodeURIComponent(teks_cari)}`)
 </script>
 

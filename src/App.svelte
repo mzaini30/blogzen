@@ -1,5 +1,8 @@
 <svelte:head>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript">
+		api = 'http://localhost/blogzen'
+	</script>
 </svelte:head>
 <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 	<a href="/" class="navbar-brand" use:link>Blog Zen</a>
