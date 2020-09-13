@@ -5,7 +5,7 @@
     "App.svelte"
   ],
   "sourcesContent": [
-    "<svelte:head>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"bootstrap.min.css\">\n</svelte:head>\n<div class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n\t<a href=\"/\" class=\"navbar-brand\" use:link>Blog Zen</a>\n</div>\n<div class=\"container\">\n\t<Router {routes}/>\n</div>\n\n<script type=\"text/javascript\">\n\timport {link} from 'svelte-spa-router'\n\timport Router from 'svelte-spa-router'\n\timport {routes} from './routes.js'\n</script>\n\n<style type=\"text/css\">\n\t.container {\n\t\tpadding-top: 70px;\n\t}\n</style>"
+    "<svelte:head>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"bootstrap.min.css\">\n</svelte:head>\n<div class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n\t<a href=\"/\" class=\"navbar-brand\" use:link>Blog Zen</a>\n</div>\n<div class=\"container\">\n\t<Router {routes}/>\n</div>\n\n<script type=\"text/javascript\">\n\timport {link} from 'svelte-spa-router'\n\timport Router from 'svelte-spa-router'\n\timport {routes} from './routes.js'\n</script>\n\n<style type=\"text/css\">\n\t.container {\n\t\tpadding-top: 50px;\n\t}\n</style>"
   ],
   "names": [],
   "mappings": "AAiBC,UAAU,eAAC,CAAC,AACX,WAAW,CAAE,IAAI,AAClB,CAAC"
