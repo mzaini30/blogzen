@@ -16,6 +16,6 @@
 
 <style type="text/css">
 	.container {
-		padding-top: 70px;
+		padding-top: 50px;
 	}
 </style>
