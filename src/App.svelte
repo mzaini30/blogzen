@@ -17,5 +17,5 @@
 <style type="text/css">
 	.container {
 		padding-top: 50px;
-	}
+	} 
 </style>
