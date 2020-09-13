@@ -1,6 +1,7 @@
 <form>
 	<div class="form-group">
-		<input type="search" class="form-control" placeholder="Cari" required="" name="">
+		<label for="cari">Cari</label>
+		<input type="search" id="cari" class="form-control" placeholder="Cari apa?" required="" name="">
 	</div>
 </form>
 <div class="list-group list-postingan">
@@ -10,9 +11,9 @@
 </div>
 <div class="bawah">
 	{#if login == false}
-		<a href="/" use:link class="btn btn-info">&#x2618;</a>
+		<a href="/login" use:link class="btn btn-info">&#x2618;</a>
 	{:else}
-		<a href="/" use:link class="btn btn-info">&#x270E;</a>
+		<a href="/tulis" use:link class="btn btn-info">&#x270E;</a>
 	{/if}
 </div>
 
