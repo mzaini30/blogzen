@@ -25,7 +25,7 @@
 	export let params = {}
 	onMount(() => {
 		ref.focus()
-		fetch(`${api}/index.php/postingan/detail/${params.slug}?${Math.random()}`).then(x => x.json()).then(y => data = y)
+		fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
 		const ukur_tinggi = () => tinggi_textarea.style.height = `${window.innerHeight - 200}px`
 		window.addEventListener('resize', ukur_tinggi)
 		ukur_tinggi()
@@ -34,7 +34,7 @@
 		let body = new FormData
 		body.append('judul', data.judul)
 		body.append('isi', data.markdown)
-		fetch(`${api}/index.php/admin/${localStorage.token}/update/${params.slug}?${Math.random()}`, {
+		fetch(`${api}/index.php/admin/${localStorage.token}/update/${params.slug}`, {
 			method: 'post',
 			body
 		}).then(push(`/${params.slug}`))

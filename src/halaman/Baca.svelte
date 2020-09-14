@@ -3,9 +3,9 @@
 <div class="bawah">
 	{#if login == true}
 		<button class="btn btn-danger" on:click={hapus}>&#x2717;</button>
-		<a href="/{params.slug}/edit" use:link class="btn btn-info">&#x2710;</a>
+		<a href="#/{params.slug}/edit" class="btn btn-info">&#x2710;</a>
 	{:else}
-		<a href="/login" use:link class="btn btn-info">&#x2618;</a>
+		<a href="#/login" class="btn btn-info">&#x2618;</a>
 	{/if}
 </div>
 <svelte:head>
@@ -25,12 +25,12 @@
 		if (localStorage.token) {
 			login = true
 		}
-		fetch(`${api}/index.php/postingan/detail/${params.slug}?${Math.random()}`).then(x => x.json()).then(y => data = y)
+		fetch(`${api}/index.php/postingan/detail/${params.slug}`).then(x => x.json()).then(y => data = y)
 	})
 	const hapus = () => {
 		const tanya = confirm('Hapus kah?')
 		if (tanya){
-			fetch(`${api}/index.php/admin/${localStorage.token}/hapus/${params.slug}?${Math.random()}`).then(push('/'))
+			fetch(`${api}/index.php/admin/${localStorage.token}/hapus/${params.slug}`).then(push('/'))
 		}
 	}
 </script>

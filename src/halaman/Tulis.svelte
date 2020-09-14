@@ -24,7 +24,7 @@
 		let body = new FormData
 		body.append('judul', judul)
 		body.append('isi', isi)
-		fetch(`${api}/index.php/admin/${localStorage.token}/tulis?${Math.random()}`, {
+		fetch(`${api}/index.php/admin/${localStorage.token}/tulis`, {
 			method: 'post',
 			body
 		}).then(x => x.json()).then(y => push(`/${y}`))

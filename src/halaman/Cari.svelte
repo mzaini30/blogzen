@@ -5,7 +5,7 @@
 </form>
 <div class="list-group">
 	{#each data as x}
-		<a href="/{x.slug}" class="list-group-item list-group-item-action" use:link>{x.judul}</a>
+		<a href="#/{x.slug}" class="list-group-item list-group-item-action">{x.judul}</a>
 	{/each}
 </div>
 
@@ -15,10 +15,12 @@
 	let teks_cari
 	let data = []
 	export let params = {}
-	let body = new FormData
 	const pencarian = () => {
 		if (params.cari) {
-			fetch(`${api}/index.php/postingan/cari?${Math.random()}`, {
+			let body = new FormData
+			body.append('cari', decodeURIComponent(params.cari))
+			teks_cari = decodeURIComponent(params.cari)
+			fetch(`${api}/index.php/postingan/cari`, {
 				method: 'post',
 				body
 			}).then(x => x.json()).then(y => {
@@ -39,18 +41,10 @@
 		}
 	}
 	const cari = () => {
-		push(`/cari/${encodeURIComponent(teks_cari)}`).then(() => {
-			if (params.cari) {
-				body.append('cari', teks_cari)
-			}
-			pencarian()
-		})
+		push(`/cari/${encodeURIComponent(teks_cari)}`)
 	}
-	onMount(() => {
-		if (params.cari) {
-			body.append('cari', decodeURIComponent(params.cari))
-			teks_cari = decodeURIComponent(params.cari)
-		}
+	onMount(() => pencarian())
+	$: if (params.cari){
 		pencarian()
-	})
+	}
 </script>
