@@ -18,7 +18,7 @@
 	let body = new FormData
 	const pencarian = () => {
 		if (params.cari) {
-			fetch(`${api}/index.php/postingan/cari`, {
+			fetch(`${api}/index.php/postingan/cari?${Math.random()}`, {
 				method: 'post',
 				body
 			}).then(x => x.json()).then(y => {
