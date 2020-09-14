@@ -1,5 +1,4 @@
 <svelte:head>
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<script type="text/javascript">
 		api = 'https://mzaini30.nasihosting.com/blogzen'
 	</script>
