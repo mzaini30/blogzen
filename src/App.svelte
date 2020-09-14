@@ -1,6 +1,7 @@
 <svelte:head>
 	<script type="text/javascript">
 		api = 'https://mzaini30.nasihosting.com/blogzen'
+		// api = 'http://localhost/blogzen'
 	</script>
 </svelte:head>
 <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
