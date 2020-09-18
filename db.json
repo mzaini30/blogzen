@@ -1,0 +1,114 @@
+{
+	"postingan": [
+		{
+			"id": 1,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 2,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 3,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 4,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 5,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 6,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 7,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 8,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 9,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 10,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 11,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 12,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 13,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 14,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 15,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 16,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 17,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 18,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 19,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 20,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 21,
+			"judul": "Hello world",
+			"isi": "Halo"
+		},
+		{
+			"id": 22,
+			"judul": "Hello world",
+			"isi": "Halo"
+		}
+	]
+}
