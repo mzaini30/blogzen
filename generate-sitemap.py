@@ -7,6 +7,7 @@ slug = []
 for x in data["postingan"]:
  slug.append(x["slug"])
 sitemap = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
+sitemap += '<url><loc>https://blogzen.js.org/</loc></url>'
 for x in slug:
  sitemap += '<url><loc>https://blogzen.js.org/' + x + '</loc></url>'
 sitemap += '</urlset>'
