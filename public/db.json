@@ -17,7 +17,7 @@
     {
       "judul": "TODO",
       "deskripsi": "Rencana blog ini ke depannya",
-      "isi": "- Kasih Sitemap (buat pakai Python terus dipanggil di Github Actions)\n- Buat halaman pencarian",
+      "isi": "- Kasih Sitemap (buat pakai Python terus dipanggil di Github Actions)\n- Buat halaman pencarian\n- Buat halaman 404 (kalau postingan nggak ditemukan dan kalau routesnya salah)",
       "slug": "todo",
       "id": 3
     },
@@ -29,10 +29,10 @@
       "id": 4
     },
     {
-      "slug": "sistem-di-balik-blog-ini",
       "judul": "Sistem di balik blog ini",
       "deskripsi": "Svelte + Page JS + JSON Server",
-      "isi": "Tes",
+      "isi": "Blog ini kubagi jadi dua sistem yaitu ketika user membukanya dan ketika aku yang membukanya. Jadi, bisa dibilang _ketika user membukanya_ adalah sistem yang sudah di level _production_ sedangkan yang _ketika aku membukanya_ adalah level _development_.",
+      "slug": "sistem-di-balik-blog-ini",
       "id": 5
     },
     {
