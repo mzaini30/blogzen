@@ -17,6 +17,9 @@
 		{/each}
 	</div>
 </div>
+<div class="bawah">
+	<a href="/tulis" class=""></a>
+</div>
 
 <script type="text/javascript">
 	import {onMount} from 'svelte'
