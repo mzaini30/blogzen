@@ -5,12 +5,14 @@
 	<div class="row">
 		{#each data as x}
 			<div class="col-6 col-sm-3">
-				<div class="card click" on:click={() => location.href = `/${x.slug}`}>
-					<div class="card-body">
-						<h5>{x.judul}</h5>
-						<p>{x.isi}</p>
+				<a href="/{x.slug}" class="samarkan-link">
+					<div class="card">
+						<div class="card-body">
+							<h5>{x.judul}</h5>
+							<p>{x.isi}</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		{/each}
 	</div>
@@ -24,9 +26,6 @@
 	})
 </script>
 
-<style type="text/css">
-	.click {
-		user-select: none;
-		cursor: pointer;
-	}
-</style>
+<svelte:head>
+	<title>Blog Zen</title>
+</svelte:head>
