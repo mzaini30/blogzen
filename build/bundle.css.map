@@ -1,12 +1,8 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [
-    "Beranda.svelte"
-  ],
-  "sourcesContent": [
-    "<div class=\"container\">\n\t<br>\n\t<h1 class=\"text-center\">Blog Zen</h1>\n\t<hr>\n\t<div class=\"row\">\n\t\t{#each data as x}\n\t\t\t<div class=\"col-6 col-sm-3\">\n\t\t\t\t<div class=\"card click\" on:click={() => location.href = `/${x.slug}`}>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<h5>{x.judul}</h5>\n\t\t\t\t\t\t<p>{x.isi}</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t{/each}\n\t</div>\n</div>\n\n<script type=\"text/javascript\">\n\timport {onMount} from 'svelte'\n\tlet data = []\n\tonMount(() => {\n\t\tfetch('/db.json').then(x => x.json()).then(x => data = x.postingan.reverse())\n\t})\n</script>\n\n<style type=\"text/css\">\n\t.click {\n\t\tuser-select: none;\n\t\tcursor: pointer;\n\t}\n</style>"
-  ],
+  "sources": [],
+  "sourcesContent": [],
   "names": [],
-  "mappings": "AA2BC,MAAM,eAAC,CAAC,AACP,WAAW,CAAE,IAAI,CACjB,MAAM,CAAE,OAAO,AAChB,CAAC"
+  "mappings": ""
 }

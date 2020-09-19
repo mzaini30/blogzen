@@ -27,3 +27,7 @@ table{width:100%;margin-bottom:1rem;color:#212529}table td,table th{padding:.75r
 th:empty {
 	display: none;
 }
+.samarkan-link {
+	color: #212529 !important;
+	text-decoration: none !important;
+}
