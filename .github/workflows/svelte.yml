@@ -18,12 +18,20 @@ jobs:
         with:
           node-version: "14.x"
 
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
+
+      - name: Clone Index
+        run: python clone-index.py
 
       - name: Install
         run: npm i
