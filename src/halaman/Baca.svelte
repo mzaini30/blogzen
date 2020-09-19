@@ -22,3 +22,7 @@
 		})
 	})
 </script>
+
+<svelte:head>
+ <title>{data.judul}</title>
+</svelte:head>

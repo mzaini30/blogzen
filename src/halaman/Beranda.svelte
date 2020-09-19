@@ -18,7 +18,9 @@
 	</div>
 </div>
 <div class="bawah">
-	<a href="/tulis" class=""></a>
+ {#if location.host == "localhost:5000"}
+	<a href="/tulis" class="btn btn-success">&plus;</a>
+ {/if}
 </div>
 
 <script type="text/javascript">
