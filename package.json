@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "db": "json-server --watch db.json",
+    "dev": "rollup -c -w & json-server --watch public/db.json",
     "start": "sirv public"
   },
   "devDependencies": {

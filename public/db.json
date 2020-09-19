@@ -1,0 +1,16 @@
+{
+	"postingan": [
+		{
+			"id": 1,
+			"slug": "hello",
+			"judul": "Hello...",
+			"isi": "Ini adalah isi"
+		},
+		{
+			"id": 2,
+			"slug": "hello-hai",
+			"judul": "Hello Hai...",
+			"isi": "Ini adalah isi kedua"
+		}
+	]
+}
