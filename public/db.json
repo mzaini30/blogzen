@@ -13,6 +13,27 @@
       "isi": "Hello...",
       "slug": "tentang-pikiran",
       "id": 2
+    },
+    {
+      "judul": "TODO",
+      "deskripsi": "Rencana blog ini ke depannya",
+      "isi": "- Kasih Sitemap (buat pakai Python terus dipanggil di Github Actions)\n- Buat halaman pencarian",
+      "slug": "todo",
+      "id": 3
+    },
+    {
+      "judul": "Cara menggunakan Svelte",
+      "deskripsi": "Membuat website lebih cepat, ringan, dan menyenangkan",
+      "isi": "## Instalasi\n\n```bash\nnpx degit sveltejs/template nama-proyekmu\n```",
+      "slug": "cara-menggunakan-svelte",
+      "id": 4
+    },
+    {
+      "slug": "sistem-di-balik-blog-ini",
+      "judul": "Sistem di balik blog ini",
+      "deskripsi": "Svelte + Page JS + JSON Server",
+      "isi": "Tes",
+      "id": 5
     }
   ]
 }

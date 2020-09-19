@@ -4,7 +4,7 @@
 	<hr>
 	<div class="row">
 		{#each data as x}
-			<div class="col-6 col-sm-3">
+			<div class="col-sm-3">
 				<a href="/{x.slug}" class="samarkan-link">
 					<div class="card">
 						<div class="card-body">
