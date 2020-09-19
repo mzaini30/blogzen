@@ -1,10 +1,23 @@
+* {
+	word-wrap: break-word;
+}
+body {
+	padding-bottom: 60px;
+}
+img {
+	max-width: 100%;
+}
+.bawah {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
 pre {
 	background: rgb(245, 245, 245);
 	padding: 10px;
 }
 blockquote {
-	background: rgb(63, 81, 181);
-	color: white;
+	background: rgb(245, 245, 245);
 	padding: 10px;
 }
 blockquote p:last-child {
@@ -14,4 +27,3 @@ table{width:100%;margin-bottom:1rem;color:#212529}table td,table th{padding:.75r
 th:empty {
 	display: none;
 }
-code{font-family:'Fira Code',monospace!important}
