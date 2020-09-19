@@ -2,13 +2,13 @@
 	"postingan": [
 		{
 			"id": 1,
-			"slug": "hello",
+			"slug": "hello-2020",
 			"judul": "Hello...",
 			"isi": "Ini adalah isi"
 		},
 		{
 			"id": 2,
-			"slug": "hello-hai",
+			"slug": "hello-hai-2020",
 			"judul": "Hello Hai...",
 			"isi": "Ini adalah isi kedua"
 		}
