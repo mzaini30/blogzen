@@ -28,31 +28,37 @@
 <script>
  import {onMount} from "svelte"
  import router from "page"
+ export let params
  let judulnya
  let isinya
  let judul
  let deskripsi
  let isi
+ let id
  onMount(() => {
   judulnya.focus()
+  fetch(`http://localhost:3000/postingan?slug=${params.slug}`).then(x => x.json()).then(w => {
+  	judul = w[0].judul
+  	deskripsi = w[0].deskripsi
+  	isi = w[0].isi
+  	id = w[0].id
+  })
   const atur_tinggi = () => isinya.style.height = `${window.innerHeight - 160}px`
   atur_tinggi()
   window.addEventListener("resize", atur_tinggi)
  })
  const submit = () => {
- 	fetch("http://localhost:3000/postingan", {
- 		method: "post",
+ 	fetch(`http://localhost:3000/postingan/${id}`, {
+ 		method: "put",
  		headers: {
  			"Content-Type": "application/json"
  		},
  		body: JSON.stringify({
- 			slug: slugify(judul),
  			judul,
  			deskripsi,
- 			isi
+ 			isi,
+ 			slug: params.slug
  		})
- 	}).then(() => {
- 		fetch("http://localhost:3000/postingan?_sort=id&_order=desc").then(x => x.json()).then(z => router.redirect(`/${z[0].slug}`))
- 	})
+ 	}).then(() => router.replace(`/${params.slug}`))
  }
 </script>

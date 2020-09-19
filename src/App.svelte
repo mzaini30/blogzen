@@ -3,6 +3,7 @@
  import Beranda from "./halaman/Beranda.svelte"
  import Baca from "./halaman/Baca.svelte"
  import Tulis from "./halaman/Tulis.svelte"
+ import Edit from "./halaman/Edit.svelte"
  let page
  let params
  router("/", () => page = Beranda)
@@ -11,6 +12,10 @@
  	params = x.params
  	next()
  }, () => page = Baca)
+ router("/:slug/edit", (x, next) => {
+ 	params = x.params
+ 	next()
+ }, () => page = Edit)
  router.start()
 </script>
 

@@ -1,16 +1,18 @@
 {
-	"postingan": [
-		{
-			"id": 1,
-			"slug": "hello-2020",
-			"judul": "Hello...",
-			"isi": "Ini adalah isi"
-		},
-		{
-			"id": 2,
-			"slug": "hello-hai-2020",
-			"judul": "Hello Hai...",
-			"isi": "Ini adalah isi kedua"
-		}
-	]
+  "postingan": [
+    {
+      "judul": "Mengapa kita sebaiknya nulis?",
+      "deskripsi": "Mengapa nggak mulai sekarang aja?",
+      "isi": "Menulis adalah salah satu cara efektif untuk menyampaikan ide kita.",
+      "slug": "mengapa-kita-sebaiknya-nulis",
+      "id": 1
+    },
+    {
+      "judul": "Tentang pikiran",
+      "deskripsi": "Apa aja yang kita pikirkan?",
+      "isi": "Hello...",
+      "slug": "tentang-pikiran",
+      "id": 2
+    }
+  ]
 }

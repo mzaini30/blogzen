@@ -9,7 +9,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h5>{x.judul}</h5>
-							<p>{x.isi}</p>
+							<div>{x.deskripsi}</div>
 						</div>
 					</div>
 				</a>
@@ -34,3 +34,9 @@
 <svelte:head>
 	<title>Blog Zen</title>
 </svelte:head>
+
+<style>
+ .card {
+ 	margin-bottom: 20px;
+ }
+</style>
