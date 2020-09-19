@@ -1,8 +1,12 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "Tulis.svelte"
+  ],
+  "sourcesContent": [
+    "<svelte:head>\n <title>Tulis</title>\n</svelte:head>\n\n<form>\n <table class=\"table table-bordered\">\n  <tbody>\n   <tr>\n    <td>\n     <input type=\"search\" class=\"form-control\" placeholder=\"Judul\">\n    </td>\n    <td>\n     <input type=\"search\" class=\"form-control\" placeholder=\"Deskripsi\">\n    </td>\n   </tr>\n   <tr>\n    <td colspan=\"2\">\n     <textarea class=\"form-control\" placeholder=\"isi\"></textarea>\n    </td>\n   </tr>\n  </tbody>\n </table>\n <div class=\"bawah\">\n  <input type=\"submit\" value=\"&check;\" class=\"btn btn-success\">\n </div>\n</form>\n\n<style>\n .form-control {\n \tborder: none;\n \tbox-shadow: none;\n }\n td {\n \tpadding: 0;\n }\n</style>\n"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AA4BC,aAAa,cAAC,CAAC,AACd,MAAM,CAAE,IAAI,CACZ,UAAU,CAAE,IAAI,AACjB,CAAC,AACD,EAAE,cAAC,CAAC,AACH,OAAO,CAAE,CAAC,AACX,CAAC"
 }
