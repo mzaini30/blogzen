@@ -33,6 +33,9 @@ jobs:
       - name: Clone Index
         run: python clone-index.py
 
+      - name: Generate sitemap
+        run: python generate-sitemap.py
+
       - name: Install
         run: npm i
 
