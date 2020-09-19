@@ -4,11 +4,12 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w & json-server --watch public/db.json",
-    "start": "sirv public"
+    "start": "sirv public --single"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "json-server": "^0.16.1",
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
@@ -16,7 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "json-server": "^0.16.1",
+    "page": "^1.11.6",
     "sirv-cli": "^1.0.0"
   }
 }

@@ -1,11 +1,11 @@
 <script>
- import {Link, Router, Route} from "svelte-routing"
+ import router from "page"
  import Beranda from "./halaman/Beranda.svelte"
- export let url = ""
+ import About from "./halaman/About.svelte"
+ let page
+ router("/", () => page = Beranda)
+ router("/about", () => page = About)
+ router.start()
 </script>
 
-<Router {url}>
- <div>
-  <Route path="/"><Beranda/></Route>
- </div>
-</Router>
+<svelte:component this={page}/>
