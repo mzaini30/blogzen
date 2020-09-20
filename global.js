@@ -1,5 +1,8 @@
 marked.setOptions({
-	breaks: true
+	breaks: true,
+	highlight: (code, lang) => {
+		return hljs.highlight(lang, code).value
+	}
 })
 function slugify(str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
