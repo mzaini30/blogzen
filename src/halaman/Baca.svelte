@@ -51,6 +51,12 @@
 	 if (params.slug){
 	 	isinya()
 	 }
+	 if (data.judul == ""){
+	 	data = {
+	 		judul: "Nggak ada",
+	 		deskripsi: "Postingan yang kamu cari nggak ada"
+	 	}
+	 }
 	}
 </script>
 
