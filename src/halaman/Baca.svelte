@@ -8,6 +8,7 @@
 	</div>
 </div>
 <div class="bawah">
+ <a href="/cari" class="btn btn-dark">&#9906;</a>
  <a href="/" class="btn btn-info">&#9964;</a>
  {#if location.host == "localhost:5000"}
   <a href="/{params.slug}/edit" class="btn btn-warning">&#10000;</a>
@@ -25,7 +26,7 @@
 		isi: ""
 	}
 	let konten = ""
-	onMount(() => {
+	const isinya = () => {
 		fetch('/db.json').then(x => x.json()).then(x => {
 			for (let y of x.postingan){
 				if (y.slug == params.slug) {
@@ -33,7 +34,8 @@
 				}
 			}
 		})
-	})
+	}
+	onMount(() => isinya())
 	const hapus = () => {
 		let tanya = confirm("Hapus kah?")
 		if (tanya){
@@ -44,7 +46,12 @@
 			})
 		}
 	}
-	$: konten = marked(data.isi)
+	$: {
+	 konten = marked(data.isi)
+	 if (params.slug){
+	 	isinya()
+	 }
+	}
 </script>
 
 <svelte:head>

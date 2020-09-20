@@ -9,3 +9,4 @@ for x in data["postingan"]:
 for x in slug:
  os.system('cp index.html ' + x + '.html')
 os.system("cp index.html 404.html")
+os.system("cp index.html cari.html")
