@@ -17,7 +17,6 @@
 <script>
  import router from "page"
  import {onMount} from "svelte"
- export let params = {}
  let yang_dicari = ""
  let el_cari
  let data = []
