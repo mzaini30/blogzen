@@ -28,18 +28,11 @@
 	let konten = ""
 	const isinya = () => {
 		if (location.host.includes('localhost')) {
-			fetch('/db.json').then(x => x.json()).then(x => {
-				for (let y of x.postingan){
-					if (y.slug == params.slug) {
-						data = y
-					}
-				}
-			})
+			fetch(`http://localhost:3000/postingan?slug=${params.slug}`).then(x => x.json()).then(y => data = y[0])
 		} else {
 			fetch(`/${params.slug}.json`).then(x => x.json()).then(x => data = x)
 		}
 	}
-	onMount(() => isinya())
 	const hapus = () => {
 		let tanya = confirm("Hapus kah?")
 		if (tanya){

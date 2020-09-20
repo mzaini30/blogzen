@@ -29,7 +29,7 @@
 	let data = []
 	onMount(() => {
 		if (location.host.includes('localhost')) {
-			fetch('/db.json').then(x => x.json()).then(x => data = x.postingan.reverse())
+			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => data = x.reverse())
 		} else {
 			fetch('/beranda.json').then(x => x.json()).then(q => data = q.reverse())
 		}
