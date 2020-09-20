@@ -15,6 +15,10 @@
  <a href="/" class="btn btn-dark">&#9964</a>
 </div>
 
+<svelte:head>
+ <title>Cari {decodeURIComponent(params.cari)}</title>
+</svelte:head>
+
 <script>
  import router from "page"
  export let params = {}

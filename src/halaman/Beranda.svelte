@@ -19,7 +19,7 @@
 </div>
 <div class="bawah">
  <a href="/cari" class="btn btn-info">&#9906;</a>
- {#if location.host == "localhost:5000"}
+ {#if location.host.includes("localhost")}
 	<a href="/tulis" class="btn btn-success">&plus;</a>
  {/if}
 </div>

@@ -10,7 +10,7 @@
 <div class="bawah">
  <a href="/cari" class="btn btn-dark">&#9906;</a>
  <a href="/" class="btn btn-info">&#9964;</a>
- {#if location.host == "localhost:5000"}
+ {#if location.host.includes("localhost")}
   <a href="/{params.slug}/edit" class="btn btn-warning">&#10000;</a>
   <div on:click={hapus} class="btn btn-danger">&times;</div>
  {/if}
@@ -46,12 +46,10 @@
 			})
 		}
 	}
-	$: {
-	 konten = marked(data.isi)
-	 if (params.slug){
+	$: konten = marked(data.isi)
+	$: if (params.slug){
 	 	isinya()
 	 }
-	}
 </script>
 
 <svelte:head>

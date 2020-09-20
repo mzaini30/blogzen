@@ -10,6 +10,10 @@
  <a href="/" class="btn btn-dark">&#9964</a>
 </div>
 
+<svelte:head>
+ <title>Cari</title>
+</svelte:head>
+
 <script>
  import router from "page"
  import {onMount} from "svelte"
