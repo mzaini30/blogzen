@@ -1,0 +1,1 @@
+{"judul": "TODO", "deskripsi": "Perbaikan blog", "isi": "- Sitemap desc\n- Cek db.json pada Baca.svelte (dua kali terload itu)\n- Untuk localhost, Fetch dari JSON Server aja supaya efektif"}
