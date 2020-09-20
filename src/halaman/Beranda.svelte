@@ -28,7 +28,11 @@
 	import {onMount} from 'svelte'
 	let data = []
 	onMount(() => {
-		fetch('/db.json').then(x => x.json()).then(x => data = x.postingan.reverse())
+		if (location.host.includes('localhost')) {
+			fetch('/db.json').then(x => x.json()).then(x => data = x.postingan.reverse())
+		} else {
+			fetch('/beranda.json').then(x => x.json()).then(q => data = q.reverse())
+		}
 	})
 </script>
 

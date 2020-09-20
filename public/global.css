@@ -7,6 +7,10 @@ body {
 img {
 	max-width: 100%;
 }
+.konten img {
+	display: block;
+	margin: auto;
+}
 .bawah {
 	position: fixed;
 	bottom: 20px;

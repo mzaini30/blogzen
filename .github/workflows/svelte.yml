@@ -36,6 +36,9 @@ jobs:
       - name: Generate sitemap
         run: python generate-sitemap.py
 
+      - name: Pecah JSON
+        run: python pecah-json.py
+
       - name: Install
         run: npm i
 
