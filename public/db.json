@@ -17,7 +17,7 @@
     {
       "judul": "TODO",
       "deskripsi": "Rencana blog ini ke depannya",
-      "isi": "- Kasih Sitemap (buat pakai Python terus dipanggil di Github Actions)\n- Buat halaman pencarian\n- Buat halaman 404 (kalau postingan nggak ditemukan dan kalau routesnya salah)",
+      "isi": "- Buat halaman pencarian\n- Buat halaman 404 (kalau postingan nggak ditemukan dan kalau routesnya salah)\n\n_Kerjakannya nanti aja pakai laptop_",
       "slug": "todo",
       "id": 3
     },
@@ -31,7 +31,7 @@
     {
       "judul": "Sistem di balik blog ini",
       "deskripsi": "Svelte + Page JS + JSON Server",
-      "isi": "Blog ini kubagi jadi dua sistem yaitu ketika user membukanya dan ketika aku yang membukanya. Jadi, bisa dibilang _ketika user membukanya_ adalah sistem yang sudah di level _production_ sedangkan yang _ketika aku membukanya_ adalah level _development_.",
+      "isi": "Blog ini kubagi jadi dua sistem yaitu ketika user membukanya dan ketika aku yang membukanya. Jadi, bisa dibilang _ketika user membukanya_ adalah sistem yang sudah di level _production_ sedangkan yang _ketika aku membukanya_ adalah level _development_.\n\nPerbedaannya bisa digambarkan seperti tabel di bawah ini:\n\n| Production | Development |\n|---|---|\n| Menggunakan Svelte | Menggunakan Svelte + JSON Server |",
       "slug": "sistem-di-balik-blog-ini",
       "id": 5
     },
@@ -41,6 +41,13 @@
       "deskripsi": "Mengapa menjadi yang terbaik itu penting?",
       "isi": "...",
       "id": 6
+    },
+    {
+      "judul": "Router di Svelte JS",
+      "deskripsi": "Mencoba menerapkan keunggulan SPA!",
+      "isi": "Ada dua macam router yaitu yang menggunakan hash sama yang nggak. Kalau menggunakan hash, cocok pakai **svelte-spa-router**. Sedangkan kalau nggak pakai hash, pakai **page**.\n\n## Menggunakan Svelte SPA Router\n\nInstall dengan:\n\n```bash\nnpm i svelte-spa-router\n```\n\n## Menggunakan Page\n\nInstall dengan:\n\n```bash\nnpm i page\n```",
+      "slug": "router-di-svelte-js",
+      "id": 7
     }
   ]
 }
