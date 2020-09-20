@@ -5,11 +5,13 @@
  import Tulis from "./halaman/Tulis.svelte"
  import Edit from "./halaman/Edit.svelte"
  import Cari from "./halaman/Cari.svelte"
+ import CariKosongan from "./halaman/CariKosongan.svelte"
  let page
  let params
  router("/", () => page = Beranda)
  router("/tulis", () => page = Tulis)
- router("/cari/:cari?", (x, next) => {
+ router("/cari", () => page = CariKosongan)
+ router("/cari/:cari", (x, next) => {
  	params = x.params
  	next()
  }, () => page = Cari)
