@@ -17,14 +17,14 @@
     {
       "judul": "TODO",
       "deskripsi": "Rencana blog ini ke depannya",
-      "isi": "- Buat halaman pencarian\n- Buat halaman 404 (kalau postingan nggak ditemukan dan kalau routesnya salah)\n\n_Kerjakannya nanti aja pakai laptop_",
+      "isi": "- Buat halaman 404 (kalau postingan nggak ditemukan dan kalau routesnya salah)\n\n_Kerjakannya nanti aja pakai laptop_",
       "slug": "todo",
       "id": 3
     },
     {
       "judul": "Cara menggunakan Svelte",
       "deskripsi": "Membuat website lebih cepat, ringan, dan menyenangkan",
-      "isi": "## Instalasi\n\n```bash\nnpx degit sveltejs/template nama-proyekmu\n```",
+      "isi": "## Instalasi\n\n```bash\nnpx degit sveltejs/template nama-proyekmu\n```\n\nKemudian, akan terdownlod tuh template Svelte di laptopmu. Nah, sekarang masuk ke `nama-proyekmu` dan jalankan:\n\n```bash\nnpm i\n```\n\nSetelah selesai instalasi, jalankan:\n\n```bash\nnpm run dev\n```\n\nNah, sekarang kamu buka `localhost:5000`. Lalu, akan muncul Hello World ala Svelte...",
       "slug": "cara-menggunakan-svelte",
       "id": 4
     },

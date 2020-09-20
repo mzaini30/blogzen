@@ -6,6 +6,7 @@
  import Edit from "./halaman/Edit.svelte"
  import Cari from "./halaman/Cari.svelte"
  import CariKosongan from "./halaman/CariKosongan.svelte"
+ import NotFound from "./halaman/NotFound.svelte"
  let page
  let params
  router("/", () => page = Beranda)
@@ -23,6 +24,7 @@
  	params = x.params
  	next()
  }, () => page = Edit)
+ router("/*", () => page = NotFound)
  router.start()
  $: {
  	if(params){
