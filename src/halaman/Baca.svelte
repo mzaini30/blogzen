@@ -6,6 +6,9 @@
      <p><em>{data.deskripsi}</em></p>
      <div class="konten">{@html konten}</div>
 	</div>
+	{#if !location.host.includes('localhost')}
+		<div id="disqus_thread"></div>
+	{/if}
 </div>
 <div class="bawah">
  <a href="/cari" class="btn btn-dark">&#9906;</a>
@@ -33,6 +36,23 @@
 			fetch(`/${params.slug}.json`).then(x => x.json()).then(x => data = x)
 		}
 	}
+	const muat_disqus = () => {
+		if (!location.host.includes('localhost')){
+			/**
+			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			var disqus_config = function () {
+			this.page.url = `https://blogzen.js.org/${params.slug}`;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = params.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://blogzen.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		}
+	}
 	const hapus = () => {
 		let tanya = confirm("Hapus kah?")
 		if (tanya){
@@ -46,7 +66,8 @@
 	$: konten = marked(data.isi)
 	$: if (params.slug){
 	 	isinya()
-	 }
+	 	muat_disqus()
+	}
 </script>
 
 <svelte:head>
