@@ -6,6 +6,12 @@
      <p><em>{data.deskripsi}</em></p>
      <div class="konten">{@html konten}</div>
 	</div>
+	<h2>Tulisan lainnya</h2>
+	<ol>
+		{#each tulisan_lainnya as x}
+			<li><a href="/{x.slug}">{x.judul}</a></li>
+		{/each}
+	</ol>
 	{#if !location.host.includes('localhost')}
 		<div id="disqus_thread"></div>
 	{/if}
@@ -28,6 +34,7 @@
 		deskripsi: "",
 		isi: ""
 	}
+	let tulisan_lainnya = []
 	let konten = ""
 	const isinya = () => {
 		if (location.host.includes('localhost')) {
@@ -36,7 +43,14 @@
 			fetch(`/${params.slug}.json`).then(x => x.json()).then(x => data = x)
 		}
 	}
-	const muat_disqus = () => {
+	const tampil_tulisan_lainnya = () => {
+		if (location.host.includes('localhost')) {
+			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).slice(0, 5))
+		} else {
+			fetch('/beranda.json').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).slice(0, 5))
+		}
+	}
+ 	const muat_disqus = () => {
 		if (!location.host.includes('localhost')){
 			/**
 			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -67,6 +81,7 @@
 	$: if (params.slug){
 	 	isinya()
 	 	muat_disqus()
+	 	tampil_tulisan_lainnya()
 	}
 </script>
 
