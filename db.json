@@ -48,6 +48,13 @@
       "deskripsi": "Tambahan fitur buat blog ini",
       "isi": "Kasih Disqus untuk production",
       "id": 12
+    },
+    {
+      "judul": "Langkah menjadi developer frontend junior",
+      "deskripsi": "Are you ready?",
+      "isi": "## Markdown\n\n## HTML\n\n## CSS\n\n## JavaScript\n\n## Svelte\n\n## Database\n\n### Dexie JS\n\n### JSON Server\n\n## Github Action\n\n### Node JS\n\n### Python\n\n### Hugo\n\n### Gitbook\n\n### Gitbook to ebooks",
+      "slug": "langkah-menjadi-developer-frontend-junior",
+      "id": 13
     }
   ]
 }
