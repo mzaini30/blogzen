@@ -1,5 +1,5 @@
 <svelte:head>
- <title>Tulis</title>
+ <title>Edit {judul}</title>
 </svelte:head>
 
 <form on:submit|preventDefault={submit}>
