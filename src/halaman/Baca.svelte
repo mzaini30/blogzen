@@ -45,9 +45,9 @@
 	}
 	const tampil_tulisan_lainnya = () => {
 		if (location.host.includes('localhost')) {
-			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).slice(0, 5))
+			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).filter(x => x.judul != data.judul).slice(0, 5))
 		} else {
-			fetch('/beranda.json').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).slice(0, 5))
+			fetch('/beranda.json').then(x => x.json()).then(x => tulisan_lainnya = x.sort(() => Math.random() - 0.5).filter(x => x.judul != data.judul).slice(0, 5))
 		}
 	}
  	const muat_disqus = () => {
