@@ -87,4 +87,5 @@
 
 <svelte:head>
  <title>{data.judul}</title>
+ <meta name="description" content={data.deskripsi}>
 </svelte:head>
