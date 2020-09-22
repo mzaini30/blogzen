@@ -26,7 +26,6 @@
 </div>
 
 <script type="text/javascript">
-	import {onMount} from 'svelte'
 	import router from "page"
 	export let params
 	let data = {
