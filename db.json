@@ -59,7 +59,7 @@
     {
       "judul": "Membuat domain gratis JS.ORG",
       "deskripsi": "Kalau bisa gratis, kenapa harus bayar?",
-      "isi": "1. Pastikan websitemu dihosting di Github atau Gitlab",
+      "isi": "1. Pastikan websitemu dihosting di Github \natau Gitlab\n2. Tentukan nama domainnya. Misalnya aja mau `halo.js.org`, maka buat repostiori `halo` di Githubku\n3. Buat CNAME yang isinya `halo.js.org`\n4. Terus daftarkan di [JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format seperti ini: `\"halo\": \"namamu.github.io/halo\"`",
       "slug": "membuat-domain-gratis-jsorg",
       "id": 16
     },
