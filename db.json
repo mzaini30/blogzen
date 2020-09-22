@@ -48,6 +48,13 @@
       "isi": "Menulis blog itu berbahaya kalau kita nggak memahami apa yang kita tuliskan. Misalnya aja kita _nggak tau_ nih apa-apa soal perkembangan manusia, lalu kita katakan deh bahwa anak itu harus A, harus B, padahal ternyata kita tu salah. Nah, itu berbahaya.",
       "slug": "menulis-blog-itu-berbahaya",
       "id": 14
+    },
+    {
+      "judul": "Tips mengikuti Hacktoberfest",
+      "deskripsi": "Yuk semarakkan festival tahunan para developer dunia!",
+      "isi": "## Apa itu Hacktoberfest?\n\n## Mengapa mengikuti Hacktoberfest?\n\n## Di mana bisa mengikuti Hacktoberfest?\n\n## Tips mengikuti Hacktoberfest",
+      "slug": "tips-mengikuti-hacktoberfest",
+      "id": 15
     }
   ]
 }
