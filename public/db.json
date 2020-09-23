@@ -80,15 +80,15 @@
     {
       "judul": "About me",
       "deskripsi": "Siapa aku?",
-      "isi": "Hai, aku **Zen**, seorang putra Samarinda kelahiran 14 Januari 1995. Ini adalah profil tentangku:\n\n## Proyek yang sudah dikerjakan\n\n2019\npanglimadelivery.com (website mati)\nCodeigniter, jQuery\n\n2017\nantrianrutansamarinda.com (website mati)\nCodeigniter, jQuery",
+      "isi": "Hai, aku **Zen**, seorang putra Samarinda kelahiran 14 Januari 1995. Ini adalah profil tentangku:\n\n## Pekerjaan\n\n2019\nGuru tahfidz di Madrasah Baitul Izzah\n\n2019\nPenata letak di Caraka Publishing\n\nMekanik di toko sepeda Sinar Jaya\n\n## Proyek yang sudah dikerjakan\n\n2019\npanglimadelivery.com (website mati)\nCodeigniter, jQuery\n\n2017\nantrianrutansamarinda.com (website mati)\nCodeigniter, jQuery\n\n## Pendidikan\n\n2020\nS1 Psikologi di Universitas Mulawarman\n\n## Di mana bisa menghubungiku?\n\nKamu bisa menghubungiku di email <muhzaini30@gmail.com>.",
       "slug": "about-me",
       "id": 19
     },
     {
-      "slug": "todo",
       "judul": "TODO",
       "deskripsi": "Next",
-      "isi": "- Mengatasi table overflow (belum ketemu caranya)\n- Mengatasi title tag sama description (mainin Python)",
+      "isi": "- Mengatasi table overflow (belum ketemu caranya)",
+      "slug": "todo",
       "id": 20
     }
   ]

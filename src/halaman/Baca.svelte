@@ -6,6 +6,12 @@
      <p><em>{data.deskripsi}</em></p>
      <div class="konten">{@html konten}</div>
 	</div>
+	<div class="card">
+     <div class="card-body">
+      Blog ini dikelola oleh <strong>Zen</strong> yang merupakan lulusan S1 Psikologi. <a href="/about-me">Lihat profil selengkapnya.</a>
+     </div>
+	</div>
+	<br>
 	<h2>Tulisan lainnya</h2>
 	<ol>
 		{#each tulisan_lainnya as x}
