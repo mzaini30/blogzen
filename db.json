@@ -17,7 +17,7 @@
     {
       "judul": "Router di Svelte JS",
       "deskripsi": "Mencoba menerapkan keunggulan SPA!",
-      "isi": "Ada dua macam router yaitu yang menggunakan hash sama yang nggak. Kalau menggunakan hash, cocok pakai **svelte-spa-router**. Sedangkan kalau nggak pakai hash, pakai **page**.\n\n## Menggunakan Svelte SPA Router\n\nInstall dengan:\n\n```bash\nnpm i svelte-spa-router\n```\n\n## Menggunakan Page\n\nInstall dengan:\n\n```bash\nnpm i page\n```",
+      "isi": "Ada dua macam router yaitu yang menggunakan hash sama yang nggak. Kalau menggunakan hash, cocok pakai **svelte-spa-router**. Sedangkan kalau nggak pakai hash, pakai **page**.\n\n## Menggunakan Svelte SPA Router\n\n### Instalasi\n\n```bash\nnpm i svelte-spa-router\n```\n\n## Menggunakan Page\n\n### Instalasi\n\n```bash\nnpm i page\n```",
       "slug": "router-di-svelte-js",
       "id": 7
     },
@@ -76,6 +76,20 @@
       "isi": "Menulis adalah meretas masa. Dengan menulis, kita bisa hidup abadi bersama tulisan kita. Mungkin nyawa ada batasnya, namun ide tak ada matinya. Dengan ide itulah kita kekal abadi tanpa pudar.\n\nTulisan adalah kontainer dari ide-ide yang kita bangun. Dengan ide-ide itulah kita bisa memberikan _nyawa_ kepada orang-orang setelah kita, entah itu berupa wawasan, pemantik, ide baru, kontruksi ide yang telah ada, dan berbagai bentuk lainnya. Bukankah kita ingin selalu _ada_ untuk mengayomi generasi penerus kita? Bukankah kita ingin selalu melihat keceriaan generasi setelah kita? Dengan tulisan lah kita bisa melakukannya.\n\nMaka, kita perlu suatu platform yang menjadi prasasti tulisan kita. Orang kerap kali menulis di media sosial. Namun, ketika kita tiada, perlahan media sosial kita pun akan pudar. Kita perlu prasasti yang lebih abadi lagi. Itulah blog! Dengan blog, tulisan kita lebih abadi dan lebih awet karena blog nggak mati setelah kita mati. Kecuali wordpress.com. Kalau WordPress.com, dia ketat. Tulisan spam, dimatikan blognya. Entah kalau lama nggak update, apakah dimatikan juga atau nggak. Maka, harapan kita tinggal Blogspot karena kalau Medium entah ada aturan apa lagi. Dia mulai money oriented. Dan tentu saja, kelak akan dilibasnya blog-blog Medium yang udah lama nggak aktif.\n\nKalau aku? Aku pakai [Github Pages](https://github.com/mzaini30/blogzen) untuk blog ini, juga menggunakan domain [JS.ORG](/membuat-domain-gratis-jsorg) yang dibackup sama Cloudflare. Aku harap juga semoga Github Pages sama JS.ORG bertahan lama sehingga tulisanku akan lebih lama di dunia Maya.",
       "slug": "mengapa-menulis",
       "id": 18
+    },
+    {
+      "judul": "About me",
+      "deskripsi": "Siapa aku?",
+      "isi": "Hai, aku **Zen**, seorang putra Samarinda kelahiran 14 Januari 1995. Ini adalah profil tentangku:\n\n## Proyek yang sudah dikerjakan\n\n2019\npanglimadelivery.com (website mati)\nCodeigniter, jQuery\n\n2017\nantrianrutansamarinda.com (website mati)\nCodeigniter, jQuery",
+      "slug": "about-me",
+      "id": 19
+    },
+    {
+      "slug": "todo",
+      "judul": "TODO",
+      "deskripsi": "Next",
+      "isi": "- Mengatasi table overflow (belum ketemu caranya)\n- Mengatasi title tag sama description (mainin Python)",
+      "id": 20
     }
   ]
 }
