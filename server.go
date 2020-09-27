@@ -2,10 +2,9 @@ package main
 import (
 	"net/http"
 	"fmt"
+	spa "github.com/roberthodgen/spa-server"
 )
 func main(){
-	file := http.FileServer(http.Dir("public/"))
-	http.Handle("/", http.StripPrefix("/", file))
-	http.ListenAndServe(":2020", nil)
+	http.ListenAndServe(":2020", spa.SpaHandler("public", "index.html"))
 	fmt.Println("Blog Zen aktif! Yey....")
 }
