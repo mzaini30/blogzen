@@ -13,22 +13,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
-
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.x"
-
-      - name: Cache dependencies Node
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
 
       - name: Install dependencies Python
         run: |
@@ -44,12 +32,6 @@ jobs:
 
       - name: Pecah JSON
         run: python pecah-json.py
-
-      - name: Install
-        run: npm i
-
-      - name: Build
-        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
