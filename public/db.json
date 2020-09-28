@@ -59,7 +59,7 @@
     {
       "judul": "Membuat domain gratis JS.ORG",
       "deskripsi": "Kalau bisa gratis, kenapa harus bayar?",
-      "isi": "1. Pastikan websitemu dihosting di Github \natau Gitlab\n2. Tentukan nama domainnya. Misalnya aja mau `halo.js.org`, maka buat repostiori `halo` di Githubku\n3. Buat file bernama `CNAME` yang isinya `halo.js.org`\n4. Terus daftarkan di [JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format seperti ini: `\"halo\": \"namamu.github.io/halo\"`",
+      "isi": "Domain itu seperti `.com`, `.net`, dan `.js.org`. Cuma, yang membedakan JS.ORG dengan dotcom dan dotnet adalah karena dia **gratis**. Tentu, nggak akan dilewatkan dong sesuatu yang namanya gratis itu.\n\nKenapa bisa gratis? Karena domain ini didukung oleh Cloudflare buat semua komunitas JavaScript. Makanya, nama domainnya ini JS.ORG. JS, singkatan dari JavaScript. Tapi, nggak mesti komunitas JavaScript sih. Blog biasa juga bisa. Yang penting ya hostingnya di _Github_ atau _Gitlab_.\n\nDan sekarang, kita mulai bahas aja yang kita tunggu-tunggu tadi, yaitu cara mendaftar domain JS.ORG:\n\n1. Pastikan websitemu dihosting di Github \natau Gitlab\n2. Tentukan nama domainnya. Misalnya aja mau `halo.js.org`, maka buat repostiori `halo` di Githubku\n3. Buat file bernama `CNAME` yang isinya `halo.js.org`\n4. Terus daftarkan di [JS.ORG](https://github.com/js-org/js.org/blob/master/cnames_active.js) dengan format seperti ini: `\"halo\": \"namamu.github.io/halo\",`\n\nMudah aja kan cara daftarnya? Ayo deh langsung",
       "slug": "membuat-domain-gratis-jsorg",
       "id": 16
     },
@@ -132,6 +132,20 @@
       "deskripsi": "Panduan buat para penulis",
       "isi": "1. Penulis memberikan naskahnya kepada layouter\n2. Layouter memberikan naskah yang sudah dilayout kepada penulis dengan format DOC \n3. Penulis merevisi (kalau ada yang mau direvisi) dalam bentuk memberikan komentar seperti contoh di bawah ini:\n\n ![Contoh comment di Word](https://i.ibb.co/Z26D1K0/1597148063066-1597148053249-0-IMG-20200811-WA0042.jpg)",
       "id": 27
+    },
+    {
+      "slug": "keikhlasan-di-segala-hal",
+      "judul": "Keikhlasan di segala hal",
+      "deskripsi": "...",
+      "isi": "The Ancient One berkata kepada Dr. Strange:\n\n> Lupakan segala hal yang kamu percaya",
+      "id": 28
+    },
+    {
+      "judul": "Membuat server SPA dengan Go",
+      "deskripsi": "Server Go untuk framework Javascript",
+      "isi": "Dunia pemrograman website saat ini mengenal ada dua kutub utama yaitu dunia backend dan dunia frontend. Dunia backend adalah mengatur logika bisnis suatu aplikasi, apakah dia harus ditambah, dikurang, modulus, koneksi database A, atur transaksi kartu kredit dengan API bank B, dan begitu seterusnya. Sedangkan kalau dunia frontend, mengatur tampilan website kepada user.\n\n```go\npackage main\nimport (\n\t\"net/http\"\n\t\"fmt\"\n\tspa \"github.com/roberthodgen/spa-server\"\n)\nfunc main(){\n\tfmt.Println(\"Buka localhost:2020\")\n\thttp.ListenAndServe(\":2020\", spa.SpaHandler(\"public\", \"index.html\"))\n}\n```",
+      "slug": "membuat-server-spa-dengan-go",
+      "id": 29
     }
   ]
 }
