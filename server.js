@@ -1,24 +1,19 @@
-/*
-  Incredibly simple Node.js and Express application server for serving static assets.
+const http = require('http')
+const fs = require('fs')
+const httpPort = 2020
 
-  Given as an example from the React Router documentation (along with examples
-  using nginx and Apache):
-  - https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md#browserhistory
-*/
+http.createServer((req, res) => {
+  fs.readFile('index.html', 'utf-8', (err, content) => {
+    if (err) {
+      console.log('We cannot open "index.html" file.')
+    }
 
-const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 2020
-const app = express();
+    res.writeHead(200, {
+      'Content-Type': 'text/html; charset=utf-8'
+    })
 
-// serve static assets normally
-app.use(express.static(__dirname + '/'));
-
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'index.html'));
-});
-
-app.listen(port);
-console.log("server started on port " + port);
+    res.end(content)
+  })
+}).listen(httpPort, () => {
+  console.log('Server listening on: http://localhost:%s', httpPort)
+})
