@@ -24,11 +24,26 @@ jobs:
           pip install beautifulsoup4
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: Cache dependencies Node
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm i
+
       - name: Clone Index
         run: python clone-index.py
 
       - name: Generate sitemap
-        run: python generate-sitemap.py
+        run: node generate-sitemap.js
 
       - name: Pecah JSON
         run: python pecah-json.py
