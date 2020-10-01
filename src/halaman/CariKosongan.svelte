@@ -7,7 +7,7 @@
  </form>
 </div>
 <div class="bawah">
- <a href="/" class="btn btn-dark">&#9876;</a>
+ <a href="/" class="btn btn-info">&#x2616;</a>
 </div>
 
 <svelte:head>
