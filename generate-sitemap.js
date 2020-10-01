@@ -5,8 +5,8 @@ readFile = util.promisify(fs.readFile)
 writeFile = util.promisify(fs.writeFile)
 process.chdir('public')
 baca = async () => {
-	data = await readFile('db.json')
-	data = await JSON.parse(data)
+	data = await readFile('db.json', 'utf8')
+	data = JSON.parse(data)
 	slug = []
 	for (x of data.postingan){
 		slug.push(x.slug)

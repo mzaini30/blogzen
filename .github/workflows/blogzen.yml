@@ -40,7 +40,7 @@ jobs:
         run: npm i
 
       - name: Clone Index
-        run: python clone-index.py
+        run: node clone-index.js
 
       - name: Generate sitemap
         run: node generate-sitemap.js
