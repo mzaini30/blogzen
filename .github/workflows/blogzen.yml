@@ -46,7 +46,7 @@ jobs:
         run: node generate-sitemap.js
 
       - name: Pecah JSON
-        run: python pecah-json.py
+        run: node pecah-json.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
