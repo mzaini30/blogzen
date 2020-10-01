@@ -177,10 +177,24 @@
     },
     {
       "judul": "Balik kata dengan Javascript",
-      "deskripsi": "...",
+      "deskripsi": "Dengan Node JS",
       "isi": "```javascript\nreadline = require(\"readline\")\nrl = readline.createInterface({\n\tinput: process.stdin,\n\toutput: process.stdout\n})\njalankan = () => {\n\trl.question(\"Nama: \", nama => {\n\t\tconsole.log(nama.toLowerCase().split(\"\").reverse().join(\"\"))\n\t\tjalankan()\n\t})\n}\njalankan()\n```\n\n```javascript\nNama: zuhdi\nidhuz\nNama: habib\nbibah\nNama: syamil\nlimays\nNama: firman\nnamrif\nNama: azzam\nmazza\nNama: $\n$\nNama: π¥•£\n£•¥π\nNama: namrif\nfirman\nNama: hitaf\nfatih\nNama: hitam\nmatih\nNama: biru\nurib\nNama: merah\nharem\n```",
       "slug": "balik-kata-dengan-javascript",
       "id": 34
+    },
+    {
+      "judul": "Cara install NVM versi 12.1.0",
+      "deskripsi": "Tools buat manajemen versi Node JS",
+      "isi": "```bash\nnvm install 12.1.0\nnvm use 12.1.0\nnvm alias default 12.1.0\n```",
+      "slug": "cara-install-nvm-versi-1210",
+      "id": 35
+    },
+    {
+      "judul": "Contoh async/await",
+      "deskripsi": "Mengatasi callback hell",
+      "isi": "```javascript\nfetch = require('node-fetch')\nlink = 'https://blogzen.js.org/beranda.json'\njalankan = async () => {\n\tx = await fetch(link)\n\tx = await x.json()\n\tconsole.log(x)\n}\njalankan()\n```",
+      "slug": "contoh-async-await",
+      "id": 36
     }
   ]
 }

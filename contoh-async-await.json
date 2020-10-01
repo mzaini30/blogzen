@@ -1,0 +1,1 @@
+{"judul": "Contoh async/await", "deskripsi": "Mengatasi callback hell", "isi": "```javascript\nfetch = require('node-fetch')\nlink = 'https://blogzen.js.org/beranda.json'\njalankan = async () => {\n\tx = await fetch(link)\n\tx = await x.json()\n\tconsole.log(x)\n}\njalankan()\n```"}
