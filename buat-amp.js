@@ -29,14 +29,20 @@ jalankan = async () => {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
         "headline": "${x.deskripsi}",
-        "image": [],
+        "image": [
+        	"https://blogzen.js.org/arthuria.jpeg"
+        ],
         "author": {
         	"@type": "Person",
         	"name": "Zen"
         },
         "publisher": {
         	"@type": "Organization",
-        	"name": "Caraka Publishing"
+        	"name": "Caraka Publishing",
+        	"logo": {
+        		"@type": "ImageObject",
+        		"url": "https://blogzen.js.org/favicon.png"
+        	}
         }
       }
     </script>
