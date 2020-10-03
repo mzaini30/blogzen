@@ -28,7 +28,7 @@ jalankan = async () => {
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "${x.deskripsi}",
+        "headline": "${x.judul}",
         "image": [
         	"https://blogzen.js.org/arthuria.jpeg"
         ],
