@@ -1,5 +1,6 @@
 dependencies:
   express: 4.17.1
+  marked: 1.2.0
   page: 1.11.6
   sirv-cli: 1.0.6
 devDependencies:
@@ -1282,6 +1283,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
+  /marked/1.2.0:
+    dev: false
+    engines:
+      node: '>= 8.16.2'
+    hasBin: true
+    resolution:
+      integrity: sha512-tiRxakgbNPBr301ihe/785NntvYyhxlqcL3YaC8CaxJQh7kiaEtrN9B/eK2I2943Yjkh5gw25chYFDQhOMCwMA==
   /media-typer/0.3.0:
     engines:
       node: '>= 0.6'
@@ -2229,6 +2237,7 @@ specifiers:
   '@rollup/plugin-node-resolve': ^8.0.0
   express: ^4.17.1
   json-server: ^0.16.1
+  marked: ^1.2.0
   page: ^1.11.6
   rollup: ^2.3.4
   rollup-plugin-livereload: ^2.0.0

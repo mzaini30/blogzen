@@ -37,6 +37,9 @@ jobs:
       - name: Pecah JSON
         run: node pecah-json.js
 
+      - name: Buat AMP
+        run: node buat-amp.js
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -20,6 +20,7 @@ buka = async () => {
 		baca = await readFile('index.html', 'utf8')
 		baca = baca.replace(/(<title>)(.+)(<\/title>)/g, `$1${judul[n]}$3`)
 		baca = baca.replace(/(<meta name="description" content=")(.+)(">)/g, `$1${deskripsi[n].replace(/"/g, '\\"')}$3`)
+		baca = baca.replace(/<\/title>/g, `</title><link rel="amphtml" href="https://blogzen.js.org/amp/${slug[n]}">`)
 		writeFile(`${slug[n]}.html`, baca)
 	}
 	fs.copyFile('index.html', '404.html', () => {})
