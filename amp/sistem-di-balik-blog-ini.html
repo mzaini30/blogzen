@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Sistem di balik blog ini</title>
+    <link rel="canonical" href="https://blogzen.js.org/sistem-di-balik-blog-ini">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Svelte + Page JS + JSON Server"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Sistem di balik blog ini</h1>
+    <hr>
+    <p><em>Svelte + Page JS + JSON Server</em></p>
+    <h2 id="filosofi">Filosofi</h2>
+<p>Aku mau website yang cepat. Dan kebetulan juga lagi suka sama Svelte karena mudah, sintaksnya enak dilihat, dan bundlenya pun kecil.</p>
+<p>Terus, untuk backendnya sih maunya ya nggak usah buat lagi sih. Capek. Akhirnya, aku teringat sama JSON Server. Jadi, aku cuma perlu menyiapkan satu file <code>db.json</code> yang kemudian akan diolah oleh JSON Server menggunakan semua metode HTTP Request. Jadi, aku nggak perlu coding sistemnya lagi. Tinggal HTTP Request aja dari linknya berdasarkan routes dan param yang sudah dijelaskan di docsnya.</p>
+<h2 id="bedah-sistem-blog">Bedah sistem blog</h2>
+<p>Blog ini kubagi jadi dua sistem yaitu ketika user membukanya dan ketika aku yang membukanya. Jadi, bisa dibilang <em>ketika user membukanya</em> adalah sistem yang sudah di level <em>production</em> sedangkan yang <em>ketika aku membukanya</em> adalah level <em>development</em>.</p>
+<p>Perbedaannya bisa digambarkan seperti tabel di bawah ini:</p>
+<table>
+<thead>
+<tr>
+<th>Development</th>
+<th>Production</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Menggunakan Svelte + JSON Server</td>
+<td>Menggunakan Svelte</td>
+</tr>
+<tr>
+<td>Akses baca tulis</td>
+<td>Akses baca</td>
+</tr>
+<tr>
+<td>Browser + Node JS</td>
+<td>Browser</td>
+</tr>
+</tbody></table>
+<h2 id="mengapa-menggunakan-svelte">Mengapa menggunakan Svelte?</h2>
+<blockquote>
+<p>Svelte itu <strong>compiler</strong>!</p>
+</blockquote>
+<p>Artinya, Svelte itu berbeda dengan framework Javascript lainnya seperti Vue, React, dan Angular.</p>
+<h2 id="perbedaan-sistem-blog-ini-dengan-ssg">Perbedaan sistem blog ini dengan SSG</h2>
+<p>Static site generator (SSG) itu sistemnya adalah menggabungkan file-file layout dengan file-file Markdown menjadi sebuah website utuh.</p>
+<p>Tentu sangat berbeda dengan blog ini. Kalau di blog ini, basisnya bukan sekumpulan file Markdown sebagaimana SSG tapi menggunakan database yang disediakan oleh JSON Server yang tugasnya adalah mengolah file <code>db.json</code> sesuai dengan API dari <a href="https://github.com/typicode/json-server">JSON Server</a>. Cara menggunakan JSON Server hanyalah dengan melakukan HTTP Request berdasarkan API yang tersedia. Misalnya aja aku punya file <code>db.json</code> yang isinya:</p>
+<pre><code class="language-json">{
+    &quot;postingan&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;judul&quot;: &quot;Hello&quot;,
+            &quot;isi&quot;: &quot;Hello world&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;judul&quot;: &quot;Kedua&quot;,
+            &quot;isi&quot;: &quot;Postingan kedua&quot;
+        }
+    ]
+}</code></pre>
+<p>Kalau di JSON Server, misalnya kita ingin menampilkan semua postingan, maka kita hanya perlu melakukan GET pada link <code>localhost:3000/postingan</code>. Kemudian, kalau kita ingin mendapatkan postingan pertama, kita cukup GET pada <code>localhost:3000/postingan/1</code>. Kalau kita ingin menambah artikel baru, cukup POST pada link <code>localhost:3000/postingan</code>. Kalau ingin menghapus postingan kedua, cukup DELETE pada <code>localhost:3000/postingan/2</code>. Mudah kan ya? Nah, itu semua aku jalankan di development karena memerlukan Node JS untuk menjalankan JSON Servernya.</p>
+<h2 id="deploy-dengan-github-action">Deploy dengan Github Action</h2>
+<p>Untuk deployment blog ini, aku menggunakan Github Action, sebuah fitur dari Github untuk deployment. Tentu, membantu banget fitur ini.</p>
+<pre><code class="language-yaml">name: build svelte
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: &quot;14.x&quot;
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: &quot;3.x&quot;
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles(&#39;**/package-lock.json&#39;) }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Clone Index
+        run: python clone-index.py
+
+      - name: Generate sitemap
+        run: python generate-sitemap.py
+
+      - name: Pecah JSON
+        run: python pecah-json.py
+
+      - name: Install
+        run: npm i
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public</code></pre>
+<h2 id="clone-index">Clone index</h2>
+<pre><code class="language-python">import os, json
+
+os.chdir(&quot;public&quot;)
+with open(&quot;db.json&quot;) as f:
+ data = json.load(f)
+slug = []
+for x in data[&quot;postingan&quot;]:
+ slug.append(x[&quot;slug&quot;])
+for x in slug:
+ os.system(&#39;cp index.html &#39; + x + &#39;.html&#39;)
+os.system(&quot;cp index.html 404.html&quot;)
+os.system(&quot;cp index.html cari.html&quot;)</code></pre>
+<h2 id="generate-sitemap">Generate sitemap</h2>
+<pre><code class="language-python">import os, json
+
+os.chdir(&quot;public&quot;)
+with open(&quot;db.json&quot;) as f:
+    data = json.load(f)
+slug = []
+for x in data[&quot;postingan&quot;]:
+    slug.append(x[&quot;slug&quot;])
+slug.reverse()
+sitemap = &#39;&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#39;
+for x in slug:
+    sitemap += &#39;&lt;url&gt;&lt;loc&gt;https://blogzen.js.org/&#39; + x + &#39;&lt;/loc&gt;&lt;/url&gt;&#39;
+sitemap += &#39;&lt;url&gt;&lt;loc&gt;https://blogzen.js.org/&lt;/loc&gt;&lt;/url&gt;&#39;
+sitemap += &#39;&lt;/urlset&gt;&#39;
+olah = open(&quot;sitemap.xml&quot;, &quot;w&quot;)
+olah.write(sitemap)
+olah.close()</code></pre>
+<h2 id="pemecahan-file-json">Pemecahan file JSON</h2>
+<pre><code class="language-python">import os, json
+
+os.chdir(&quot;public&quot;)
+with open(&quot;db.json&quot;) as f:
+    data = json.load(f)
+slug = []
+judul = []
+deskripsi = []
+isi = []
+for x in data[&quot;postingan&quot;]:
+    slug.append(x[&quot;slug&quot;])
+    judul.append(x[&quot;judul&quot;])
+    deskripsi.append(x[&quot;deskripsi&quot;])
+    isi.append(x[&quot;isi&quot;])
+
+beranda = []
+for (n, x) in enumerate(slug):
+    beranda.append({&quot;slug&quot;: x, &quot;judul&quot;: judul[n], &quot;deskripsi&quot;: deskripsi[n]})
+simpan_beranda = open(&quot;beranda.json&quot;, &quot;w&quot;)
+simpan_beranda.write(json.dumps(beranda))
+simpan_beranda.close()
+
+for (n, x) in enumerate(slug):
+    tulis = open(x + &#39;.json&#39;, &#39;w&#39;)
+    tulis.write(json.dumps({&quot;judul&quot;: judul[n], &quot;deskripsi&quot;: deskripsi[n], &quot;isi&quot;: isi[n]}))
+    tulis.close()</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/tips-mengikuti-hacktoberfest">Tips mengikuti Hacktoberfest</a></li>
+     <li><a href="/cara-menggunakan-svelte">Cara menggunakan Svelte</a></li>
+     <li><a href="/about-me">About me</a></li>
+     <li><a href="/cara-install-nvm-versi-1210">Cara install NVM versi 12.1.0</a></li>
+     <li><a href="/menjalankan-node-js-di-hp">Menjalankan Node JS di HP</a></li>
+    </ol>
+  </body>
+</html>
+		

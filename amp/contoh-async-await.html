@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Contoh async/await</title>
+    <link rel="canonical" href="https://blogzen.js.org/contoh-async-await">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Mengatasi callback hell"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Contoh async/await</h1>
+    <hr>
+    <p><em>Mengatasi callback hell</em></p>
+    <p>Javascript terkenal dengan nonblocking IO. Artinya, kalau di Javascript itu, nggak perlu menunggu satu proses sempurna dulu baru lanjut ke proses berikutnya (blocking IO). Jadi, Javascript itu menjalankan segala script di dalamnya itu secara paralel kecuali beberapa sintaks Javascript zaman dulu (sintaks bahari) yang memang secara berurutan, tapi dia nggak berhubungan sama IO. Misalnya aja script di bawah ini:</p>
+<pre><code class="language-javascript">nama = prompt(&quot;Siapa namamu?&quot;)
+alert(nama)</code></pre>
+<p>Kebanyakan, sintaks Javascript itu seperti ini:</p>
+<pre><code class="language-javascript">fetch(&#39;situs.com&#39;).then(x =&gt; x.json()).then(y =&gt; console.log(y))</code></pre>
+<p>Atau, untuk lebih memudahkan dalam pemahaman konsepnya, kita buat sintaksnya seperti ini:</p>
+<pre><code class="language-javascript">fetch(&#39;situs.com&#39;).then(x =&gt; {
+    x.json()
+}).then(y =&gt; {
+    console.log(y)
+})</code></pre>
+<p>Jadinya, bersarang kan ya?</p>
+<p>Jadinya, kita nggak bisa langsung mengakses variabel <code>x</code> sebelum melalui callback yang pertama. Lalu, nggak bisa mendapatkan nilai dari <code>y</code> sebelum melalui callback 1 dan 2.</p>
+<p>Maka, solusinya adalah menggunakan async/await. Sintaksnya itu seperti ini jika kita menggunakan contoh di atas tadi:</p>
+<pre><code class="language-javascript">tes = async () =&gt; {
+    x = await fetch(&#39;situs.com&#39;)
+    y = await x.json()
+    console.log(y)
+}
+tes()</code></pre>
+<h2 id="pembahasan-lebih-lanjut">Pembahasan lebih lanjut</h2>
+<p>Sekarang, kita pecah dulu script di atas yang memiliki callback (<code>.then</code>) yaitu:</p>
+<table>
+<thead>
+<tr>
+<th>Sintaks</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fetch(&#39;situs.com&#39;)</td>
+<td>x</td>
+</tr>
+<tr>
+<td>x.json()</td>
+<td>y</td>
+</tr>
+</tbody></table>
+<p>Nah, dari tabel di atas, kita sudah dapat bayangan <code>await</code> seperti ini:</p>
+<pre><code class="language-javascript">fetch(&#39;situs.com&#39;) -&gt; x
+x.json() -&gt; y</code></pre>
+<p>Kemudian, kita pindah hasil callbacknya ke depan, lalu tambahkan tulisan <code>await</code>:</p>
+<pre><code class="language-javascript">x = await fetch(&#39;situs.com&#39;)
+y = await x.json()</code></pre>
+<p>Lalu, tambahkan perintah yang nggak menghasilkan callback:</p>
+<pre><code class="language-javascript">x = await fetch(&#39;situs.com&#39;)
+y = await x.json()
+console.log(y)</code></pre>
+<p>Nah, baru di endingnya ditutup dengan fungsi yang <code>async</code>:</p>
+<pre><code class="language-javascript">tes = async () =&gt; {
+    x = await fetch(&#39;situs.com&#39;)
+    y = await x.json()
+    console.log(y)
+}
+tes()</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/sop-revisi-layout">SOP revisi layout</a></li>
+     <li><a href="/cara-menggunakan-svelte">Cara menggunakan Svelte</a></li>
+     <li><a href="/memperbarui-generator-website-ini">Memperbarui generator website ini</a></li>
+     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
+     <li><a href="/about-me">About me</a></li>
+    </ol>
+  </body>
+</html>
+		

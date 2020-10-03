@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Router di Svelte JS</title>
+    <link rel="canonical" href="https://blogzen.js.org/router-di-svelte-js">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Mencoba menerapkan keunggulan SPA!"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Router di Svelte JS</h1>
+    <hr>
+    <p><em>Mencoba menerapkan keunggulan SPA!</em></p>
+    <p>Router adalah hal yang sangat esensial bagi suatu website yang menerapkan single page app (SPA). Karena dengan router, kita bisa memanipulasi URL di website SPA yang kemudian akan kita jalankan fungsi-fungsi tertentu sesuai dengan rules URL yang telah kita atur. Contoh dari SPA adalah halaman:</p>
+<ul>
+<li>situs.com</li>
+<li>situs.com/about</li>
+<li>situs.com/anggota/200</li>
+</ul>
+<p>Semua halaman tersebut sebenarnya hanyalah satu halaman yang sama namun menampilkan halaman yang saling berbeda dikarenakan sudah diatur oleh routernya.</p>
+<p>Ada dua macam router yaitu yang menggunakan hash sama yang nggak. Kalau menggunakan hash (contoh: <code>situs.com/#/daftar</code>), cocok pakai <strong>svelte-spa-router</strong>. Sedangkan kalau <em>nggak</em> pakai hash, pakai <strong>page</strong>.</p>
+<h2 id="menggunakan-svelte-spa-router">Menggunakan Svelte SPA Router</h2>
+<h3 id="instalasi">Instalasi</h3>
+<pre><code class="language-bash">npm i svelte-spa-router</code></pre>
+<h3 id="import-halaman-halaman-untuk-router">Import halaman-halaman untuk router</h3>
+<p>Ini adalah contoh ketika dipanggil di dalam <code>App.svelte</code>:</p>
+<pre><code class="language-html">&lt;Router {routes}/&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    import Router from &#39;svelte-spa-router&#39;
+
+    import Beranda from &#39;./halaman/Beranda.svelte&#39;
+    import Tambah from &#39;./halaman/Tambah.svelte&#39;
+    import Edit from &#39;./halaman/Edit.svelte&#39;
+
+    const routes = {
+        &#39;/&#39;: Beranda,
+        &#39;/tambah&#39;: Tambah,
+        &#39;/:id&#39;: Edit
+    }
+&lt;/script&gt;</code></pre>
+<h3 id="contoh-penggunaan-params">Contoh penggunaan params</h3>
+<pre><code class="language-html">&lt;p&gt;Hello {params.nama}&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    export let params
+&lt;/script&gt;</code></pre>
+<h3 id="push-router">Push router</h3>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+    import {push} from &#39;svelte-spa-router&#39;
+    const pindah = () =&gt; push(&#39;/about-me&#39;)
+&lt;/script&gt;
+
+&lt;div on:click={pindah}&gt;Klik ini&lt;/div&gt;</code></pre>
+<h3 id="push-router-dengan-a">Push router dengan <code>&lt;a&gt;</code></h3>
+<pre><code class="language-html">&lt;a href=&#39;/#hello&#39;&gt;Hello&lt;/a&gt;</code></pre>
+<h2 id="menggunakan-page">Menggunakan Page</h2>
+<h3 id="instalasi-1">Instalasi</h3>
+<pre><code class="language-bash">npm i page</code></pre>
+<p>Kemudian, buka <code>package.json</code> dan cari tulisan:</p>
+<pre><code class="language-json">&quot;start&quot;: &quot;sirv public&quot;</code></pre>
+<p>Nah, itu diganti dengan:</p>
+<pre><code class="language-json">&quot;start&quot;: &quot;sirv public --single&quot;</code></pre>
+<h3 id="import-halaman-halaman-untuk-router-1">Import halaman-halaman untuk router</h3>
+<p>Ini adalah contoh ketika dipanggil di dalam <code>App.svelte</code>:</p>
+<pre><code class="language-html">&lt;script&gt;
+ import router from &quot;page&quot;
+
+ import Beranda from &quot;./halaman/Beranda.svelte&quot;
+ import Baca from &quot;./halaman/Baca.svelte&quot;
+ import Tulis from &quot;./halaman/Tulis.svelte&quot;
+ import NotFound from &quot;./halaman/NotFound.svelte&quot;
+
+ let page
+ let params
+
+ router(&quot;/&quot;, () =&gt; page = Beranda)
+ router(&quot;/tulis&quot;, () =&gt; page = Tulis)
+ router(&quot;/:slug&quot;, (x, next) =&gt; {
+     params = x.params
+     next()
+ }, () =&gt; page = Baca)
+ router(&quot;/*&quot;, () =&gt; page = NotFound)
+
+ $: if(params){
+  window.scrollTo(0, 0)
+ }
+&lt;/script&gt;
+
+&lt;svelte:component this={page} {params}/&gt;</code></pre>
+<h3 id="contoh-penggunaan-params-1">Contoh penggunaan params</h3>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+    export let params
+&lt;/script&gt;
+
+&lt;p&gt;Hello {params.nama}&lt;/p&gt;</code></pre>
+<h3 id="push-router-1">Push router</h3>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+    import router from &quot;page&quot;
+    const pindah = () =&gt; router.replace(&#39;/about-me&#39;)
+&lt;/script&gt;
+
+&lt;div on:click={pindah}&gt;Klik ini&lt;/div&gt;</code></pre>
+<h3 id="push-router-dengan-a-1">Push router dengan <code>&lt;a&gt;</code></h3>
+<pre><code class="language-html">&lt;a href=&#39;/hello&#39;&gt;Hello&lt;/a&gt;</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/cara-menggunakan-svelte">Cara menggunakan Svelte</a></li>
+     <li><a href="/sistem-di-balik-blog-ini">Sistem di balik blog ini</a></li>
+     <li><a href="/sop-revisi-layout">SOP revisi layout</a></li>
+     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
+     <li><a href="/import-component-di-html">Import component di HTML</a></li>
+    </ol>
+  </body>
+</html>
+		

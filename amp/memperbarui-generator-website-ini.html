@@ -1,0 +1,238 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Memperbarui generator website ini</title>
+    <link rel="canonical" href="https://blogzen.js.org/memperbarui-generator-website-ini">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Sekarang, pakai JavaScript!"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Memperbarui generator website ini</h1>
+    <hr>
+    <p><em>Sekarang, pakai JavaScript!</em></p>
+    <p>Kalau di <a href="/sistem-di-balik-blog-ini">generator sebelumnya</a>, aku menggunakan Python untuk mengolah konten blog ini yang berupa:</p>
+<ol>
+<li>Clone <code>index.html</code></li>
+<li>Generate <code>sitemap.xml</code></li>
+<li>Membuat JSON tiap konten</li>
+</ol>
+<p>Kemudian, aku refaktori kodenya ke bahasa JavaScript karena pengennya sih <a href="https://github.com/mzaini30/blogzen">repositori blog ini</a> full menggunakan Javascript dan juga, kalau aku menggunakan Javascript, lebih mudah maintenance-nya karena APInya sudah banyak aku tau dan karena sintaksnya C-like, enak buat copas kode. Hehehhehe... Kalau aku pakai Python, susah copasnya karena bakalan banyak mencet tab. Hehehhee... Oke, langsung kita bahas aja.</p>
+<h2 id="tentang-clone-indexhtml">Tentang Clone <code>index.html</code></h2>
+<p>Clone <code>index.html</code> berfungsi untuk menyalin file <code>index.html</code> menjadi slugnya masing-masing konten. Misalnya aja, aku punya konten-konten yang memiliki slug: </p>
+<ol>
+<li>hello-world</li>
+<li>makan-nasi-enak</li>
+<li>coba-sekarang</li>
+</ol>
+<p>Maka, script akan menyalin <code>index.html</code> dan membuat file-file:</p>
+<ol>
+<li>hello-world.html</li>
+<li>makan-nasi-enak.html</li>
+<li>coba-sekarang.html</li>
+</ol>
+<p>Namun, sebenarnya sih aku dah nyaman sama JavaScript dibandingkan bahasa lainnya. Ada juga pernah aku mencoba untuk mengubah ketiga script itu ke dalam bahasa Go, tapi aku kesulitan mengubahnya.</p>
+<h2 id="tentang-generate-sitemap">Tentang generate sitemap</h2>
+<p><a href="/sitemap.xml">Sitemap</a> merupakan file yang sangat penting bagi sebuah website. Karena, dengan file ini, mesin pencari Google akan bisa merayapi website kita. Kok bisa? Karena file sitemap ini berisi kumpulan link di website kita. Maka, Google akan mudah merayapi website kita karena tinggal mengunjungi link-link yang ada di list di dalam file sitemap itu.</p>
+<p>Maka, aku pun akhirnya membuat script JavaScript untuk membuat file sitemap secara otomatis berdasarkan semua postingan yang sudah kubuat.</p>
+<h2 id="tentang-clone-json">Tentang Clone JSON</h2>
+<p>Database di blog ini awalnya hanya berupa <a href="/db.json">satu file</a>. Dan tentu saja ukurannya akan terus bertambah seiring dengan jumlah postingan di blog ini. Maka, bukan sesuatu yang efektif jika setiap kali kita membuka suatu halaman di blog ini, menembak satu file tersebut (yang sangat besar size-nya) dan kemudian ketika berganti halaman, menembak file itu lagi. Jadi, aku buat script untuk memecah satu file JSON itu menjadi banyak file JSON sesuai dengan jumlah postingan di blog ini. Sehingga, muat halaman akan lebih cepat karena yang diload hanya JSON yang sesuai dengan halaman yang sedang dibuka (nggak sampai 1 kb JSONnya).</p>
+<h2 id="tentang-callback-hell-di-javascript">Tentang callback hell di JavaScript</h2>
+<p>Salah satu yang menjadi tantangan di pemrograman berbasis bahasa JavaScript adalah tentang callback hell seperti ini:</p>
+<pre><code class="language-javascript">fetch(&quot;situs.com&quot;).then(x =&gt; x.json()).then(x =&gt; {
+ console.log(x)
+ fetch(&quot;halo.com&quot;).then(x =&gt; x.json()).then(x =&gt; {
+  console.log(x)
+ })
+})</code></pre>
+<p>Callback dalam JavaScript ditampakkan dari fungsi setelah tulisan <code>.then</code>. Nah, kalau kita lihat dari kode di atas, maka, callbacknya berada di sebuah fungsi setelah kita menjalankan perintah utama. Jadi, di dalam suatu statement, ada statement berikutnya, dia berbeda dengan bahasa lainnya yang menggunakan prinsip blocking IO:</p>
+<pre><code class="language-python">baca = open(&quot;halo.txt&quot;)
+print(baca.read())
+baca.close()
+buka = open(&quot;hai.txt&quot;, &quot;w&quot;)
+buka.write(&quot;halo&quot;)
+buka.close()</code></pre>
+<p>Kalau di JavaScript, kita menggunakan <a href="/contoh-async-await">async/await</a> untuk mengatasi permasalahan ini:</p>
+<pre><code class="language-javascript">halo = async () =&gt; {
+ x = await fetch(&quot;situs.com&quot;)
+ x = await x.json()
+ console.log(x)
+ x = await fetch(&quot;halo.com&quot;)
+ x = await x.json()
+ console.log(x)
+}
+halo()</code></pre>
+<p>Jadinya lebih enak dimaintenance kan ya? Mirip kayak blocking IO. Itulah kelebihannya kalau menggunakan Javascript karena bahasa ini sering banget di-update. Dan akhirnya, fitur async/await ini membantu banget buat mengatasi permasalahan callback hell yang sudah lama menghantui para programmer JavaScript.</p>
+<p>Di script-script yang akan aku bahas di sini juga menggunakan teknik async/await.</p>
+<h2 id="clone-indexjs">clone-index.js</h2>
+<pre><code class="language-javascript">process = require(&#39;process&#39;)
+fs = require(&#39;fs&#39;)
+util = require(&#39;util&#39;)
+readFile = util.promisify(fs.readFile)
+writeFile = util.promisify(fs.writeFile)
+copyFile = util.promisify(fs.copyFile)
+process.chdir(&#39;public&#39;)
+buka = async () =&gt; {
+    data = await readFile(&#39;db.json&#39;, &#39;utf8&#39;)
+    data = JSON.parse(data)
+    slug = []
+    judul = []
+    deskripsi = []
+    for (x of data.postingan){
+        slug.push(x.slug)
+        judul.push(x.judul)
+        deskripsi.push(x.deskripsi)
+    }
+    for (n in slug){
+        baca = await readFile(&#39;index.html&#39;, &#39;utf8&#39;)
+        baca = baca.replace(/(&lt;title&gt;)(.+)(&lt;\/title&gt;)/g, `$1${judul[n]}$3`)
+        baca = baca.replace(/(&lt;meta name=&quot;description&quot; content=&quot;)(.+)(&quot;&gt;)/g, `$1${deskripsi[n].replace(/&quot;/g, &#39;\\&quot;&#39;)}$3`)
+        writeFile(`${slug[n]}.html`, baca)
+    }
+    fs.copyFile(&#39;index.html&#39;, &#39;404.html&#39;, () =&gt; {})
+    fs.copyFile(&#39;index.html&#39;, &#39;cari.html&#39;, () =&gt; {})
+}
+buka()</code></pre>
+<h2 id="generate-sitemapjs">generate-sitemap.js</h2>
+<pre><code class="language-javascript">process = require(&#39;process&#39;)
+fs = require(&#39;fs&#39;)
+util = require(&#39;util&#39;)
+readFile = util.promisify(fs.readFile)
+writeFile = util.promisify(fs.writeFile)
+process.chdir(&#39;public&#39;)
+baca = async () =&gt; {
+    data = await readFile(&#39;db.json&#39;, &#39;utf8&#39;)
+    data = JSON.parse(data)
+    slug = []
+    for (x of data.postingan){
+        slug.push(x.slug)
+    }
+    slug.reverse()
+    sitemap = &#39;&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#39;
+    for (x of slug){
+        sitemap += `&lt;url&gt;&lt;loc&gt;https://blogzen.js.org/${x}&lt;/loc&gt;&lt;/url&gt;`
+    }
+    sitemap += &#39;&lt;url&gt;&lt;loc&gt;https://blogzen.js.org/&lt;/loc&gt;&lt;/url&gt;&#39;
+    sitemap += &#39;&lt;/urlset&gt;&#39;
+    writeFile(&#39;sitemap.xml&#39;, sitemap)
+}
+baca()</code></pre>
+<h2 id="pecah-jsonjs">pecah-json.js</h2>
+<pre><code class="language-javascript">fs = require(&#39;fs&#39;)
+util = require(&#39;util&#39;)
+process = require(&#39;process&#39;)
+writeFile = util.promisify(fs.writeFile)
+readFile = util.promisify(fs.readFile)
+process.chdir(&#39;public&#39;)
+buka = async () =&gt; {
+    data = await readFile(&#39;db.json&#39;, &#39;utf8&#39;)
+    data = JSON.parse(data)
+    slug = []
+    judul = []
+    isi = []
+    deskripsi = []
+    for (x of data.postingan){
+        slug.push(x.slug)
+        judul.push(x.judul)
+        isi.push(x.isi)
+        deskripsi.push(x.deskripsi)
+    }
+    beranda = []
+    for (n in slug){
+        beranda.push({
+            slug: slug[n],
+            judul: judul[n],
+            deskripsi: deskripsi[n]
+        })
+    }
+    writeFile(&#39;beranda.json&#39;, JSON.stringify(beranda))
+    for (n in slug){
+        yang_diisi = {
+            judul: judul[n],
+            deskripsi: deskripsi[n],
+            isi: isi[n]
+        }
+        writeFile(`${slug[n]}.json`, JSON.stringify(yang_diisi))
+    }
+}
+buka()</code></pre>
+<h2 id="script-deploy-di-github-action">Script Deploy di Github Action</h2>
+<p>Nggak mungkin kan aku menjalankan ketiga file itu sebelum menguploadnya ke Github. Maka, aku membuat <a href="https://github.com/mzaini30/blogzen/blob/master/.github/workflows/blogzen.yml">script</a> untuk menjalankan ketiga script di atas secara otomatis <em>setiap kali aku meng-upload website ini ke Github</em>:</p>
+<pre><code class="language-yaml">name: blogzen
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: &quot;14.x&quot;
+
+      - name: Cache dependencies Node
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles(&#39;**/package-lock.json&#39;) }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm i
+
+      - name: Clone Index
+        run: node clone-index.js
+
+      - name: Generate sitemap
+        run: node generate-sitemap.js
+
+      - name: Pecah JSON
+        run: node pecah-json.js
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public</code></pre>
+<p>Dari script di atas, ada beberapa step yang dijalankan secara otomatis saat Deploy:</p>
+<ol>
+<li>Check out</li>
+<li>Setup Node</li>
+<li>Cache dependencies Node</li>
+<li>Install</li>
+<li>Clone Index</li>
+<li>Generate sitemap</li>
+<li>Pecah JSON</li>
+<li>Deploy</li>
+</ol>
+<p>Tahapan <strong>checkout</strong> artinya adalah menyalin repositori Github kita ke cachenya Github. Kemudian, <strong>setup Node</strong> untuk meng-install Node di cache tadi. Kemudian, <strong>cache dependencies Node</strong> itu artinya cek apakah dependencies Node yang diperlukan itu sudah terinstall di cache Github atau belum. Kalau pemakaian pertama, biasanya sih dia mendownload dulu berbagai dependencies Node yang diperlukan. Kalau sudah pemakaian ke sekian, dia tinggal mengambil cache dependencies Node aja.</p>
+<p>Lalu, <strong>install</strong> berarti menjalankan <code>npm i</code>. Baru setelah itu kita menjalankan ketiga script yang sudah dibuat (<strong>Clone index, generate sitemap, pecah JSON</strong>). Baru, terakhir adalah <strong>deploy</strong> untuk menyalin folder <code>public</code> di cache Github ke dalam repositori Github kita di branch <code>gh-pages</code>.</p>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/sistem-di-balik-blog-ini">Sistem di balik blog ini</a></li>
+     <li><a href="/keikhlasan-di-segala-hal">Keikhlasan di segala hal</a></li>
+     <li><a href="/menjalankan-node-js-di-hp">Menjalankan Node JS di HP</a></li>
+     <li><a href="/about-me">About me</a></li>
+     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
+    </ol>
+  </body>
+</html>
+		

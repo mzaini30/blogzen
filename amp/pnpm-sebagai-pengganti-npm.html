@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>PNPM sebagai pengganti NPM</title>
+    <link rel="canonical" href="https://blogzen.js.org/pnpm-sebagai-pengganti-npm">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Package manager yang terpusat"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>PNPM sebagai pengganti NPM</h1>
+    <hr>
+    <p><em>Package manager yang terpusat</em></p>
+    <p>Node JS memiliki sistem manajemen paket yang bernama NPM. Nah, NPM ini akan mendownload paket yang kamu butuhkan beserta dengan paket-paket yang dibutuhkan oleh paket yang kamu butuhkan tadi. Hahahaha...</p>
+<p>Analoginya seperti ini, kamu membutuhkan sebuah paket yang bernama <em>kue</em> (1 MB). Nah, <em>kue</em> ini membutuhkan paket-paket lainnya berupa:</p>
+<ul>
+<li>adonan (1 MB)</li>
+<li>krim (2 MB)</li>
+<li>hiasan (1 MB)</li>
+</ul>
+<p>Total dari instalasi paket <em>kue</em> adalah 5 MB.</p>
+<p>Kemudian, kita akan instalasi paket <em>kue</em> juga di folder lainnya. Otomatis, terdownload lagi 5 MB tadi. Kan boros. Kalau dengan PNPM, semuanya terpusat. Artinya, yang dipasang di project kita cuma yang kita butuhkan aja, yaitu <em>kue</em>, sedangkan untuk adonan, krim, dan hiasan, semuanya di root laptop kita. Nah, kalau gini kan jadinya lebih kecil ukuran <code>node_modules</code> nya dan lebih hemat internet juga karena yang belum ada di root aja yang didownload. Kalau sudah ada, dia cuma ngelink ke root aja.</p>
+<h2 id="instalasi">Instalasi</h2>
+<p>Untuk instalasi, pertama, jalankan script berikut:</p>
+<pre><code class="language-bash">npm i -g pnpm</code></pre>
+<p>Kalau sudah, di-update PNPMnya dengan perintah berikut:</p>
+<pre><code class="language-bash">pnpm add -g pnpm</code></pre>
+<h2 id="perbandingan-perintah">Perbandingan perintah</h2>
+<p>Perintah PNPM sebenarnya kurang lebih aja sih sama NPM. Tabel di bawah ini menunjukkan perbedaanya yang sangat kecil sekali:</p>
+<table>
+<thead>
+<tr>
+<th>NPM</th>
+<th>PNPM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npm init -y</code></td>
+<td><code>pnpm init -y</code></td>
+</tr>
+<tr>
+<td><code>npm i</code></td>
+<td><code>pnpm install</code></td>
+</tr>
+<tr>
+<td><code>npm i hello</code></td>
+<td><code>pnpm add hello</code></td>
+</tr>
+<tr>
+<td><code>npm i -g hai</code></td>
+<td><code>pnpm add -g hai</code></td>
+</tr>
+</tbody></table>
+<p>Nah, kalau kamu mau migrasi dari project yang menggunakan NPM ke penggunaan PNPM, pastikan dulu kamu sudah hapus folder <code>node_modules</code>. Setelah itu, jalankan:</p>
+<pre><code class="language-bash">pnpm install</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/membuat-server-spa-dengan-javascript">Membuat server SPA dengan Javascript</a></li>
+     <li><a href="/membuat-apk-dari-html">Membuat APK dari HTML</a></li>
+     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
+     <li><a href="/pnpm-sebagai-pengganti-npm">PNPM sebagai pengganti NPM</a></li>
+     <li><a href="/cek-repositori-jsorg-yang-tidak-aktif">Cek repositori JS.ORG yang tidak aktif</a></li>
+    </ol>
+  </body>
+</html>
+		

@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Balik kata dengan Javascript</title>
+    <link rel="canonical" href="https://blogzen.js.org/balik-kata-dengan-javascript">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Dengan Node JS"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Balik kata dengan Javascript</h1>
+    <hr>
+    <p><em>Dengan Node JS</em></p>
+    <pre><code class="language-javascript">readline = require(&quot;readline&quot;)
+rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+jalankan = () =&gt; {
+    rl.question(&quot;Nama: &quot;, nama =&gt; {
+        console.log(nama.toLowerCase().split(&quot;&quot;).reverse().join(&quot;&quot;))
+        jalankan()
+    })
+}
+jalankan()</code></pre>
+<pre><code class="language-javascript">Nama: zuhdi
+idhuz
+Nama: habib
+bibah
+Nama: syamil
+limays
+Nama: firman
+namrif
+Nama: azzam
+mazza
+Nama: $
+$
+Nama: π¥•£
+£•¥π
+Nama: namrif
+firman
+Nama: hitaf
+fatih
+Nama: hitam
+matih
+Nama: biru
+urib
+Nama: merah
+harem</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/about-me">About me</a></li>
+     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
+     <li><a href="/langkah-menjadi-developer-frontend-junior">Langkah menjadi developer frontend web junior</a></li>
+     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
+    </ol>
+  </body>
+</html>
+		

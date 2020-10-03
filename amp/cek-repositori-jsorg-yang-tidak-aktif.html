@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Cek repositori JS.ORG yang tidak aktif</title>
+    <link rel="canonical" href="https://blogzen.js.org/cek-repositori-jsorg-yang-tidak-aktif">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Beres-beres list JS.ORG"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Cek repositori JS.ORG yang tidak aktif</h1>
+    <hr>
+    <p><em>Beres-beres list JS.ORG</em></p>
+    <p>Semalam (29/9/2020) aku kepikiran dengan beberapa website berdomain <a href="/membuat-domain-gratis-jsorg">JS.ORG</a> yang 404 not found, alias, kalau dibuka linknya ya nggak ada isinya. Akhirnya, aku kepikiran untuk membuat script yang bisa melacak website mana aja yang kosong.</p>
+<p>Pertama, tentu aja aku memilih bahasa pemrograman yang paling <em>mudah</em> untuk membuatnya. Kemudian, aku memilih antara JavaScript, Python, Ruby, dan Go. Dan kayaknya sudah jelas sih bahwa aku akan memilih JavaScript. Hehehhehe... Soalnya cuma bahasa itu aja sih yang udah paling nyaman di aku. Hehehhe...</p>
+<p>Nah, sekarang, kita buat logika pemrogramannya. Pertama kan, kita ambil dulu data yang berisi semua domain JS.ORG. Lalu, cek repositorinya, apakah ketika dibuka, di bagian <code>&lt;title&gt;</code> ada tulisan <code>Page not found</code> apa nggak. Kalau ada, kita masukkan list. Sesimpel itu.</p>
+<h2 id="persiapan">Persiapan</h2>
+<p>Pertama, init dulu foldernya dengan <a href="/pnpm-sebagai-pengganti-npm">PNPM</a>:</p>
+<pre><code class="language-bash">pnpm init -y</code></pre>
+<p>Kemudian, install <code>node-fetch</code>:</p>
+<pre><code class="language-bash">pnpm add node-fetch</code></pre>
+<h2 id="mulai-coding">Mulai coding!</h2>
+<p>Buat <code>index.js</code> yang isinya:</p>
+<pre><code class="language-javascript">fetch = require(&#39;node-fetch&#39;)
+fs = require(&#39;fs&#39;)
+// data = &#39;http://localhost:2020/cnames_active.js&#39;
+data = &#39;https://raw.githubusercontent.com/js-org/js.org/master/cnames_active.js&#39;
+fetch(data).then(x =&gt; x.text()).then(x =&gt; {
+    eval(x)
+    data = []
+    for (n in cnames_active){
+        data.push({
+            &#39;id&#39;: n,
+            &#39;github_pages&#39;: cnames_active[n],
+            &#39;repo&#39;: &#39;&#39;
+        })
+    }
+    for (x of data){
+        if (x.id == &#39;&#39;){
+            x.id = &#39;js.org&#39;
+        }
+    }
+    for (x of data){
+        if (x.github_pages.includes(&#39;github.io&#39;)) {
+            pisah = x.github_pages.split(&#39;/&#39;)
+            x.repo = `${pisah[0].replace(&#39;.github.io&#39;, &#39;&#39;)}/${pisah[1] ? pisah[1] : pisah[0]}`
+        }
+    }
+    kosong = []
+    fs.writeFile(&#39;hasil.txt&#39;, &#39;&#39;, () =&gt; {})
+    angka = 0
+    jalankan = () =&gt; {
+        fetch(`https://github.com/${data[angka].repo}`).then(z =&gt; z.text()).then(hasil =&gt; {
+            console.log(`Cek ${data[angka].repo}`)
+            if (hasil.includes(&#39;&lt;title&gt;Page not found&#39;)) {
+                kosong.push(&#39;\n&#39; + &#39;https://github.com/&#39; + data[angka].repo)
+            }
+            fs.writeFile(&#39;hasil.txt&#39;, kosong, () =&gt; {})
+            angka += 1
+            if (angka &lt; data.length){
+                jalankan()
+            }
+        })
+    }
+    jalankan()
+})</code></pre>
+<h2 id="hasilnya">Hasilnya</h2>
+<p>Berikut ini hasilnya setelah aku jalankan <code>node index.js</code>:</p>
+<pre><code class="language-javascript">https://github.com/js-org/js-org.github.io,
+https://github.com/afexteam/aemp,
+https://github.com/agrawalnaman/agrawalnaman.github.io,
+https://github.com/algninja/algninja.github.io,
+https://github.com/am-77/amine,
+https://github.com/ardasoyturk/ardasoyturk.github.io,
+https://github.com/asdivyansh/asdivyansh.github.io,
+https://github.com/sawyerbx/atom-git-docs,
+https://github.com/basicgame/basicGame.js,
+https://github.com/purpzie/birb.js.org,
+https://github.com/black-fury/black-fury.github.io,
+https://github.com/zam27/blogzam,
+https://github.com/discordboats/discordboats.github.io,
+https://github.com/fardindadev/bonzibuddy,
+https://github.com/beeyev/btgprice.org,
+https://github.com/cagataycali/cagataycali.github.io,
+https://github.com/bbyjins/candy,
+https://github.com/iamnapo/cbmjs,
+https://github.com/diegomagdaIeno/Chr1stmas,
+https://github.com/chrismendis/chrismendis.github.io,
+https://github.com/marekkobida/christopher,
+https://github.com/city/city.github.io,
+https://github.com/clarkdo/clarkdo.github.io,
+https://github.com/schoolhouserock/CollegeQuest,
+https://github.com/gleeny/countr-redirect,
+https://github.com/realalexsss/CustomRPC,
+https://github.com/chroventer/discordutil,
+https://github.com/megacode18/discunit.js,
+https://github.com/relms12345/Dislink,
+https://github.com/dougg0k/dougg0k.github.io,
+https://github.com/martondev/dpm,
+https://github.com/dromejs/drome.js.org,
+https://github.com/orbitalproject/dyn-client,
+https://github.com/andreapins/Efemerides,
+https://github.com/engui/engui.github.io,
+https://github.com/frani/fem,
+https://github.com/ikrydev/fikri.js.org,
+https://github.com/sirajchokshi/FlowPainter,
+https://github.com/netology-group/foxford.github.io,
+https://github.com/egoist/funbook,
+https://github.com/chaudhs769/girish.js.org,
+https://github.com/jottocraft/surf,
+https://github.com/assetinfo/assetinfo.github.io,
+https://github.com/grubburg/blog,
+https://github.com/guineapigbot/guineapigbot.github.io,
+https://github.com/guuibayer/guuibayer.github.io,
+https://github.com/tbnritzdoge/helperweb,
+https://github.com/hiteshsubnani0128/hiteshsubnani,
+https://github.com/hifocus/www.hxis.me,
+https://github.com/iiilfaaa/iiilfaaa.github.io,
+https://github.com/iiilfaaa/www,
+https://github.com/ionjs-dev/ionjs-dev.github.io,
+https://github.com/irjs/docs,
+https://github.com/sinistrecyborg/Ivy,
+https://github.com/sawyerbx/james,
+https://github.com/json-schema-faker/website-jsf,
+https://github.com/jz6/jz6.github.io,
+https://github.com/fed135/kalm.github.io,
+https://github.com/thecodesuite/katebot,
+https://github.com/jasperv/keeping-up-with-javascript,
+https://github.com/naveenjujaray/jksblog,
+https://github.com/kiliczsh/kiliczsh.github.io,
+https://github.com/khareemnurulla/kim,
+https://github.com/kunalghosh02/kunalghosh02.github.io,
+https://github.com/kyotojs/kyotojs.github.io,
+https://github.com/palladium/Lava.js,
+https://github.com/laveesh/laveesh.github.io,
+https://github.com/leipzigjs/leipzigjs.github.io,
+https://github.com/leoaj/leoaj.github.io,
+https://github.com/lf112/lf112.github.io,
+https://github.com/lmribeiro/lmribeiro.github.io,
+https://github.com/mahdyar/mahdyar.js.org,
+https://github.com/botsdemanu/manu,
+https://github.com/matthias-schuetz/matthias-schuetz.github.io,
+https://github.com/megacode18/megacode18.github.io,
+https://github.com/miteshtagadiya/miteshtagadiya,
+https://github.com/rolandpoulter/murder,
+https://github.com/naveenjujaray/blog,
+https://github.com/eliotchignell/NBABot,
+https://github.com/nemaniarjun/nemaniarjun.github.io,
+https://github.com/netology-group/netology-group.github.io,
+https://github.com/nmai/nmai.github.io,
+https://github.com/nintenzone/NintenBot,
+https://github.com/baleeds/nota,
+https://github.com/okb1100/okb1100.github.io,
+https://github.com/mountainwang/ohmy,
+https://github.com/jczimm/omega,
+https://github.com/passportbot/Website,
+https://github.com/sawyerbx/pw,
+https://github.com/nathan/pax,
+https://github.com/iamcristye/PDF,
+https://github.com/pekanbarujs/pekanbarujs.github.io,
+https://github.com/kaisteinke/perle,
+https://github.com/xiaopika/pika.js.org,
+https://github.com/pixxel/pixxel.github.io,
+https://github.com/meshesha/jspptxjs.github.io,
+https://github.com/project-ignite/project-ignite.github.io,
+https://github.com/gleeny/promise-redirect,
+https://github.com/purpzie/site,
+https://github.com/sawyerbx/quotes,
+https://github.com/randyviandaputra/randyviandaputra.github.io,
+https://github.com/sawyerbx/renovate,
+https://github.com/eton4446/Reply,
+https://github.com/saguijs/saguijs.github.io,
+https://github.com/sanohin/sanohin.github.io,
+https://github.com/codedrs/secret-santa,
+https://github.com/mrfarhad/senilwebsite,
+https://github.com/mayerdev/md-server-core,
+https://github.com/shekharreddy4/Shekhar,
+https://github.com/shermix/shermix.github.io,
+https://github.com/jsmiith/shortener,
+https://github.com/shs-coding-club-projects/shs-coding-club-projects.github.io,
+https://github.com/chaudhs769/siddharth.js.org,
+https://github.com/3052cole/snowglobe,
+https://github.com/solome/solome.github.io,
+https://github.com/sonnylazuardi/sonnylazuardi.github.io,
+https://github.com/soofik/soofik.github.io,
+https://github.com/sawyerbx/spotix,
+https://github.com/sawyerjs/sqrvival,
+https://github.com/stampylongr/stampylongr.github.io,
+https://github.com/janbiasi/supernova,
+https://github.com/technologyadvice/tap-flux,
+https://github.com/taylorreis/taylorreis.github.io,
+https://github.com/theshellproject/theshellproject.github.io,
+https://github.com/sawyerbx/titlejs,
+https://github.com/ttttmr/ttttmr.github.io,
+https://github.com/jottocraft/tp,
+https://github.com/wr1ght/trellojs,
+https://github.com/trevorgk/trevorgk.github.io,
+https://github.com/marcus-sa/trinity-js,
+https://github.com/turbo/turbo.github.io,
+https://github.com/umm233/umm233.github.io,
+https://github.com/iamcristye/Uneditable.js,
+https://github.com/url-pages/url-pages.github.io,
+https://github.com/use-js/use,
+https://github.com/misly16/ValoBotsite,
+https://github.com/vecxode/vecxode.github.io,
+https://github.com/viki-org/viki-web-ui,
+https://github.com/bryansha/wc,
+https://github.com/w-gx/w-gx.github.io,
+https://github.com/sy-records/wstool,
+https://github.com/sawyerbx/wthunting,
+https://github.com/xhy/xhy.github.io,
+https://github.com/yadljs/yadljs.github.io,
+https://github.com/yakeing/HexoBlog,
+https://github.com/ssttii/ssttii.github.io,
+https://github.com/zeainc/zea-cad,
+https://github.com/zeainc/zea-engine,
+https://github.com/wzb1244/wzb1244.github.io,
+https://github.com/zlanguage/plugin-docs</code></pre>
+<p>Kemudian, list ini aku masukkan ke <a href="https://github.com/js-org/js.org/issues/4718">#4718 js-org/js.org</a>.</p>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/membuat-domain-gratis-jsorg">Membuat domain gratis JS.ORG</a></li>
+     <li><a href="/router-di-svelte-js">Router di Svelte JS</a></li>
+     <li><a href="/langkah-menjadi-developer-frontend-junior">Langkah menjadi developer frontend web junior</a></li>
+     <li><a href="/mengisi-waktu-kosong">Mengisi waktu kosong</a></li>
+    </ol>
+  </body>
+</html>
+		

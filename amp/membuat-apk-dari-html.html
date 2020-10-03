@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Membuat APK dari HTML</title>
+    <link rel="canonical" href="https://blogzen.js.org/membuat-apk-dari-html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Tanpa Android Studio!"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Membuat APK dari HTML</h1>
+    <hr>
+    <p><em>Tanpa Android Studio!</em></p>
+    <p>Membuat suatu aplikasi Android adalah impian dari banyak developer. Namun terkadang tujuan mulia itu (membuat aplikasi Android yang bermanfaat) tersandung pada suatu fakta bahwa untuk membuat aplikasi Android dibutuhkan Android Studio atau setidaknya Android SDK yang nanti bisa dikoneksikan dengan React Native maupun <a href="/cara-menggunakan-svelte">Svelte</a> Native. Tapi, itu semua sama aja. Sama-sama harus menggunakan laptop dengan RAM minimal 4 GB untuk menjalankannya. Nah, kalau misalnya kita hanya mempunyai laptop dengan RAM 2 GB, ya hanya bisa gigit jari karena laptop harus kerja keras untuk sekadar membuat satu aplikasi.</p>
+<p>Nah, kali ini aku akan memberi tau cara membuat aplikasi Android dengan mudah! Yap, mudah banget karena kamu hanya perlu file HTML untuk membuatnya dan menyiapkan icon aplikasi yang bebas aja, yang penting bentuk iconnya kotak. Yuk lah kita mulai...</p>
+<h2 id="menyiapkan-tools-dan-bahan">Menyiapkan tools dan bahan</h2>
+<p>Download dulu <a href="https://github.com/mzaini30/apk/blob/master/APK%20Builder-com.gmail.heagoo.apkbuilder-1.1.0-11.apk">APK Builder</a>. APK Builder ini adalah tool utama yang kita gunakan untuk convert dari HTML jadi aplikasi Android.</p>
+<p>Lalu, siapkan juga file HTMLnya. Dikumpulkan dalam satu folder ya...</p>
+<p>Kemudian, siapkan juga gambar berdimensi kotak, untuk icon aplikasi.</p>
+<h2 id="membuat-aplikasi-dari-apk-builder">Membuat aplikasi dari APK Builder</h2>
+<p>Buka aplikasi APK Builder lalu pilih <code>New Project</code>.</p>
+<p>Lalu tentukan nama aplikasi yang diinginkan. Di sini, aku memilih menggunakan nama <code>Coba Dulu</code>. Nah, secara otomatis, nama packagenya menjadi <code>com.example.cobadulu</code>.</p>
+<p>Lalu muncul pilihan template aplikasi, pilih yang <code>Web Wrapper</code>.</p>
+<p>Terus muncul pertanyaan <code>Activity Name</code>, klik <code>Finish</code> aja.</p>
+<p>Selamat, aplikasimu (masih kosongan tapi) sudah jadi...</p>
+<h2 id="mengedit-kode-java">Mengedit kode Java</h2>
+<p>Buka <code>src/com/example/cobadulu/MainActivity.java</code>. Lalu, hapus semua kodenya dan ganti dengan kode berikut ini:</p>
+<pre><code class="language-java">package com.example.murajaah;
+
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import android.net.Uri;
+import android.content.Intent;
+
+public class MainActivity extends Activity {
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+        setContentView(R.layout.activity_main);
+
+
+
+        WebView webView = (WebView)findViewById(R.id.web);
+
+
+         webView.getSettings().setJavaScriptEnabled(true);
+         webView.getSettings().setDomStorageEnabled(true);
+
+webView.getSettings().setAllowFileAccessFromFileURLs(true); webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+
+webView.getSettings().setAllowFileAccess(true); webView.getSettings().setAllowContentAccess(true);
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
+
+            if (url.startsWith(&quot;http&quot;)){ 
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url)); 
+                    startActivity(i); 
+
+            } else {
+                     view.loadUrl(url);
+
+            } 
+             return true; 
+
+
+
+
+            }
+/*
+            @TargetApi(Build.VERSION_CODES.N)
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return false;
+            }
+*/
+        });
+
+        if (savedInstanceState != null) {
+          webView.restoreState(savedInstanceState);
+         } else {
+            webView.loadUrl(&quot;file:///android_asset/index.html&quot;);
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+
+        WebView webView = (WebView)findViewById(R.id.web);
+
+
+
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            switch (keyCode) {
+                case KeyEvent.KEYCODE_BACK:
+                    if (webView.canGoBack()) {
+                        webView.goBack();
+                    } else {
+                        finish();
+                    }
+                    return true;
+            }
+
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState )
+    {
+        WebView webview = (WebView)findViewById(R.id.web);
+
+      super.onSaveInstanceState(outState);
+        webview.saveState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        WebView webview = (WebView)findViewById(R.id.web);
+
+        super.onRestoreInstanceState(savedInstanceState);
+        webview.restoreState(savedInstanceState);
+    }
+
+}</code></pre>
+<p>Nah, perhatikan pada baris pertama kode yang isinya:</p>
+<pre><code class="language-java">package com.example.murajaah;</code></pre>
+<p>Ingat kan kalau nama package kita <code>com.example.cobadulu</code>? Nah, ubah bagian itu menjadi:</p>
+<pre><code class="language-java">package com.example.cobadulu;</code></pre>
+<h2 id="mengedit-layout">Mengedit layout</h2>
+<p>Buka <code>AndroidManifest.xml</code>.</p>
+<p>Perhatikan pada bagian:</p>
+<pre><code class="language-javascript">android:theme=&quot;@style/AppTheme&quot;</code></pre>
+<p>Pada bagian itu, ubah menjadi:</p>
+<pre><code class="language-javascript">android:theme=&quot;@android:style/Theme.NoTitleBar&quot;</code></pre>
+<h2 id="memasukkan-html">Memasukkan HTML</h2>
+<p>Untuk memasukkan file HTMLnya, salin folder yang berisi HTML (pastikan ada <code>index.html</code> ya...) ke root dari APK Builder kemudian remake foldernya menjadi <code>assets</code>.</p>
+<h2 id="mengubah-icon-aplikasi">Mengubah icon aplikasi</h2>
+<p>Salin gambar icon aplikasi ke <code>res/midmap-xhdpi</code> lalu rename gambarnya menjadi <code>ic_launcher.jpg</code> atau <code>ic_launcher.png</code>, disesuaikan aja sama ekstensi gambarnya. Kalau PNG ya tetap PNG. Kalau JPG ya tetap JPG.</p>
+<blockquote>
+<p>Kalau sudah, klik tombol <strong>Build</strong> yang ada di kanan atas.</p>
+</blockquote>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
+     <li><a href="/import-component-di-html">Import component di HTML</a></li>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
+     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
+    </ol>
+  </body>
+</html>
+		

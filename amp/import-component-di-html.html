@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Import component di HTML</title>
+    <link rel="canonical" href="https://blogzen.js.org/import-component-di-html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Ternyata bisa! Hahahaha...."
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Import component di HTML</h1>
+    <hr>
+    <p><em>Ternyata bisa! Hahahaha....</em></p>
+    <p>Import component artinya adalah kita memasukkan <code>sidebar.html</code>, <code>footer.html</code>, dan ,<code>header.html</code> ke dalam <code>index.html</code>. Bisa kah ya? Kalau dulu, aku pengen banget melakukan itu tapi nggak tau bagaimana caranya. Hingga akhirnya, ada sebuah postingan yang dishare sama Bang Rian di <a href="https://t.me/js_id">grup Telegram JavaScript Indonesia</a> yang memberi tau caranya seperti ini:</p>
+<p>Misal, kita memiliki komponen <code>sidebar.html</code> yang mau diexport ke <code>index.html</code>, maka, di <code>index.html</code>, kita buat elemen seperti ini:</p>
+<pre><code class="language-html">&lt;bagian-sidebar&gt;&lt;/bagian-sidebar&gt;</code></pre>
+<p>Aneh banget kan ya? Tag HTML <code>&lt;bagian-sidebar&gt;</code> kan nggak pernah ada. Lalu, kita menggunakannya? Ya memang tujuannya itu sih, kita menuliskan tag HTML yang nggak pernah ada supaya nggak bentrok dengan tag HTML yang sudah ada.</p>
+<p>Oke, kita lanjutkan codingnya. Tadi kan kodenya seperti ini:</p>
+<pre><code class="language-html">&lt;bagian-sidebar&gt;&lt;/bagian-sidebar&gt;</code></pre>
+<p>Kemudian, kita tambahkan script untuk mengimport komponen <code>sidebar.html</code>:</p>
+<pre><code class="language-html">&lt;bagian-sidebar&gt;&lt;/bagian-sidebar&gt;
+&lt;script&gt;
+ fetch(&quot;sidebar.html&quot;).then(x =&gt; x.text()).then(x =&gt; document.querySelector(&quot;bagian-sidebar&quot;).innerHTML = x)
+&lt;/script&gt;</code></pre>
+<p>Aku ngelihat script di atas ketawa eh. Ya benar sih bisa import HTML dengan cara Fetch. Aku nggak kebayang dari dulu eh. Dari dulu bingung aja gimana caranya import HTML tanpa ada usaha nyari jawabannya. Eh, sekarang malah nemukan jawabannya tepat di depan mata. Hehehhehe...</p>
+<h2 id="kelemahan-include-html">Kelemahan include HTML</h2>
+<p>Kalau kita lihat dari contoh di atas, scriptnya hanya bisa sekadar include aja tanpa bisa menggunakan <em>attribute</em> dan <em>slot</em>. Nah, dua elemen ini adalah sesuatu yang penting jika bermain dengan komponen. Akan tetapi, di teknik yang kusebutkan di atas tadi, nggak bisa pakai attribute dan slot. Maka, kita pun harus menggunakan teknik lainnya.</p>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/langkah-menjadi-developer-frontend-junior">Langkah menjadi developer frontend web junior</a></li>
+     <li><a href="/about-me">About me</a></li>
+     <li><a href="/sistem-di-balik-blog-ini">Sistem di balik blog ini</a></li>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/import-component-di-html">Import component di HTML</a></li>
+    </ol>
+  </body>
+</html>
+		

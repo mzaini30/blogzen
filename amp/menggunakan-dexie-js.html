@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Menggunakan Dexie JS</title>
+    <link rel="canonical" href="https://blogzen.js.org/menggunakan-dexie-js">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Database offline"
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Menggunakan Dexie JS</h1>
+    <hr>
+    <p><em>Database offline</em></p>
+    <p>Dexie JS adalah sebuah library JavaScript yang berguna untuk kita membuat database tanpa memerlukan suatu server. Eh, emang bisa? Gimana caranya? Jadi, dengan Dexie JS ini, kita hanya memerlukan browser sebagai tempat penyimpanan databasenya. Dexie menggunakan teknologi IndexedDB, yaitu suatu database manager di browser untuk menyimpan data. Alasan mengapa aku menggunakan API-API dari Dexie dibandingkan API-API dari IndexedDB untuk mengolah database offline adalah karena sintaks-sintaks Dexie yang lebih sederhana. Jadi, kita bisa lebih berfokus ke alur programnya aja.</p>
+<p>Sebelumnya, aku menjelaskan kode-kode program di bawah ini dengan mengistilahkan table sebuah database pada table yang sesungguhnya. Jadi, ada yang namanya kolom dan baris. Contohnya seperti berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Alamat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Zen</td>
+<td>Samarinda</td>
+</tr>
+<tr>
+<td>Seseorang</td>
+<td>Balikpapan</td>
+</tr>
+</tbody></table>
+<p>Dari table di atas, kita bisa lihat bahwa <code>nama</code> dan <code>alamat</code> adalah nama kolom. Sedangkan <code>Zen</code> dan <code>Samarinda</code> adalah isi table pada baris yang sama.</p>
+<p>Oke, langsung aja kita mulai dari instalasi.</p>
+<h2 id="instalasi">Instalasi</h2>
+<p>Untuk instalasi, kamu cukup mengincludekan file Dexie ke dalam HTML dengan sintaks sebagai berikut:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/dexie@latest/dist/dexie.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Tapi, kalau kamu mau download dulu file Dexienya bisa sih. Tinggal kamu buka aja link itu baru disave. Tapi, kalau mau ala-ala Linux atau download dari Terminal ya, kodenya seperti ini yang kamu jalankan di Terminal:</p>
+<pre><code class="language-bash">wget https://unpkg.com/dexie@latest/dist/dexie.min.js</code></pre>
+<p>Lalu, setelah itu, includekan Dexie dengan script berikut:</p>
+<pre><code class="language-html">&lt;script src=&quot;dexie.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Itu kalau dengan file Dexienya secara CDN (content delivery network). Tapi, kalau mau coba dengan Node JS, bisa dengan:</p>
+<pre><code class="language-bash">npm i dexie</code></pre>
+<p>Lalu, importnya dengan:</p>
+<pre><code class="language-javascript">import Dexie from &quot;dexie&quot;</code></pre>
+<p>Tapi kalau aku sih suka yang dengan CDN daripada import dari Node JS, karena untuk memisahkan antara <a href="/cara-menggunakan-svelte">framework JavaScript</a> yang menggunakan Node JS dengan script-script eksternal. Tapi kali ini ya. Nggak tau kalau besok-besok berubah pikiran. Hehehhehe....</p>
+<h2 id="init-database">Init database</h2>
+<p>Hal pertama yang dilakukan setelah mengincludekan file Dexie adalah menginit databasenya. Nah, pada contoh di bawah ini, aku membuat database bernama <code>nama database</code>, lalu database tersebut aku simpan di variabel <code>db</code>.</p>
+<pre><code class="language-javascript">db = new Dexie(&quot;nama database&quot;)
+db.version(1).stores({
+ data: &quot;++id, nama, alamat&quot;
+})</code></pre>
+<p>Kemudian, dari database <code>db</code>, aku buat tablenya yang bernama <code>data</code> dan berisi kolom <code>id</code> yang auto increment, <code>nama</code>, dan <code>alamat</code>. Oh iya, di Dexie ini, semuanya disimpan dalam bentuk string. Jadi, walaupun kamu menyimpannya dalam bentuk number, akan disimpan ke dalam bentuk string.</p>
+<p>Mengapa hanya membuat satu tabel? Karena Dexie ini memanipulasi fungsi-fungsi pada IndexedDB, maka hanya bisa membuat satu table aja di satu database, soalnya kan ini bukan SQL yang merupakan kaitan antara satu table dengan table lainnya. Tapi nggak msalah sih. Yang penting kan, kita sudah punya fitur database untuk aplikasi offline kita. Itu aja udah Alhamdulillah banget ya.</p>
+<p>Kemudian, kita akan mempelajari bagaimana caranya <strong>CRUD</strong> di Dexie ini:</p>
+<h2 id="memasukkan-data-ke-database-create">Memasukkan data ke database <em>(Create)</em></h2>
+<pre><code class="language-javascript">db.data.add({
+ nama: &quot;Zen&quot;,
+ alamat: &quot;Samarinda&quot;
+}).then(() =&gt; console.log(&quot;success&quot;))</code></pre>
+<p>Pada contoh di atas, aku menggunakan <code>.then(() =&gt; console.log(&quot;success&quot;))</code> di akhir dari kodenya. Itu adalah callback yang akan dijalankan jika success.</p>
+<h2 id="membaca-data-read">Membaca data <em>(Read)</em></h2>
+<pre><code class="language-javascript">db.data.toArray(x =&gt; console.log(x))</code></pre>
+<p>Contoh dari hasil di atas adalah:</p>
+<pre><code class="language-json">[
+ {
+  &quot;id&quot;: 1,
+  &quot;nama&quot;: &quot;Zen&quot;,
+  &quot;alamat&quot;: &quot;Samarinda&quot;
+ },
+ {
+  &quot;id&quot;: 2,
+  &quot;nama&quot;: &quot;Siapa&quot;,
+  &quot;alamat&quot;: &quot;Tenggarong&quot;
+ },
+]</code></pre>
+<p>Nah, baru deh hasil JSON di atas kita olah di berbagai framework JavaScript favorit kita.</p>
+<h2 id="update-data-update">Update data <em>(Update)</em></h2>
+<pre><code class="language-javascript">db.data.where({
+ id: 2
+}).modify({
+ nama: &quot;Dia&quot;,
+ alamat: &quot;Samarinda&quot;
+})</code></pre>
+<p>Untuk update data ini, pertama kita sebutkan dulu condition yang membuat suatu baris table di-update. Nah, kalau dari contoh di atas, kita ambil baris table dengan id 2. Itu nggak mesti diisi dengan id. Bisa juga diisi dengan <code>nama: &quot;Zen&quot;</code> atau dengan nama kolom lainnya.</p>
+<h2 id="delete-data-delete">Delete data <em>(Delete)</em></h2>
+<pre><code class="language-javascript">db.data.delete(3)</code></pre>
+<p>Angka 3 pada contoh di atas adalah id dari baris data yang mau dihapus. Nah, itu artinya, yang mau dihapus adalah baris data dengan id 3.</p>
+<h2 id="membalik-urutan-data">Membalik urutan data</h2>
+<p>Untuk membalik urutan data, kita cukup menggunakan API <code>.reverse()</code>.</p>
+<pre><code class="language-javascript">db.data.reverse().toArray(x =&gt; console.log(x))</code></pre>
+
+    <h2>Tulisan lainnya</h2>
+    <ol>
+     <li><a href="/tentang-belajar-mandiri">Tentang belajar mandiri</a></li>
+     <li><a href="/import-component-di-html">Import component di HTML</a></li>
+     <li><a href="/betapa-uniknya-hafalan-quran">Betapa uniknya hafalan Quran</a></li>
+     <li><a href="/keikhlasan-di-segala-hal">Keikhlasan di segala hal</a></li>
+     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
+    </ol>
+  </body>
+</html>
+		
