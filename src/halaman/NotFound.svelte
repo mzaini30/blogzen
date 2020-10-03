@@ -1,4 +1,7 @@
 <p bind:this={teks} class="text-center">Nggak ada</p>
+<div class="bawah">
+ <a class="btn btn-info" href="/">&#x2616;</a>
+</div>
 
 <svelte:head>
  <title>Nggak ada</title>
