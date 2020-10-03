@@ -16,6 +16,7 @@ jalankan = async () => {
 	for (x of baca.postingan){
 	 data = [...baca.postingan]
 	 data = data.sort(() => 0.5 - Math.random())
+	 konten = marked(x.isi)
 		isi = `
 <!doctype html>
 <html amp lang="en">
@@ -54,7 +55,7 @@ jalankan = async () => {
     <h1>${x.judul}</h1>
     <hr>
     <p><em>${x.deskripsi}</em></p>
-    ${marked(x.isi)}
+    ${konten}
     <h2>Tulisan lainnya</h2>
     <ol>
      <li><a href="/${data[0].slug}">${data[0].judul}</a></li>
