@@ -16,7 +16,7 @@ jalankan = async () => {
 	for (x of baca.postingan){
 	 data = [...baca.postingan]
 	 data = data.sort(() => 0.5 - Math.random())
-	 konten = marked(x.isi)
+	 konten = marked(x.isi).replace(/<img([^>]+)>/g, "<div class='container-gambar'><amp-img class='gambar' layout='fill'$1></amp-img></div>")
 		isi = `
 <!doctype html>
 <html amp lang="en">
@@ -49,7 +49,17 @@ jalankan = async () => {
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>${css}</style>
+    <style amp-custom>
+    ${css}
+ .container-gambar {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 300px;
+ }
+ amp-img.gambar img {
+ 	object-fit: contain;
+ }
+    </style>
   </head>
   <body>
     <h1>${x.judul}</h1>
