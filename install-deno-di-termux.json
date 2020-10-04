@@ -1,0 +1,1 @@
+{"judul":"Install Deno di Termux","deskripsi":"Akhirnya...","isi":"```bash\npkg install rust\ncargo install deno\n```"}
