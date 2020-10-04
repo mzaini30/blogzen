@@ -95,6 +95,15 @@ db.version(1).stores({
  alamat: &quot;Samarinda&quot;
 }).then(() =&gt; console.log(&quot;success&quot;))</code></pre>
 <p>Pada contoh di atas, aku menggunakan <code>.then(() =&gt; console.log(&quot;success&quot;))</code> di akhir dari kodenya. Itu adalah callback yang akan dijalankan jika success.</p>
+<p>Kalau menggunakan <a href="/contoh-async-await">async/await</a>, kodenya jadi seperti ini:</p>
+<pre><code class="language-javascript">jalankan = async () =&gt; {
+ x = await db.data.add({
+  nama: &quot;Zen&quot;,
+  alamat: &quot;Samarinda&quot;
+ })
+ console.log(&quot;Sukses&quot;)
+}
+jalankan()</code></pre>
 <h2 id="membaca-data-read">Membaca data <em>(Read)</em></h2>
 <pre><code class="language-javascript">db.data.toArray(x =&gt; console.log(x))</code></pre>
 <p>Contoh dari hasil di atas adalah:</p>
@@ -128,11 +137,11 @@ db.version(1).stores({
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/mengisi-waktu-kosong">Mengisi waktu kosong</a></li>
-     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
-     <li><a href="/balik-kata-dengan-javascript">Balik kata dengan Javascript</a></li>
-     <li><a href="/keikhlasan-di-segala-hal">Keikhlasan di segala hal</a></li>
-     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
+     <li><a href="/tentang-belajar-mandiri">Tentang belajar mandiri</a></li>
+     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
+     <li><a href="/membuat-server-spa-dengan-go">Membuat server SPA dengan Go</a></li>
+     <li><a href="/membuat-apk-dari-html">Membuat APK dari HTML</a></li>
+     <li><a href="/memperbarui-generator-website-ini">Memperbarui generator website ini</a></li>
     </ol>
   </body>
 </html>
