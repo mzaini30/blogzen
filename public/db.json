@@ -80,7 +80,7 @@
     {
       "judul": "About me",
       "deskripsi": "Siapa aku?",
-      "isi": "Hai, aku **Zen**, seorang putra Samarinda kelahiran 14 Januari 1995. Ini adalah profil tentangku:\n\n## Email\n\n<muhzaini30@gmail.com>\n\n## Pekerjaan\n\n2020\n\n- Web developer dan kurator opini di sanggarcaraka.com\n- Dosen pembimbing di kampus Nulis Aja Community\n\n2019\n\n- Guru tahfidz di Mahad Tahfidzul Quran Baitul Izzah\n- Penata letak di Caraka Publishing\n\n2015\n- Mekanik di toko sepeda Sinar Jaya\n\n## Proyek yang sudah dikerjakan\n\n2019\n\n- panglimadelivery.com (website mati)\n\n2017\n\n- antrianrutansamarinda.com (website mati)\n\n## Pendidikan\n\n2020\n\n- S1 Psikologi di Universitas Mulawarman\n\n2016\n\n- D2 Bahasa Arab di Ma'had Hasan bin Ali",
+      "isi": "Hai, aku **Zen**, seorang putra Samarinda kelahiran 14 Januari 1995. Ini adalah profil tentangku:\n\n## Email\n\n<muhzaini30@gmail.com>\n\n## Pekerjaan\n\n2020\n\n- Web developer dan kurator opini di sanggarcaraka.com\n- Dosen pembimbing di kampus Nulis Aja Community\n\n2019\n\n- Guru [tahfidz](/betapa-uniknya-hafalan-quran) di Mahad Tahfidzul Quran Baitul Izzah\n- Penata letak di Caraka Publishing\n\n2015\n- Mekanik di toko sepeda Sinar Jaya\n\n## Proyek yang sudah dikerjakan\n\n2019\n\n- panglimadelivery.com (website mati)\n\n2017\n\n- antrianrutansamarinda.com (website mati)\n\n## Pendidikan\n\n2020\n\n- S1 Psikologi di Universitas Mulawarman\n\n2016\n\n- D2 Bahasa Arab di Ma'had Hasan bin Ali",
       "slug": "about-me",
       "id": 19
     },
@@ -150,7 +150,7 @@
     {
       "judul": "Betapa uniknya hafalan Quran",
       "deskripsi": "Mengapa kita tidak memulainya?",
-      "isi": "Menghafal Quran itu unik. Mungkin pas awal-awal kita mencobanya, akan terasa berat. Namun, jika kita terus saja konsisten dalam melakukannya, seolah-olah Al-Quran membuka diri terhadap kehadiran kita sehingga akan semakin mudah dalam menghafal. Jadi, memang ya kuncinya itu adalah konsisten.\n\nCoba deh diingat lagi dengan suatu mahfuzhot yang mengatakan:\n\nمن سار على الدرب وصل\n\n_Barang siapa yang menempuh suatu jalan, maka ia akan sampai_.",
+      "isi": "Menghafal Quran itu unik. Mungkin pas awal-awal kita mencobanya, akan terasa berat. Namun, jika kita terus saja konsisten dalam melakukannya, seolah-olah Al-Quran membuka diri terhadap kehadiran kita sehingga akan semakin mudah dalam menghafal. Jadi, memang ya kuncinya itu adalah konsisten.\n\nCoba deh diingat lagi dengan suatu mahfuzhot yang mengatakan:\n\nمن سار على الدرب وصل\n\n_Barang siapa yang menempuh suatu jalan, maka ia akan sampai_.\n\nMaka sebenarnya nggak peduli sesusah apapun, seberat apapun jalan yang ditempuh. Asalkan kita masih menempuh jalan yang tepat, maka, pasti akan sampai ke tujuan. Begitu pula dengan menghafal Quran. Jalan untuk mencapai hafalan yang sempurna adalah:\n\n- Rajin menyetorkan hafalan di halaqah Quran\n- Rajin memurajaah hafalan yang dimiliki\n- Berdoa untuk disempurnakan hafalannya\n\nKalau kita menempuh jalan yang benar tersebut, maka kita akan sampai kepada tujuan.",
       "slug": "betapa-uniknya-hafalan-quran",
       "id": 30
     },
@@ -211,10 +211,10 @@
       "id": 38
     },
     {
-      "slug": "install-deno-di-termux",
       "judul": "Install Deno di Termux",
       "deskripsi": "Akhirnya...",
-      "isi": "```bash\npkg install rust\ncargo install deno\n```",
+      "isi": "Kalau di [websitenya Deno](https://deno.land/), dia cuma bisa diinstall pada OS-OS desktop seperti Windows, Mac, dan Linux. Kalau di HP nggak bisa. Akhirnya, aku menemukan cara instalasi Deno dari berdiskusi di Dev:\n\n```bash\npkg install rust\ncargo install deno\n```\n\nTapi sayangnya, pas aku coba, gagal. Kayaknya sih karena arsitektur OSnya yang nggak kompatibel sama yang dibutuhkan oleh Deno. Akhirnya ya nggak jadi install dan aku pakai Node JS aja sudah. Hehehhee...",
+      "slug": "install-deno-di-termux",
       "id": 39
     }
   ]
