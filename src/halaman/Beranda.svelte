@@ -18,6 +18,7 @@
 	</div>
 </div>
 <div class="bawah">
+	<Atas/>
  <a href="/cari" class="btn btn-info">&#9906;</a>
  {#if location.host.includes("localhost")}
 	<a href="/tulis" class="btn btn-success">&plus;</a>
@@ -25,13 +26,24 @@
 </div>
 
 <script type="text/javascript">
-	import {onMount} from 'svelte'
+	import {onMount, afterUpdate} from 'svelte'
+	import Atas from '../komponen/Atas.svelte'
 	let data = []
 	onMount(() => {
+		window.addEventListener('scroll', () => localStorage.setItem('posisiBerandaBlogZen', window.pageYOffset))
 		if (location.host.includes('localhost')) {
 			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => data = x.reverse())
 		} else {
 			fetch('/beranda.json').then(x => x.json()).then(q => data = q.reverse())
+		}
+	})
+	afterUpdate(() => {
+		if (localStorage.posisiBerandaBlogZen) {
+			window.scrollTo({
+				top: localStorage.posisiBerandaBlogZen,
+				left: 0,
+				behavior: 'smooth'
+			})
 		}
 	})
 </script>

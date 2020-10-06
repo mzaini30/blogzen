@@ -23,6 +23,7 @@
 	{/if}
 </div>
 <div class="bawah">
+	<Atas/>
  <a href="/cari" class="btn btn-dark">&#9906;</a>
  <a href="/" class="btn btn-info">&#x2616;</a>
  {#if location.host.includes("localhost")}
@@ -33,6 +34,7 @@
 
 <script type="text/javascript">
 	import router from "page"
+	import Atas from '../komponen/Atas.svelte'
 	export let params
 	let data = {
 		judul: "",
