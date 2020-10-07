@@ -218,10 +218,10 @@
       "id": 39
     },
     {
-      "slug": "mengapa-membuat-aplikasi-cukup-hanya-dengan-javascript",
       "judul": "Mengapa membuat aplikasi cukup hanya dengan Javascript?",
-      "deskripsi": "Revolusi teknologi",
-      "isi": "Ingat nggak, dulu ketika ada orang yang mengatakan _pakai Javascript_ aja, apa yang ada di benak kita?",
+      "deskripsi": "Keajaiban Javascript",
+      "isi": "JavaScript itu keren. Kamu cukup menguasai satu bahasa pemrograman aja untuk menguasai frontend dan backend. Tentu hal ini akan memudahkan pengembangan aplikasi dan mudah untuk mencari orang buat mengembangkan aplikasi dengan satu bahasa yang sama.\n\nMisalnya aja, sintaks berikut ini di bagian frontend:\n\n```javascript\npangkat = (a, b) => a ** b\n```\n\nAkan memiliki kode yang 100% sama di bagian backend:\n\n```javascript\npangkat = (a, b) => a ** b\n```\n\nKalau dilihat dari kode di atas, sintaksnya juga termasuk mudah karena bentuknya yang C-like. Lebih lengkapnya, coba kita lihat kode di bawah ini:\n\n```javascript\nnilai = 70\ncekNilai = x => {\n if (x == 100){\n  return \"Sempurna\"\n } else if (x > 80){\n  return \"Bagus\"\n } else {\n  return \"Belajar lagi ya...\"\n }\n}\nconsole.log(cekNilai(nilai))\n```\n\nCoba kita bandingkan dengan Python:\n\n```python\nnilai = 70\ndef cekNilai(x):\n if x == 100:\n  return \"Sempurna\"\n elif x > 80:\n  return \"Bagus\"\n else:\n  return \"Belajar lagi ya...\"\nprint(cekNilai(nilai))\n```\n\nMemang sih kita lihat bahwasanya sintaks Python itu lebih elegan dan lebih rapi dengan tiadanya kurung kurawal. Tapi, penggunaan spasi maupun tab yang konsisten adalah keharusan. Jadi, misalnya kalau pertama kita menggunakan dua spasi, maka seterusnya harus menggunakan dua spasi. Kalau tiba-tiba kita pakai tab, program akan error.",
+      "slug": "mengapa-membuat-aplikasi-cukup-hanya-dengan-javascript",
       "id": 40
     }
   ]
