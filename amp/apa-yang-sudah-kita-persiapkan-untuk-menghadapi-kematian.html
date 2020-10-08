@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Membuat server SPA dengan Go</title>
-    <link rel="canonical" href="https://blogzen.js.org/membuat-server-spa-dengan-go">
+    <title>Apa yang sudah kita persiapkan untuk menghadapi kematian?</title>
+    <link rel="canonical" href="https://blogzen.js.org/apa-yang-sudah-kita-persiapkan-untuk-menghadapi-kematian">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Membuat server SPA dengan Go",
+        "headline": "Apa yang sudah kita persiapkan untuk menghadapi kematian?",
         "image": [
         	"https://blogzen.js.org/arthuria.jpeg"
         ],
@@ -45,43 +45,20 @@
     </style>
   </head>
   <body>
-    <h1>Membuat server SPA dengan Go</h1>
+    <h1>Apa yang sudah kita persiapkan untuk menghadapi kematian?</h1>
     <hr>
-    <p><em>Server Go untuk framework Javascript</em></p>
-    <p>Dunia pemrograman website saat ini mengenal ada dua kutub utama yaitu dunia backend dan dunia frontend. Dunia backend adalah mengatur logika bisnis suatu aplikasi, apakah dia harus ditambah, dikurang, modulus, koneksi database A, atur transaksi kartu kredit dengan API bank B, dan begitu seterusnya. Sedangkan kalau dunia frontend, mengatur tampilan website kepada user. Nah, kalau di frontend ini lagi ramai yang namanya framework Javascript seperti Vue dan Angular, library Javascript seperti React, dan compiler Javascript seperti Svelte. Satu hal yang membuat khas dari berbagai teknologi frontend Javascript ini adalah penggunaan router untuk pengelolaan halaman-halamannya. Jadi, misalnya kita melihat di URL:</p>
-<ul>
-<li>situs.com</li>
-<li>situs.com/hello-world</li>
-<li>situs.com/guesbook</li>
-</ul>
-<p>Dan segala macamnya, itu sebenarnya hanya satu file <code>index.html</code> yang memberikan tampilan halaman yang berbeda-beda sesuai dengan URL yang muncul. Jadi, semua halaman di satu website, ittu semua ditumpuk di satu buah file <code>index.html</code>. Itulah yang namanya SPA (single page application). Keunggulan dari SPA ini adalah website menjadi lebih cepat dan transisi antar halamannya terasa lebih halus karena ya sebenarnya yang dibuka itu cuma satu file aja, yaitu <code>index.html</code>. Dan ketika kita klik-klik, yang seolah-olah berpindah halaman itu ya sebenarnya masih di <code>index.html</code> aja dan yang berubah hanya tampilannya, menyesuaikan dengan URLnya. Keren ya? Nah, sekarang kita akan bahas cara membuat servernya dengan Go.</p>
-<p>Jadi, kita akan membuat server static file yang memiliki fitur SPA. Pertama, pastikan dulu kamu sudah punya Go ya. Kalau belum, install dulu. Monggo dicari di Google, gimana cara installnya.</p>
-<p>Lalu, jalankan perintah berikut:</p>
-<pre><code class="language-bash">go get github.com/roberthodgen/spa-server</code></pre>
-<p>Itu fungsinya adalah untuk mendownload library Go bernama SPA Server yang dibuat oleh roberthodgen. Kenapa kita perlu library ini? Ya karena di library ini ada fitur untuk membuat sebuah server Go menjadi SPA, artinya, apapun URLnya, yang dibuka ya hanya <code>index.html</code>.</p>
-<p>Kemudian, kita buat <code>server.go</code> yang isinya:</p>
-<pre><code class="language-go">package main
-import (
-    &quot;net/http&quot;
-    &quot;fmt&quot;
-    spa &quot;github.com/roberthodgen/spa-server&quot;
-)
-func main(){
-    fmt.Println(&quot;Buka localhost:2020&quot;)
-    http.ListenAndServe(&quot;:2020&quot;, spa.SpaHandler(&quot;public&quot;, &quot;index.html&quot;))
-}</code></pre>
-<p>Maksud dari kode di atas adalah, <em>apapun URL yang terbuka</em> yang diakses oleh server, tetap <code>public/index.html</code>. Lalu, file tersebut dijalankan di <code>localhost:2020</code>.</p>
-<p>Kemudian, jalankan perintah:</p>
-<pre><code class="language-bash">go build server.go</code></pre>
-<p>Maka, akan tercipta file <code>server</code> yang merupakan hasil compile dari script Go tadi. Nah, ini nggak perlu pakai Go lagi untuk menjalankan. Tinggal dijalankan dengan <code>./server</code>.</p>
+    <p><em>Nggak ada?</em></p>
+    <p>Kematian adalah gerbang menuju ke kehidupan selanjutnya. Kematian adalah proses yang mengerikan, menyakitkan, entah apakah aku bisa melaluinya atau tidak. Tapi, semua orang tentu akan melaluinya. Pertanyaannya, apakah kita akan tetap beriman ketika melalui proses kematian itu?</p>
+<p>Kehidupan setelah kematian lebih mengerikan lagi. Kita nggak bisa mengupayakan apapun di situ. Kalau di dunia ini kan, kalau kita lapar ya makan, kalau haus ya minum, kalau capek ya tidur. Namun, di kehidupan setelah kematian nanti, apakah kita bisa makan, minum, tidur? Kita bahkan nggak memiliki kuasa atas diri kita! Semua yang akan kita dapatkan nanti hanyalah berasal dari <strong>amal-amal</strong> kita.</p>
+<p>Kita membicarakan amal kebaikan sungguh mudah ya. Tapi, ketika kita membicarakan kematian, terasa dah tuh, apakah amalan kita itu sedikit atau banyak. Kalau amalan kita banyak, apakah memang tulus hanya untuk Allah ataukah untuk manusia? Atau, kita berbuat sesuatu hanya untuk duit? Kita sedekah supaya bisa dapat duit banyak. Kita tahajud supaya rezeki kita lancar. Lalu, apa yang kita persiapkan untuk akhirat nanti kalau kita sudah menginginkan hasilnya untuk dunia ini?</p>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/mengapa-menulis">Mengapa menulis?</a></li>
-     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
-     <li><a href="/contoh-async-await">Contoh async/await</a></li>
+     <li><a href="/install-deno-di-termux">Install Deno di Termux</a></li>
+     <li><a href="/membuat-domain-gratis-jsorg">Membuat domain gratis JS.ORG</a></li>
+     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
      <li><a href="/membuat-server-spa-dengan-go">Membuat server SPA dengan Go</a></li>
-     <li><a href="/menggunakan-dexie-js">Menggunakan Dexie JS</a></li>
+     <li><a href="/khilafah-itu-perlu">Khilafah itu perlu</a></li>
     </ol>
   </body>
 </html>
