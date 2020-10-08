@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Langkah menjadi developer frontend web junior</title>
-    <link rel="canonical" href="https://blogzen.js.org/langkah-menjadi-developer-frontend-junior">
+    <title>Memodifikasi Termux</title>
+    <link rel="canonical" href="https://blogzen.js.org/memodifikasi-termux">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Langkah menjadi developer frontend web junior",
+        "headline": "Memodifikasi Termux",
         "image": [
         	"https://blogzen.js.org/arthuria.jpeg"
         ],
@@ -45,33 +45,28 @@
     </style>
   </head>
   <body>
-    <h1>Langkah menjadi developer frontend web junior</h1>
+    <h1>Memodifikasi Termux</h1>
     <hr>
-    <p><em>Are you ready?</em></p>
-    <p>Dunia frontend, atau tepatnya dunia Javascript adalah dunia yang sangat dinamis. Segalanya bergerak dengan sangat cepat. Mungkin pertama kali kita mengenal Javascript, kita sudah berkenalan dengan jQuery yang menurut kita tu magic banget. Lalu, nggak lama kemudian, kita dituntut untuk bisa menguasai AJAX. Lalu, kita dikagetkan dengan kehadiran React dengan Virtual DOMnya, kemudian ada Angular, lalu ada Vue yang merupakan penyederhanaan dari Angular. Dan semua cerita ini masih terus berlanjut. Hingga akhirnya aku bertemu dengan Svelte yang <em>write less, do more</em>!</p>
-<p>Jadi, berikut ini adalah roadmap mempelajari frontend versiku. Ya mungkin berbeda sih sama yang lainnya. Jadi mungkin ini nggak bisa jadi patokan utama. Tapi bisa sih untuk jadi preferensi kalau bingung mau belajar apa.</p>
-<h2 id="markdown">Markdown</h2>
-<h2 id="html">HTML</h2>
-<h2 id="css">CSS</h2>
-<h2 id="javascript">JavaScript</h2>
-<h2 id="svelte">Svelte</h2>
-<h2 id="database">Database</h2>
-<h3 id="dexie-js">Dexie JS</h3>
-<h3 id="json-server">JSON Server</h3>
-<h2 id="github-action">Github Action</h2>
-<h3 id="node-js">Node JS</h3>
-<h3 id="python">Python</h3>
-<h3 id="hugo">Hugo</h3>
-<h3 id="gitbook">Gitbook</h3>
-<h3 id="gitbook-to-ebooks">Gitbook to ebooks</h3>
+    <p><em>Simpel tapi bermanfaat</em></p>
+    <p>Aku bingung sih mau ngasih ini postingan judulnya apa. Intinya itu ya, kita jadi tau di mana posisi kita saat ini. Kalau di Termux kan, biasanya itu cuma ada tanda <code>$</code> di folder manapun yang sedang terbuka. Tentunya kan kita bingung ya, kita ini sudah di posisi mana. Mau kita di dalam memori internal maupun di dalam folder download, tetap aja yang ditampilkan di Termux hanyalah <code>$</code>. Nah, berikut ini adalah caranya supaya kita ubah itu Termux supaya menampilkan posisi kita saat ini.</p>
+<p>Pertama, kita install dulu micro editor dengan perintah:</p>
+<pre><code class="language-bash">pkg install micro</code></pre>
+<p>Nah, kemudian, ikuti langkah-langkah berikut:</p>
+<pre><code class="language-bash">cd
+cd ../usr/etc
+micro bash.bashrc</code></pre>
+<p>Kemudian, di baris paling bawah, yaitu:</p>
+<pre><code class="language-bash">PS1=&#39;\$ &#39;</code></pre>
+<p>Ubah dengan:</p>
+<pre><code class="language-bash">PS1=&quot;\w: &quot;</code></pre>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/install-deno-di-termux">Install Deno di Termux</a></li>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/menjalankan-node-js-di-hp">Menjalankan Node JS di HP</a></li>
+     <li><a href="/betapa-uniknya-hafalan-quran">Betapa uniknya hafalan Quran</a></li>
      <li><a href="/balik-kata-dengan-javascript">Balik kata dengan Javascript</a></li>
-     <li><a href="/yang-nampak-dari-abstraknya-kecerdasan">Yang nampak dari abstraknya kecerdasan</a></li>
-     <li><a href="/contoh-async-await">Contoh async/await</a></li>
-     <li><a href="/menggabungkan-kedua-file-pdf-di-linux">Menggabungkan kedua file PDF di Linux</a></li>
+     <li><a href="/membuat-apk-dari-html">Membuat APK dari HTML</a></li>
     </ol>
   </body>
 </html>

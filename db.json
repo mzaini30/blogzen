@@ -223,6 +223,20 @@
       "isi": "JavaScript itu keren. Kamu cukup menguasai satu bahasa pemrograman aja untuk menguasai frontend dan backend. Tentu hal ini akan memudahkan pengembangan aplikasi dan mudah untuk mencari orang buat mengembangkan aplikasi dengan satu bahasa yang sama.\n\nMisalnya aja, sintaks berikut ini di bagian frontend:\n\n```javascript\npangkat = (a, b) => a ** b\n```\n\nAkan memiliki kode yang 100% sama di bagian backend:\n\n```javascript\npangkat = (a, b) => a ** b\n```\n\nKalau dilihat dari kode di atas, sintaksnya juga termasuk mudah karena bentuknya yang C-like. Lebih lengkapnya, coba kita lihat kode di bawah ini:\n\n```javascript\nnilai = 70\ncekNilai = x => {\n if (x == 100){\n  return \"Sempurna\"\n } else if (x > 80){\n  return \"Bagus\"\n } else {\n  return \"Belajar lagi ya...\"\n }\n}\nconsole.log(cekNilai(nilai))\n```\n\nCoba kita bandingkan dengan Python:\n\n```python\nnilai = 70\ndef cekNilai(x):\n if x == 100:\n  return \"Sempurna\"\n elif x > 80:\n  return \"Bagus\"\n else:\n  return \"Belajar lagi ya...\"\nprint(cekNilai(nilai))\n```\n\nMemang sih kita lihat bahwasanya sintaks Python itu lebih elegan dan lebih rapi dengan tiadanya kurung kurawal. Tapi, penggunaan spasi maupun tab yang konsisten adalah keharusan. Jadi, misalnya kalau pertama kita menggunakan dua spasi, maka seterusnya harus menggunakan dua spasi. Kalau tiba-tiba kita pakai tab, program akan error.",
       "slug": "mengapa-membuat-aplikasi-cukup-hanya-dengan-javascript",
       "id": 40
+    },
+    {
+      "judul": "Memodifikasi Termux",
+      "deskripsi": "Simpel tapi bermanfaat",
+      "isi": "Aku bingung sih mau ngasih ini postingan judulnya apa. Intinya itu ya, kita jadi tau di mana posisi kita saat ini. Kalau di Termux kan, biasanya itu cuma ada tanda `$` di folder manapun yang sedang terbuka. Tentunya kan kita bingung ya, kita ini sudah di posisi mana. Mau kita di dalam memori internal maupun di dalam folder download, tetap aja yang ditampilkan di Termux hanyalah `$`. Nah, berikut ini adalah caranya supaya kita ubah itu Termux supaya menampilkan posisi kita saat ini.\n\nPertama, kita install dulu micro editor dengan perintah:\n\n```bash\npkg install micro\n```\n\nNah, kemudian, ikuti langkah-langkah berikut:\n\n```bash\ncd\ncd ../usr/etc\nmicro bash.bashrc\n```\n\nKemudian, di baris paling bawah, yaitu:\n\n```bash\nPS1='\\$ '\n```\n\nUbah dengan:\n\n```bash\nPS1=\"\\w: \"\n```",
+      "slug": "memodifikasi-termux",
+      "id": 41
+    },
+    {
+      "slug": "menggabungkan-kedua-file-pdf-di-linux",
+      "judul": "Menggabungkan kedua file PDF di Linux",
+      "deskripsi": "Tips berguna banget buat yang terbiasa dengan pengolahan PDF",
+      "isi": "Pertama, install dulu QPDF:\n\n```bash\nsudo apt install qpdf\n```\n\nLalu, buat file `pdf` di `~/bin` yang isinya:\n\n```bash\nqpdf --empty --pages a.pdf 1-z b.pdf 1-z -- \"$1.pdf\"\n```\n\nNah, nanti kalau mau gabungkan `a.pdf` dengan `b.pdf` tinggal jalankan aja:\n\n```bash\npdf \"nama file gabungannya\"\n```\n\nMaka, akan menghasilkan `nama file gabungannya.pdf`.",
+      "id": 42
     }
   ]
 }
