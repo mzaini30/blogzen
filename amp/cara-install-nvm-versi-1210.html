@@ -49,17 +49,21 @@
     <hr>
     <p><em>Tools buat manajemen versi Node JS</em></p>
     <p>Salah satu yang menjadi kekurangan laptop dengan arsitektur OS 32 bit adalah kesusahan untuk menggunakan software versi terbaru. Salah satunya adalah Node JS karena dukungan versi terbaru Node JS hanya untuk arsitektur OS 64 bit sedangkan untuk 32 bit hanya sampai versi 8.</p>
+<p>Maka, di sini, kita menggunakan NVM untuk instalasi Node JS sesuai dengan versi yang kita inginkan. Pertama, tentu saja kita harus install NVM dulu. Ada di <a href="https://www.petanikode.com/nodejs-nvm/">Petani Kode</a> cara instalasi NVMnya.</p>
+<p>Nah, kemudian, setelah kita menginstall NVM, langsung aja ini cara untuk menginstall NVM versi 12.1.0. Aku kemaren membutuhkan ini karena perlu menginstall beberapa package Node JS yang ternyata membutuhkan versi 12 ke atas. Setelah aku cek di repositori Linux Lite versi 32 bit ini, yang ada cuma sampai versi 8. Akhirnya, aku menggunakan NVM kemudian install versi 12.1.0.</p>
+<p>Kode di bawah ini ngetikkannya satu-satu ya. Jadi, habis baris pertama dijalankan, dienter, setelah baris kedua, dienter. Begitu.</p>
 <pre><code class="language-bash">nvm install 12.1.0
 nvm use 12.1.0
 nvm alias default 12.1.0</code></pre>
+<p>Nah, karena memang Linux Lite 32 bit ini belum mendukung Node JS versi 12 ke atas, akhirnya, cara instalasinya pun menggunakan source code C++nya. Jadi ya agak lama memang. Aku menjalankan perintah <code>nvm install 12.1.0</code> itu mulai dari pagi dan selesainya itu sekitar jam 10. Jadi memang agak lama. Kira-kira ya sekitar 4 jam.</p>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
-     <li><a href="/memperbarui-generator-website-ini">Memperbarui generator website ini</a></li>
-     <li><a href="/tips-mengikuti-hacktoberfest">Tips mengikuti Hacktoberfest</a></li>
      <li><a href="/membuat-domain-gratis-jsorg">Membuat domain gratis JS.ORG</a></li>
-     <li><a href="/router-di-svelte-js">Router di Svelte JS</a></li>
+     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
+     <li><a href="/menggunakan-dexie-js">Menggunakan Dexie JS</a></li>
+     <li><a href="/contoh-async-await">Contoh async/await</a></li>
+     <li><a href="/sop-revisi-layout">SOP revisi layout</a></li>
     </ol>
   </body>
 </html>
