@@ -30,7 +30,11 @@
 	import Atas from '../komponen/Atas.svelte'
 	let data = []
 	onMount(() => {
-		window.addEventListener('scroll', () => localStorage.setItem('posisiBerandaBlogZen', window.pageYOffset))
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset != 0) {
+				localStorage.setItem('posisiBerandaBlogZen', window.pageYOffset)
+			}
+		})
 		if (location.host.includes('localhost')) {
 			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => data = x.reverse())
 		} else {
