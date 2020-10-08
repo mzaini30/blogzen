@@ -15,6 +15,7 @@ baca = async () => {
 	sitemap = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
 	for (x of slug){
 		sitemap += `<url><loc>https://blogzen.js.org/${x}</loc></url>`
+		sitemap += `<url><loc>https://blogzen.js.org/amp/${x}</loc></url>`
 	}
 	sitemap += '<url><loc>https://blogzen.js.org/</loc></url>'
 	sitemap += '</urlset>'
