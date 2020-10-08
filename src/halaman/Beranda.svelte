@@ -26,28 +26,14 @@
 </div>
 
 <script type="text/javascript">
-	import {onMount, afterUpdate} from 'svelte'
+	import {onMount} from 'svelte'
 	import Atas from '../komponen/Atas.svelte'
 	let data = []
 	onMount(() => {
-		window.addEventListener('scroll', () => {
-			if (window.pageYOffset != 0) {
-				localStorage.setItem('posisiBerandaBlogZen', window.pageYOffset)
-			}
-		})
 		if (location.host.includes('localhost')) {
 			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => data = x.reverse())
 		} else {
 			fetch('/beranda.json').then(x => x.json()).then(q => data = q.reverse())
-		}
-	})
-	afterUpdate(() => {
-		if (localStorage.posisiBerandaBlogZen) {
-			window.scrollTo({
-				top: localStorage.posisiBerandaBlogZen,
-				left: 0,
-				behavior: 'smooth'
-			})
 		}
 	})
 </script>
