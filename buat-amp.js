@@ -32,7 +32,7 @@ jalankan = async () => {
         "@type": "NewsArticle",
         "headline": "${x.judul}",
         "image": [
-        	"https://blogzen.js.org/arthuria.jpeg"
+        	"https://blogzen.js.org/tauhid.jpeg"
         ],
         "author": {
         	"@type": "Person",
