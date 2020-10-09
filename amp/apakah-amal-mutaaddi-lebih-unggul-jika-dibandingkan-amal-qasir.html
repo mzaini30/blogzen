@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Membuat server SPA dengan Go</title>
-    <link rel="canonical" href="https://blogzen.js.org/membuat-server-spa-dengan-go">
+    <title>Apakah amal muta'addi lebih unggul jika dibandingkan amal qasir?</title>
+    <link rel="canonical" href="https://blogzen.js.org/apakah-amal-mutaaddi-lebih-unggul-jika-dibandingkan-amal-qasir">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Membuat server SPA dengan Go",
+        "headline": "Apakah amal muta'addi lebih unggul jika dibandingkan amal qasir?",
         "image": [
         	"https://blogzen.js.org/tauhid.jpeg"
         ],
@@ -45,43 +45,33 @@
     </style>
   </head>
   <body>
-    <h1>Membuat server SPA dengan Go</h1>
+    <h1>Apakah amal muta'addi lebih unggul jika dibandingkan amal qasir?</h1>
     <hr>
-    <p><em>Server Go untuk framework Javascript</em></p>
-    <p>Dunia pemrograman website saat ini mengenal ada dua kutub utama yaitu dunia backend dan dunia frontend. Dunia backend adalah mengatur logika bisnis suatu aplikasi, apakah dia harus ditambah, dikurang, modulus, koneksi database A, atur transaksi kartu kredit dengan API bank B, dan begitu seterusnya. Sedangkan kalau dunia frontend, mengatur tampilan website kepada user. Nah, kalau di frontend ini lagi ramai yang namanya framework Javascript seperti Vue dan Angular, library Javascript seperti React, dan compiler Javascript seperti Svelte. Satu hal yang membuat khas dari berbagai teknologi frontend Javascript ini adalah penggunaan router untuk pengelolaan halaman-halamannya. Jadi, misalnya kita melihat di URL:</p>
-<ul>
-<li>situs.com</li>
-<li>situs.com/hello-world</li>
-<li>situs.com/guesbook</li>
-</ul>
-<p>Dan segala macamnya, itu sebenarnya hanya satu file <code>index.html</code> yang memberikan tampilan halaman yang berbeda-beda sesuai dengan URL yang muncul. Jadi, semua halaman di satu website, ittu semua ditumpuk di satu buah file <code>index.html</code>. Itulah yang namanya SPA (single page application). Keunggulan dari SPA ini adalah website menjadi lebih cepat dan transisi antar halamannya terasa lebih halus karena ya sebenarnya yang dibuka itu cuma satu file aja, yaitu <code>index.html</code>. Dan ketika kita klik-klik, yang seolah-olah berpindah halaman itu ya sebenarnya masih di <code>index.html</code> aja dan yang berubah hanya tampilannya, menyesuaikan dengan URLnya. Keren ya? Nah, sekarang kita akan bahas cara membuat servernya dengan Go.</p>
-<p>Jadi, kita akan membuat server static file yang memiliki fitur SPA. Pertama, pastikan dulu kamu sudah punya Go ya. Kalau belum, install dulu. Monggo dicari di Google, gimana cara installnya.</p>
-<p>Lalu, jalankan perintah berikut:</p>
-<pre><code class="language-bash">go get github.com/roberthodgen/spa-server</code></pre>
-<p>Itu fungsinya adalah untuk mendownload library Go bernama SPA Server yang dibuat oleh roberthodgen. Kenapa kita perlu library ini? Ya karena di library ini ada fitur untuk membuat sebuah server Go menjadi SPA, artinya, apapun URLnya, yang dibuka ya hanya <code>index.html</code>.</p>
-<p>Kemudian, kita buat <code>server.go</code> yang isinya:</p>
-<pre><code class="language-go">package main
-import (
-    &quot;net/http&quot;
-    &quot;fmt&quot;
-    spa &quot;github.com/roberthodgen/spa-server&quot;
-)
-func main(){
-    fmt.Println(&quot;Buka localhost:2020&quot;)
-    http.ListenAndServe(&quot;:2020&quot;, spa.SpaHandler(&quot;public&quot;, &quot;index.html&quot;))
-}</code></pre>
-<p>Maksud dari kode di atas adalah, <em>apapun URL yang terbuka</em> yang diakses oleh server, tetap <code>public/index.html</code>. Lalu, file tersebut dijalankan di <code>localhost:2020</code>.</p>
-<p>Kemudian, jalankan perintah:</p>
-<pre><code class="language-bash">go build server.go</code></pre>
-<p>Maka, akan tercipta file <code>server</code> yang merupakan hasil compile dari script Go tadi. Nah, ini nggak perlu pakai Go lagi untuk menjalankan. Tinggal dijalankan dengan <code>./server</code>.</p>
+    <p><em>Tadi khutbah Jumat bahas ini sih</em></p>
+    <p>Amal muta&#39;addi adalah amal-amal yang berkaitan dengan orang lain seperti sedekah, membantu orang lain, membantu melunasi utang orang lain, memperpanjang tenggat waktu pembayaran utang, dan lain sebagainya. Sedangkan amal qasir adalah amal-amal yang berkaitan hanya dengan diri sendiri seperti shalat, sedekah, infaq, dan lain sebagainya. Lalu, apakah amal muta&#39;addi lebih unggul daripada amal qasir?</p>
+<p>Kalau kata khatib tadi sih <em>iya</em>, dengan menggunakan berbagai hadits Nabi shallallahu alaihi wa sallam (yang aku cari di Google, nggak ketemu tadi. Soalnya kan jumatan nggak boleh bawa catatan. Jadi, nggak kucatat tadi). Misalnya aja hadits tentang orang yang alim jika dibandingkan dengan abid adalah seperti rembulan di tengah malam dibandingkan dengan berbagai bintang di sekitarnya. Lalu, ada pula hadits yang menyatakan bahwa orang yang membantu orang lain itu lebih mulia daripada shalat di masjid nabawi selama sebulan. Tapi sayang sih, aku belum nemu hadits-haditsnya.</p>
+<p>Tapi, hal yang menarik diungkapkan oleh <a href="http://almoslim.net/naser/285768">website Al-Muslim</a> yang menyatakan bahwa sebenarnya nggak perlu sih membeda-bedakan antara amal muta&#39;addi dengan amal qasir karena semua amal itu baik di sisi Allah. Berikut adalah terjemahannya:</p>
+<p>هناك بعض الأوهام المتعلقة بمفهوم العمل المتعدي والقاصر، والمقصود بالعمل المتعدي هو ما يتعدَّى نفعُه صاحبَه إلى غيره، كالدعوة إلى الله، وتعليم العلم، والأمر بالمعروف والنهي عن المنكر، وقضاء حوائج الناس، والنفقة؛ أما الفعل القاصر فهو ما اقتصر نفعه على صاحبه كقراءة القرآن والصلاة والصيام والذكر.</p>
+<p><em>Terdapat beberapa kesalahpahaman konsep yang berkaitan dengan amal muta&#39;addi dengan amal qasir, amal muta&#39;addi adalah segala amal yang manfaatnya berkaitan dengan pelakunya dan orang lain, seperti dakwah kepada Allah, mengajarkan ilmu, amar ma&#39;ruf dan nahi munkar, memenuhi kebutuhan manusia, dan berinfaq; sedangkan amal qasir yaitu yang manfaatnya hanya berkaitan dengan pelakunya seperti membaca Quran, shalat, puasa, dan dzikir.</em></p>
+<p>حتى إن بعضهم بسبب هذا الوهم يقول: ليت ابن تيمية اشتغل بالتأليف بدل جلوسه لذكر الله من بعد صلاة الفجر إلى الضحى، فإنه عمل قاصر. وهذا بلا شك خطأ محض وفهم قاصر، فهذه الجلسة ونظائرها من العبادات هي التي أعانته على الجهاد الحقيقي، بالسيف والسنان، والقلم واللسان، إلى أن لقي ربه عالماً عاملاً رحمه الله.</p>
+<p><em>Kesalahpahaman konsep ini menyebabkan beberapa orang berkata: Seandainya saja Ibnu Taimiyah menyibukkan dirinya untuk menulis kitab menggantikan duduknya untuk berdzikir kepada Allah dari shalat Subuh sampai waktu Dhuha, karena itu hanyalah amal qasir. Maka, tidak diragukan lagi bahwa ini adalah sebuah kesalahan dan pemahaman yang sempit, maka duduknya dalam beribadahlah yang membantunya dalam berjihad yang sesungguhnya, menggunakan pedang dan gigi, dengan pena dan lisan, hingga ia bertemu kepada Tuhannya dengan ilmunya dan amalnya (semoga Allah merahmatinya).</em></p>
+<p>ولا شك أن الأصل في نفع الأعمال المسماة قاصرة يعود على صاحبها بالدرجة الأولى، ولكن هذا لا يعني بحال أن النفع لا يجاوزه إلى غيره.</p>
+<p><em>Maka tidak ada keraguan lagi bahwasanya inti dari manfaat suatu amal yang dinamakan qasir kembali kepada pelakunya saja, akan tetapi bukan berarti bahwa manfaatnya tidak ada buat orang lain.</em></p>
+<p>فهذا خلاف الصواب نقلاً وعقلاً، أما نقلاً فقد قال الله سبحانه وتعالى: {يَا أَيُّهَا الَّذِينَ آَمَنُوا إِذَا لَقِيتُمْ فِئَةً فَاثْبُتُوا وَاذْكُرُوا اللَّهَ كَثِيرًا لَعَلَّكُمْ تُفْلِحُونَ} [الأنفال]، فعلَّق الفلاح والغلبة على العدو بالثبات والذكر، فدلَّ أن نفع الذكر ليس قاصراً على صاحبه، بل يتعداه إلى باقي المؤمنين، والذي يقطع كل شك حول هذه النقطة قوله صلى الله عليه وسلم: «إنما ينصر الله هذه الأمة بضعيفها، بدعوتهم وصلاتهم وإخلاصهم»(1)، فبيَّن –عليه السلام- أن نصر هذه الأمة بدعوة الضعفاء وصلاتهم وإخلاصهم، بل عظَّم من شأنها فاستخدم أداة الحصر &quot;إنما&quot;، كأن النصر لا يكون إلا بذلك، فهل يصح بعد ذلك أن يُقال: إن الصلاة والإخلاص من الأعمال القاصرة بالمفهوم المتقدم؟</p>
+<p><em>Maka kebalikan ini adalah benar baik secara dalil nash maupun akal, adapun secara dalil nash, Allah subhanahu wa taaala telah berfirman: Wahai orang-orang yang beriman, jika kamu bertemu dengan suatu kelompok (kelompok musuh dalam peperangan), maka teguhlah dan berdzikirlah kepada Allah dengan dzikir yang banyak supaya kamu menang (Al-Qur&#39;an surat Al-Anfal). Maka, Allah mengaitkan antara kemenangan dan mengalahkan musuh dengan berteguh hati dan berdzikir. Maka, ini adalah dalil bagi manfaat dzikir bukan hanya terbatas bagi pelakunya, melainkan juga bermanfaat bagi orang-orang beriman lainnya.</em></p>
+<p><em>Kemudian, yang menghilangkan keraguan atas semua ini adalah sabda Nabi shallallahu alaihi wa sallam: Sesungguhnya hanya orang-orang dhaiflah yang membuat Allah menolong umat ini, dengan doa mereka, shalat mereka, dan keikhlasan mereka. (Sunan An-Nasa&#39;i 6/45 [3178] dan dishahihkan oleh Al-Albani). Maka, Nabi shallallahu alaihi wa sallam menjelaskan bahwasanya pertolongan atas umat ini adalah dikarenakan oleh doanya para dhuafa, shalat mereka, dan keikhlasan mereka. Kemudian, dikuatkan lagi dengan lafadz <code>innama</code> yang artinya bahwa pertolongan nggak akan datang kecuali dengan sebab-sebab tersebut. Lalu, apakah tepat pernyataan: Sesungguhnya shalat dan ikhlas hanyalah amal qasir sebagaimana yang dipahami oleh orang-orang saat ini?</em></p>
+<p>وقد فهمت الأمم قديماً ذلك؛ فقال قوم شعيب عليه السلام لنبيهم: {قَالُوا يَا شُعَيْبُ أَصَلَاتُكَ تَأْمُرُكَ أَنْ نَتْرُكَ مَا يَعْبُدُ آَبَاؤُنَا أَوْ أَنْ نَفْعَلَ فِي أَمْوَالِنَا مَا نَشَاءُ} [هود:87]، فعلموا أن الصلاة يتعدى نفعها إلى إصلاح العقيدة والمال، فأي نفع أعظم من ذلك، ولذلك قال سبحانه: {إِنَّ الصَّلَاةَ تَنْهَى عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ وَلَذِكْرُ اللَّهِ أَكْبَرُ} [العنكبوت: 45].</p>
+<p><em>Maka, seperti itu pulalah yang dipahami oleh umat-umat terdahulu; maka berkata qaumnya Syuaib alaihissalam kepada nabi mereka: Mereka berkata, Wahai Syuaib, apakah shalatmu (agamamu) yang menyuruhmu agar kami meninggalkan apa yang disembah nenek moyang kami atau melarang kami mengelola harta kami menurut cara yang kami kehendaki? (Al-Qur&#39;an surat Hud ayat 87). Maka ketahuilah bahwa sesungguhnya shalat itu bermanfaat kepada perbaikan aqidah dan harta, maka manfaat apa lagi yang lebih besar daripada itu? Maka, Allah subhanahu wa taala berfirman: Sesungguhnya shalat itu mencegah dari perbuatan keji dan munkar, dan dzikir kepada Allah itu lebih besar (lebih agung) (Al-Qur&#39;an surat Al-Ankabut ayat 45).</em></p>
+<p>أما عقلاً فإن لهذه الأعمال المسماة بالقاصرة أثراً لا يُنكر على صاحبها، حيث تصقل شخصيته، وتصفي ذهنه، وتعطيه عوناً كبيراً على أداء واجبات الدعوة والتعليم وغيرها من الأفعال المتعدية، كما أنها تهذِّب أخلاقه، وتضبط تصرفاته، وتنظِّم حركاته وسكناته، فيكون داعية بفعله قبل كلامه، وهذا أدعى للتأثير في المحيط، وأرجى لقبول النصح منه والإرشاد؛ بل بكونه قدوة لمن بعده، وانظر كيف وجَّه النبي أمَّته إلى صلاة داود - عليه السلام – وصيامه؛ فجعله قدوة في ذلك مبيناً أنه لا أفضل من صلاة وصيام داود تطوعاً. أليس هذا من أعظم العمل المتعدي؟!</p>
+<p><em>Adapun secara logika, bahwa sesungguhnya amal-amal yang tadi dikatakan sebagai amal qasir itu membekas kepada pelakunya, kemudian akan memperbaiki kepribadiannya, lalu menjernihkan pikirannya, yang akan memberikan bantuan yang besar kepada pemenuhan kewajiban dakwah, pendidikan, dan lainnya dari segi amal muta&#39;addi, sebagaimana dia akan memperbaiki akhlak, mengendalikan tindakannya, dan mengatur pergerakannya dan diamnya, sehingga akan menjadi seorang dai yang amalnya lebih dahulu daripada perkataannya, dan dakwah ini akan memberikan kesan yang membekas, sehingga mudah diterimanya berbagai nash dan nasehat, maka dengan kepribadiannya ini, dia akan menjadi contoh bagi orang-orang setelahnya. Maka, lihatlah bagaimana Nabi shallallahu alaihi wasallam memberi tau umatnya tentang shalatnya Nabi Daud alaihissalam dan puasanya. Maka, dia menjadi contoh yang jelas bahwa tidak ada yang lebih utama dari shalat sunnahnya dan puasa sunnahnya Nabi Daud. Bukankah ini lebih agung daripada amal muta&#39;addi?</em></p>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/cara-install-nvm-versi-1210">Cara install NVM versi 12.1.0</a></li>
-     <li><a href="/balik-kata-dengan-javascript">Balik kata dengan Javascript</a></li>
-     <li><a href="/memperbarui-generator-website-ini">Memperbarui generator website ini</a></li>
-     <li><a href="/tips-mengikuti-hacktoberfest">Tips mengikuti Hacktoberfest</a></li>
-     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
+     <li><a href="/membuat-apk-dari-html">Membuat APK dari HTML</a></li>
+     <li><a href="/menggunakan-dexie-js">Menggunakan Dexie JS</a></li>
+     <li><a href="/cek-repositori-jsorg-yang-tidak-aktif">Cek repositori JS.ORG yang tidak aktif</a></li>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/menggabungkan-kedua-file-pdf-di-linux">Menggabungkan kedua file PDF di Linux</a></li>
     </ol>
   </body>
 </html>
