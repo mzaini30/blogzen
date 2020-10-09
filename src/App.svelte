@@ -1,4 +1,4 @@
-<script>
+<script> 
  import router from "page"
  import Beranda from "./halaman/Beranda.svelte"
  import Baca from "./halaman/Baca.svelte"
