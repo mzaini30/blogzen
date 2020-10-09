@@ -26,7 +26,7 @@
 </div>
 
 <script type="text/javascript">
-	import {onMount} from 'svelte'
+	import {onMount, beforeUpdate, afterUpdate} from 'svelte'
 	import Atas from '../komponen/Atas.svelte'
 	let data = []
 	onMount(() => {
@@ -34,6 +34,22 @@
 			fetch('http://localhost:3000/postingan').then(x => x.json()).then(x => data = x.reverse())
 		} else {
 			fetch('/beranda.json').then(x => x.json()).then(q => data = q.reverse())
+		}
+	})
+	beforeUpdate(() => {
+		window.addEventListener('scroll', () => {
+			if (location.href.split('/').filter(x => x).length == 2 && window.pageYOffset != 0) {
+				localStorage.setItem('posisiBlogzen', window.pageYOffset)
+			}
+		})
+	})
+	afterUpdate(() => {
+		if (localStorage.posisiBlogzen) {
+			window.scrollTo({
+				top: localStorage.posisiBlogzen,
+				left: 0,
+				behavior: 'smooth'
+			})
 		}
 	})
 </script>
