@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Mengisi waktu kosong</title>
-    <link rel="canonical" href="https://blogzen.js.org/mengisi-waktu-kosong">
+    <title>Menerima inputan data dari user di Node JS</title>
+    <link rel="canonical" href="https://blogzen.js.org/menerima-inputan-data-dari-user-di-node-js">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Mengisi waktu kosong",
+        "headline": "Menerima inputan data dari user di Node JS",
         "image": [
         	"https://blogzen.js.org/muslim.jpg"
         ],
@@ -45,21 +45,35 @@
     </style>
   </head>
   <body>
-    <h1>Mengisi waktu kosong</h1>
+    <h1>Menerima inputan data dari user di Node JS</h1>
     <hr>
-    <p><em>Mungkin ini bisa jadi solusi untuk mengisi waktu kosongmu</em></p>
-    <p>Waktu kosong itu berbahaya. Waktu kosong adalah ujian bagi kita untuk melihat apakah kita ini orang yang produktif ataukah orang yang nganggur. Kalau kita terbiasa produktif, maka kita akan produktif terus. Kalau terbiasa nganggur, nantinya akan nganggur terus. Nah, biasanya kan kalau ada waktu kosong, pengennya ya nggak ngapa-ngapain. Makanya kubilang <strong>berbahaya</strong>.</p>
-<h2 id="menghafal-atau-memurajaah-hafalan-quran">Menghafal atau memurajaah hafalan Qur&#39;an</h2>
-<h2 id="membaca-buku">Membaca buku</h2>
-<h2 id="blogging">Blogging</h2>
+    <p><em>Nggak pakai async</em></p>
+    <p>Kalau di Python kan, untuk menerima inputan user menggunakan kode seperti di bawah ini:</p>
+<pre><code class="language-python">nama = input(&quot;Siapa namanya: &quot;)
+print(&quot;Halo &quot; + nama)</code></pre>
+<p>Nah, lalu bagaimanakah dengan Node JS? </p>
+<p>Pertama, kita buat dulu folder yang akan menampung script kita. Anggap aja namanya <code>nulis node js</code>. Kemudian, kita masuk ke folder tersebut.</p>
+<p>Di folder tersebut, ketikkan perintah berikut:</p>
+<pre><code class="language-bash">pnpm init -y</code></pre>
+<p>Kemudian, kita pakai package <code>prompt-sync</code>:</p>
+<pre><code class="language-bash">pnpm add prompt-sync</code></pre>
+<p>Kemudian, kita buat <code>index.js</code> yang isinya:</p>
+<pre><code class="language-javascript">prompt = require(&quot;prompt-sync&quot;)()
+nama = prompt(&quot;Siapa namanya: &quot;)
+console.log(`Halo ${nama}`)</code></pre>
+<p>Kemudian, jalankan dengan:</p>
+<pre><code class="language-bash">node index.js</code></pre>
+<p>Hasilnya:</p>
+<pre><code class="language-javascript">Siapa namanya: Zen
+Halo Zen</code></pre>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/balik-kata-dengan-javascript">Balik kata dengan Javascript</a></li>
-     <li><a href="/menghapus-elemen-kosong-dari-array-javascript">Menghapus elemen kosong dari array Javascript</a></li>
-     <li><a href="/khilafah-itu-perlu">Khilafah itu perlu</a></li>
-     <li><a href="/menulis-blog-itu-berbahaya">Menulis blog itu berbahaya</a></li>
-     <li><a href="/mengisi-waktu-kosong">Mengisi waktu kosong</a></li>
+     <li><a href="/svelte-vs-framework-lainnya">Svelte vs framework lainnya</a></li>
+     <li><a href="/langkah-menjadi-developer-frontend-junior">Langkah menjadi developer frontend web junior</a></li>
+     <li><a href="/betapa-pentingnya-sebuah-hobi">Betapa pentingnya sebuah hobi</a></li>
+     <li><a href="/about-me">About me</a></li>
+     <li><a href="/pnpm-sebagai-pengganti-npm">PNPM sebagai pengganti NPM</a></li>
     </ol>
   </body>
 </html>
