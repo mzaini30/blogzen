@@ -1,0 +1,1 @@
+{"judul":"Menggunakan Gitmoji","deskripsi":"Membuat commit message di Github jadi lebih berwarna","isi":"## Instalasi\n\n```bash\npnpm add -g gitmoji-cli\n```\n\n## Menggunakan\n\n```bash\ngit add -A .\ngitmoji -c\ngit push\n```"}
