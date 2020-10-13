@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Betapa pentingnya sebuah hobi</title>
-    <link rel="canonical" href="https://blogzen.js.org/betapa-pentingnya-sebuah-hobi">
+    <title>Menggunakan Git</title>
+    <link rel="canonical" href="https://blogzen.js.org/menggunakan-git">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Betapa pentingnya sebuah hobi",
+        "headline": "Menggunakan Git",
         "image": [
         	"https://blogzen.js.org/muslim.jpg"
         ],
@@ -45,18 +45,31 @@
     </style>
   </head>
   <body>
-    <h1>Betapa pentingnya sebuah hobi</h1>
+    <h1>Menggunakan Git</h1>
     <hr>
-    <p><em>Untuk pelarian tentunya</em></p>
-    <p>Kita hidup tidak hanya di satu dunia. Setidaknya ada dua dunia: dunia kita dan dunia sosial kita. Dunia sosial kita adalah dunia di mana kita berinteraksi dengan orang lain. Dunia kita adalah dunia yang kita bentuk sendiri. Di dunia kita, aktornya adalah kita sendiri. Penduduknya adalah kita sendiri. Kerjaannya adalah kerjaan yang kita bentuk sendiri. Tak ada orang lain. Tak ada aturan lain yang mengekang.</p>
+    <p><em>Buat backup folder</em></p>
+    <p>Yang pertama, pastikan dulu bahwa kamu sudah punya akun di <a href="https://github.com">Github</a>. Kalau sudah, lanjut aja ya...</p>
+<h2 id="instalasi">Instalasi</h2>
+<p>Kalau di Termux:</p>
+<pre><code class="language-bash">pkg install git</code></pre>
+<p>Kalau di Linux:</p>
+<pre><code class="language-bash">sudo apt install git</code></pre>
+<h2 id="setting-awal">Setting awal</h2>
+<pre><code class="language-bash">git config --global user.name usernamenya
+git config --global user.email emailnya</code></pre>
+<h2 id="update">Update</h2>
+<p>Untuk update kode yang di local dari Github, pakai perintah berikut:</p>
+<pre><code class="language-bash">git pull</code></pre>
+<h2 id="upload">Upload</h2>
+<p>Untuk upload dari local ke Github, pakai artikel tentang <a href="/menggunakan-gitmoji">Gitmoji</a>.</p>
 
     <h2>Tulisan lainnya</h2>
     <ol>
-     <li><a href="/install-deno-di-termux">Install Deno di Termux</a></li>
-     <li><a href="/router-di-svelte-js">Router di Svelte JS</a></li>
-     <li><a href="/tips-mengikuti-hacktoberfest">Tips mengikuti Hacktoberfest</a></li>
-     <li><a href="/import-component-di-html">Import component di HTML</a></li>
+     <li><a href="/membuat-server-spa-dengan-go">Membuat server SPA dengan Go</a></li>
+     <li><a href="/menerima-inputan-data-dari-user-di-node-js">Menerima inputan data dari user di Node JS</a></li>
+     <li><a href="/mengisi-waktu-kosong">Mengisi waktu kosong</a></li>
      <li><a href="/membuat-apk-dari-html">Membuat APK dari HTML</a></li>
+     <li><a href="/menggunakan-gitmoji">Menggunakan Gitmoji</a></li>
     </ol>
   </body>
 </html>
