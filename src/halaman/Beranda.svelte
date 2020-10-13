@@ -1,6 +1,7 @@
 <div class="container">
 	<br>
 	<h1 class="text-center">Blog Zen</h1>
+	<p class="text-center"><em><small>Don't be a programmer. Be a problem solver (<a href='https://www.youtube.com/watch?v=EiKK04Ht8QI'>Joma</a>)</small></em></p>
 	<hr>
 	<div class="row">
 		{#each data as x}
