@@ -13,5 +13,5 @@ export default defineConfig({
     plugins: [WindiCSS()],
   },
   integrations: [mdx(), sitemap(), robotsTxt()],
-  site: "https://mzaini30.js.org",
+  site: "https://blogzen.js.org",
 });
