@@ -1,1 +1,0 @@
-{"judul":"Menggunakan Gitmoji","deskripsi":"Membuat commit message di Github jadi lebih berwarna","isi":"## Yang dibutuhkan\n\n- [PNPM](/pnpm-sebagai-pengganti-npm)\n- [Node JS](/cara-install-nvm-versi-1210)\n- Git\n\n## Instalasi\n\n```bash\npnpm add -g gitmoji-cli\n```\n\nNggak perlu pakai `sudo`.\n\n## Menggunakan\n\n```bash\ngit add -A .\ngitmoji -c\ngit push\n```"}
