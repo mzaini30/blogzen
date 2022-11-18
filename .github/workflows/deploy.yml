@@ -1,4 +1,4 @@
-name: blogzen
+name: Deploy
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-          
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
@@ -22,26 +22,17 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-node-
 
       - name: Install
         run: npm i
 
-      - name: Clone Index
-        run: node clone-index.js
-
-      - name: Generate sitemap
-        run: node generate-sitemap.js
-
-      - name: Pecah JSON
-        run: node pecah-json.js
-
-      - name: Buat AMP
-        run: node buat-amp.js
+      - name: Build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./dist
