@@ -36,7 +36,7 @@ jobs:
 
       - run: pnpm build
       - run: node script/add-cname.mjs
-      # - run: node script/kasih-adsense.mjs
+      - run: node script/kasih-adsense.mjs
 
       - run: mkdir public
       - run: node script/sitemap.mjs
