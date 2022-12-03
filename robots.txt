@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://blogzen.js.org/sitemap-index.xml
