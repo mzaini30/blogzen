@@ -1,0 +1,29 @@
+created: 20221202235010007
+modified: 20221202235050878
+tags: TiddlyWiki
+title: Cara Menggunakan TiddlyWiki
+type: text/vnd.tiddlywiki
+
+Install:
+
+```bash
+pnpm i -g tiddlywiki
+```
+
+Init Project Baru:
+
+```bash
+tiddlywiki folder --init server
+```
+
+Dev:
+
+```bash
+tiddlywiki . --listen
+```
+
+Build:
+
+```bash
+tiddlywiki . --build
+```

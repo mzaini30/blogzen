@@ -1,7 +1,14 @@
-name: deploy
+created: 20221202145257144
+modified: 20221202234023988
+tags: development
+title: Github Actions untuk Deploy PNPM
+type: text/vnd.tiddlywiki
+
+```yaml
+name: run
 on:
-  # schedule:
-  #   - cron: 0 0/4 * * *
+  schedule:
+    - cron: 0 0/4 * * *
   push:
     branches:
       - master
@@ -34,19 +41,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm build
-      - run: node script/add-cname.mjs
-      # - run: node script/kasih-adsense.mjs
-
-      - run: mkdir public
-      - run: node script/sitemap.mjs
-      - run: rm public/sitemap.xml
-      - run: mv public/sitemap.xsl output/
-      - run: mv public/sitemap-rumahzen.xml output/sitemap.xml
-      - run: rm -rf public
+      - run: node app.mjs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: ./public
+```
