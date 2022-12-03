@@ -3,7 +3,7 @@ import cup from "cup-readdir";
 
 const MySitemap = new SitemapManager({
   /* Options here */
-  siteURL: "https://rumahzen.thedev.id/" /*URL*/,
+  siteURL: "https://blogzen.js.org/" /*URL*/,
   pathPrefix: "" /*Site Prefix*/,
   outDir: "" /*Output dir*/,
 });
