@@ -1,0 +1,10 @@
+created: 20221203160712795
+modified: 20221203160830725
+tags: tes
+title: Presentasi
+type: text/vnd.tiddlywiki
+
+<$presentation>
+<$slide>Halo</$slide>
+<$slide>Hai</$slide>
+</$presentation>
