@@ -1,7 +1,13 @@
 created: 20221203131811963
-modified: 20221203132729537
-tags: linux
+modified: 20221203182918834
+tags: linux geek
 title: Membuat Efek Suara Mengetik di Keyboard Linux
 type: text/vnd.tiddlywiki
 
 Aku menggunakan bucklespring. Jadi, cukup ketikkan `buckle` di Terminal. 
+
+Memang sih suaranya ribut banget. Tapi itu yang membuatku asyik berlama-lama di depan laptop.
+
+Tutorial cara pasangnya ada di sini: https://github.com/zevv/bucklespring
+
+Tapi, intinya adalah kalau mau install, cukup jalankan perintah `sudo apt install bucklespring`.
