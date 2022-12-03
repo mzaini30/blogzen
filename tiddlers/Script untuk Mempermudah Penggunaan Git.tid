@@ -1,0 +1,20 @@
+created: 20221203121333143
+modified: 20221203121706236
+tags: git bash
+title: Script untuk Mempermudah Penggunaan Git
+type: text/vnd.tiddlywiki
+
+Clone:
+
+```bash
+git clone --depth 1 git@github.com:user/$1
+```
+
+Upload:
+
+```bash
+git status
+git add .
+git commit -m "Oke"
+git push
+```
