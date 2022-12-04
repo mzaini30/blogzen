@@ -1,4 +1,7 @@
 import { copyFileSync } from "fs";
+import cup from "cup-readdir";
 
-copyFileSync("files/cover.jpg", "output/cover.jpg");
-copyFileSync("files/icon.png", "output/icon.png");
+let data = await cup.getAllFilePaths("files");
+for (let x of data) {
+  copyFileSync(x, x.replace("files/", "output/"));
+}

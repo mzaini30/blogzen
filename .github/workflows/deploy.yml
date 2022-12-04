@@ -34,9 +34,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm build:klasik
-      - run: mkdir cache
-      - run: mv output/index.html cache/halaman-tiddlywiki.html
+      # - run: pnpm build:klasik
+      # - run: mkdir cache
+      # - run: mv output/index.html cache/halaman-tiddlywiki.html
 
       - run: pnpm build
       - run: node script/add-cname.mjs
