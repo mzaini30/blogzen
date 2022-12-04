@@ -68,6 +68,12 @@
    </url>
 
    <url>
+      <loc>https://blogzen.js.org/javascript</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
       <loc>https://blogzen.js.org/karena-hidup-begitu-sempurna</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
@@ -135,6 +141,18 @@
 
    <url>
       <loc>https://blogzen.js.org/tiddlywiki</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/tv</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/vanilla-js</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
    </url>
