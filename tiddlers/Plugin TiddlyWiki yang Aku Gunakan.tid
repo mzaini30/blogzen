@@ -1,5 +1,5 @@
 created: 20221204062445606
-modified: 20221204062549000
+modified: 20221204062623610
 published: 20221204062549000
 tags: blog TiddlyWiki plugin $:/plugins/adithyab/tiddlyjam/live
 title: Plugin TiddlyWiki yang Aku Gunakan
@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 
 # [[Relink|https://flibbles.github.io/tw5-relink/]] supaya pas ubah judul, dia nggak nge-broken backlink ke situ
 # [[Random Tiddler Button|https://sonephetr2.github.io/]] supaya bisa melihat [[tiddler]] secara acak. Cocok buat orang yang suka bosan
-# [[Tiddly JAM|https://tiddlyjam.com/wiki]] supaya pas build, jadinya kayak blog biasa. Jadi lebih ringat dan bisa dipasang [[Adsense]].
+# [[Tiddly JAM|https://tiddlyjam.com/wiki]] supaya pas build, jadinya kayak blog biasa. Jadi lebih ringan dan bisa dipasang [[Adsense]].
 # [[Favorite|https://kookma.github.io/TW-Favorites/]]
