@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tiddlywiki . --listen",
+    "build:klasik": "tiddlywiki . --build",
     "build": "tiddlywiki . --build tiddlyjam"
   },
   "keywords": [],
