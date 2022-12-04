@@ -1,0 +1,11 @@
+<script type="module">
+  import { acak } from "https://esm.sh/kumpulan-tools";
+
+  async function dapatkan() {
+    let data = await fetch("/cari.json");
+    data = await data.json();
+    data = acak(data);
+    location.href = data[0].link;
+  }
+  dapatkan();
+</script>
