@@ -116,6 +116,12 @@
    </url>
 
    <url>
+      <loc>https://blogzen.js.org/plugin-tiddlywiki-yang-aku-gunakan</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
       <loc>https://blogzen.js.org/script-untuk-mempermudah-penggunaan-git</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
@@ -135,6 +141,12 @@
 
    <url>
       <loc>https://blogzen.js.org/sudahkah-kita-membaca-buku-agama</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/tiddler</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
    </url>
