@@ -41,6 +41,7 @@ jobs:
       - run: pnpm build
       - run: node script/add-cname.mjs
       - run: node script/kasih-adsense.mjs
+      - run: node script/salin-file.mjs
 
       - run: mv cache/halaman-tiddlywiki.html output/
       - run: rm -rf cache/
