@@ -199,4 +199,10 @@
       <changefreq>monthly</changefreq>
    </url>
 
+   <url>
+      <loc>https://blogzen.js.org/youtuber</loc>
+      <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
 </urlset>
