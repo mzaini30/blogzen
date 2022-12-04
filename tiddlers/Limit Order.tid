@@ -1,0 +1,14 @@
+created: 20221204041928945
+modified: 20221204042413354
+published: 20221204042413352
+tags: keuangan saham crypto emas forex blog $:/plugins/adithyab/tiddlyjam/live
+title: Limit Order
+type: text/vnd.tiddlywiki
+
+Limit Order adalah memesan suatu barang (bisa juga berupa saham, emas, forex, maupun crypto) dengan cara menentukan harga suatu barang. Misal, kita menentukan harga 1 gram emas di harga 500 ribu. Maka, kita menunggu harga pasaran (Market Order) mencapai harga tersebut, baru orderan kita akan matched dan laku terjual.
+
+Secara simpel sih seperti itu.
+
+Tapi, ada yang namanya Book Order.
+
+Jadi, Book Order ini akan me-list berbagai penawaran harga barang dan berapa banyak yang menawarkan; baik itu dari sisi penjual maupun pembeli. Misalnya, untuk barang seharga 500 ribu, sudah ada antrian 10 orang. Maka, ketika kamu akan order dengan harga 500 ribu, kamu ada di antrian 11. Artinya, ketika harga pasaran mencapai harga 500 ribu, kamu akan antri dulu di belakang 10 orang. Ketika 10 orang itu sudah mendapatkan barangnya, baru kamu yang akan dapat.
