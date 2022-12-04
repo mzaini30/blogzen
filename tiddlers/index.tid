@@ -1,9 +1,9 @@
 created: 20200728102956586
 creator: Adithya_
 description: A static generator for TiddlyWiki. Inspired by JamStack.
-modified: 20221204030445263
+modified: 20221204044805095
 modifier: Adithya_
-name: Homepage
+name: Blog Zen
 published: 20210314001527357
 tags: $:/plugins/adithyab/tiddlyjam/page $:/plugins/adithyab/tiddlyjam/internals $:/plugins/adithyab/tiddlyjam/live
 title: index

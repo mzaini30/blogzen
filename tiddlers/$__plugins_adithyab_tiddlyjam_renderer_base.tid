@@ -1,6 +1,6 @@
 created: 20200728141157165
 creator: Adithya_
-modified: 20221204043218404
+modified: 20221204044644857
 modifier: Adithya_
 tags: $:/plugins/adithyab/tiddlyjam/internals
 title: $:/plugins/adithyab/tiddlyjam/renderer/base
@@ -30,7 +30,7 @@ type: text/vnd.tiddlywiki
 
   <meta name="format-detection" content="telephone=no">
 
-  <link id="faviconLink" rel="shortcut icon" href="/favicon.ico">
+  <link id="faviconLink" rel="shortcut icon" href="/icon.png">
 
 `{{||$:/plugins/adithyab/tiddlyjam/renderer/base/seotags}}
   {{$:/plugins/adithyab/tiddlyjam/renderer/base/imports}}
