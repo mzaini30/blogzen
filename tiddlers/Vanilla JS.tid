@@ -1,0 +1,16 @@
+created: 20221204045128165
+modified: 20221204050052328
+published: 20221204045610968
+tags: blog definisi JavaScript $:/plugins/adithyab/tiddlyjam/live
+title: Vanilla JS
+type: text/vnd.tiddlywiki
+
+Vanilla JS bukanlah merupakan framework JavaScript tapi merupakan JavaScript native. Kenapa kok dinamakan Vanilla JS? Itu sebenarnya hanya ejekan buat yang nggak tau istilah ini.
+
+Kenapa kita harus menggunakan Vanilla JS? Tentu supaya script yang kita gunakan itu lebih ringan.
+
+Framework-framework JavaScript, baik itu yang modern maupun yang jadul, sebenarnya kan me-load file library-nya terlebih dahulu sebelum kita gunakan. Misalnya saja saat menggunakan [[jQuery]], itu kita perlu me-load 90 kb terlebih dahulu sebelum bisa digunakan. [[Vue]] juga memerlukan 90 kb. Lalu, begitu pula saat kita ingin menggunakan [[React]], harus load library React terlebih dahulu.
+
+Nah, dengan kita menggunakan Vanilla JS, file yang perlu kita load hanyalah 0 kb. Sehingga, website yang kita buat menjadi lebih cepat.
+
+Tapi memang lebih baik nggak menggunakan JavaScript sama sekali sih.

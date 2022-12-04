@@ -1,0 +1,12 @@
+created: 20221204050100640
+modified: 20221204050552238
+published: 20221204050552235
+tags: blog definisi teknologi $:/plugins/adithyab/tiddlyjam/live
+title: JavaScript
+type: text/vnd.tiddlywiki
+
+JavaScript merupakan bahasa pemrograman dinamis yang ditemukan pada tahun 1995. Waktu itu memang JavaScript hanya diperuntukkan buat website supaya bisa lebih dinamis. Misalnya aja ketika klik suatu elemen, elemennya gerak-gerak. Untuk tujuan simpel seperti itu aja sih awalnya.
+
+Karena memang JavaScript tidak diperuntukkan tujuan yang lebih berat seperti pengolahan big data maupun mengirim astronot ke bulan, makanya di JavaScript banyak kita temukan bug. Dan memang ada beberapa bug itu yang sampai sekarang nggak dibaiki karena takut akan merusak [[codebase]], seperti `0.1 + 0.2`.
+
+Tapi, JavaScript sekarang malah jadi bahasa pemrograman yang populer karena bahasanya yang sangat simpel, [[API]] yang sangat mudah, tersedia berbagai macam [[library]], [[instalasi]] library yang cepat menggunakan [[PNPM]], dan berbagai keunggulan lainnya.
