@@ -44,8 +44,8 @@ jobs:
       - run: node script/salin-file.mjs
       - run: node script/cari.mjs
 
-      - run: mv cache/halaman-tiddlywiki.html output/
-      - run: rm -rf cache/
+      # - run: mv cache/halaman-tiddlywiki.html output/
+      # - run: rm -rf cache/
 
       # - run: mkdir public
       # - run: node script/sitemap.mjs
