@@ -1,0 +1,176 @@
+
+<!doctype html>
+<html lang="en">
+
+<head><script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149'></script>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="generator" content="TiddlyWiki" />
+  <meta name="tiddlywiki-version" content="5.2.3" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <link id="faviconLink" rel="shortcut icon" href="/icon.png">
+
+<title>Kode untuk Fitur Pencarian di Website Statis ~ </title>
+<meta name="description" content="Sebelumnya, harus ada file cari.json yang berisi dengan judul dan link.">
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blogzen.js.org/kode-untuk-fitur-pencarian-di-website-statis" />
+<meta property="og:title" content="Kode untuk Fitur Pencarian di Website Statis ~ " />
+<!--<meta property="og:image" content="" />-->
+<meta property="og:image" content="https://blogzen.js.org/cover.jpg" />
+<meta property="og:description" content="Sebelumnya, harus ada file cari.json yang berisi dengan judul dan link." />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@zenia2020">
+<meta name="twitter:creator" content="@zenia2020">
+<meta name="twitter:title" content="Kode untuk Fitur Pencarian di Website Statis ~ " />
+<meta name="twitter:description" content="Sebelumnya, harus ada file cari.json yang berisi dengan judul dan link." />
+<!--<meta name="twitter:image" content="" />-->
+<meta name="twitter:image" content="https://blogzen.js.org/cover.jpg" />
+
+<link rel="stylesheet" href="/css/tiddlyjam.min.css"/>
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'/>
+<style>
+a:hover {
+color: #3273dc;
+}
+a.tc-tiddlylink.tc-tiddlylink-missing {
+    font-style: italic;
+    pointer-events: none;
+}
+a.tc-tiddlylink-external {
+    text-decoration: dotted;
+    /* text-decoration: underline; */
+    text-decoration-line: underline;
+}
+</style>
+</head>
+
+<body class="tc-body">
+  
+<nav aria-label="main navigation" class="navbar is-primary is-fixed-top" role="navigation">
+        <div class="navbar-brand">
+
+            <a class="navbar-item" href="/" style="font-weight: 700;">
+        Blog Zen
+            </a>
+        </div>
+    </nav>
+<style>
+body {
+padding-top: 52px;
+}
+</style>
+<section class="section">
+        <div class="container">
+            <div class="column is-6-desktop is-offset-3-desktop is-8 is-offset-2">
+                <div>
+
+                    <div class="block content">
+                     <h2 class="title is-3">Kode untuk Fitur Pencarian di Website Statis</h2>
+                        <div class="subtitle is-6">4th December, 2022</div>
+                <p>Sebelumnya, harus ada file <code>cari.json</code> yang berisi dengan <code>judul</code> dan <code>link</code>.</p><p>Kemudian, buat file <code>cari.html</code> yang isinya adalah:</p><pre class="hljs"><code class="html hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Cari<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/windicss-runtime-dom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-3 app&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-0 mb-3&quot;</span>&gt;</span>Cari apa?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> @<span class="hljs-attr">submit.prevent</span>=<span class="hljs-string">&quot;cari&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+          <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;teks&quot;</span>
+          <span class="hljs-attr">required</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;w-full border border-zinc-800 rounded shadow p-3 px-4 focus:outline-none text-base&quot;</span>
+        /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Progress: {{~~progress}}%<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+        <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;ketemu.length &gt; 0&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;border rounded overflow-hidden rounded-lg&quot;</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;border-b block p-2 no-underline text-black&quot;</span>
+          <span class="hljs-attr">:href</span>=<span class="hljs-string">&quot;x.link&quot;</span>
+          <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;x in ketemu&quot;</span>
+          &gt;</span>{{x.judul}}&lt;/a
+        &gt;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;module&quot;</span>&gt;</span><span class="language-javascript">
+      <span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://esm.sh/petite-vue&quot;</span>;
+      <span class="hljs-title function_">createApp</span>({
+        <span class="hljs-attr">teks</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-attr">progress</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">ketemu</span>: [],
+        <span class="hljs-keyword">async</span> <span class="hljs-title function_">cari</span>(<span class="hljs-params"></span>) {
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">ketemu</span> = [];
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">progress</span> = <span class="hljs-number">0</span>;
+
+          <span class="hljs-keyword">let</span> telah_dijelajah = <span class="hljs-number">0</span>;
+
+          <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;/cari.json&quot;</span>);
+          data = <span class="hljs-keyword">await</span> data.<span class="hljs-title function_">json</span>();
+
+          <span class="hljs-keyword">let</span> panjang = data.<span class="hljs-property">length</span>;
+
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> x <span class="hljs-keyword">of</span> data) {
+            <span class="hljs-keyword">let</span> ambil = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(x.<span class="hljs-property">link</span>);
+            ambil = <span class="hljs-keyword">await</span> ambil.<span class="hljs-title function_">text</span>();
+            <span class="hljs-keyword">if</span> (ambil.<span class="hljs-title function_">toLowerCase</span>().<span class="hljs-title function_">includes</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">teks</span>.<span class="hljs-title function_">toLowerCase</span>())) {
+              <span class="hljs-variable language_">this</span>.<span class="hljs-property">ketemu</span>.<span class="hljs-title function_">push</span>({
+                <span class="hljs-attr">judul</span>: x.<span class="hljs-property">judul</span>,
+                <span class="hljs-attr">link</span>: x.<span class="hljs-property">link</span>,
+              });
+            }
+            telah_dijelajah++;
+            <span class="hljs-variable language_">this</span>.<span class="hljs-property">progress</span> = (telah_dijelajah / panjang) * <span class="hljs-number">100</span>;
+          }
+        },
+      }).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;.app&quot;</span>);
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;border-b block p-2 no-underline text-black hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+
+<p><strong>Backlink:</strong></p>
+<ol>
+No tiddlers link to this one
+</ol>
+
+</div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Made with <a href="https://tiddlyjam.com"><strong><a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlyjam.html">TiddlyJam</a></strong></a> by <a href="https://adithyab.in">Adithya Badidey</a>
+•
+<a href="/acak.html">acak</a>
+•
+<a href="/cari.html">cari</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
