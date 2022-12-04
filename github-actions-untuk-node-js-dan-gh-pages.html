@@ -1,24 +1,65 @@
-<!doctype html>
-<html>
-<head><script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149'></script>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.2.3" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="mobile-web-app-capable" content="yes"/>
-<meta name="format-detection" content="telephone=no">
-<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="static.css">
-<title>Github Actions untuk Node JS dan GH Pages: Blog Zen — Kumpulan pemikiran Zen</title>
-</head>
-<body class="tc-body">
 
-<section class="tc-story-river tc-static-story-river">
-<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-development" data-tags="development" data-tiddler-title="Github Actions untuk Node JS dan GH Pages" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Github Actions untuk Node JS dan GH Pages</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2nd December 2022 at 10:58pm</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="development"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
-fill:#333333;
-color:#333333;">development</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><pre class="hljs"><code class="yaml hljs"><span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span>
+<!doctype html>
+<html lang="en">
+
+<head><script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149'></script>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="generator" content="TiddlyWiki" />
+  <meta name="tiddlywiki-version" content="5.2.3" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <link id="faviconLink" rel="shortcut icon" href="/favicon.ico">
+
+<title>Github Actions untuk Node JS dan GH Pages ~ </title>
+<meta name="description" content="yaml">
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content=".//github-actions-untuk-node-js-dan-gh-pages" />
+<meta property="og:title" content="Github Actions untuk Node JS dan GH Pages ~ " />
+<meta property="og:image" content="" />
+<meta property="og:description" content="yaml" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adithya_badidey">
+<meta name="twitter:creator" content="@adithya_badidey">
+<meta name="twitter:title" content="Github Actions untuk Node JS dan GH Pages ~ " />
+<meta name="twitter:description" content="yaml" />
+<meta name="twitter:image" content="" />
+
+<link rel="stylesheet" href="./css/tiddlyjam.min.css"/>
+
+</head>
+
+<body class="tc-body">
+  
+<nav aria-label="main navigation" class="navbar" role="navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./" style="font-weight: 700;">
+        <a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlyjam.html">TiddlyJam</a>
+            </a>
+        </div>
+    </nav>
+<section class="section">
+        <div class="container">
+            <div class="column is-6-desktop is-offset-3-desktop is-8 is-offset-2">
+                <div>
+                    <div class="block">
+                        <a class="button is-link is-inverted" href="./">
+                            <span>&amp;lt- Home </span>
+                        </a>
+                    </div>
+                    <div class="block content">
+                     <h2 class="title is-3">Github Actions untuk Node JS dan GH Pages</h2>
+                        <div class="subtitle is-6">4th December, 2022</div>
+                <pre class="hljs"><code class="yaml hljs"><span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span>
 
 <span class="hljs-attr">on:</span>
   <span class="hljs-attr">push:</span>
@@ -55,9 +96,21 @@ color:#333333;">development</span><span class="tc-drop-down tc-reveal" hidden="t
         <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span>
         <span class="hljs-attr">with:</span>
           <span class="hljs-attr">github_token:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">}}</span>
-          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">./public</span></code></pre></div>
-</div></p>
-</section>
+          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">./public</span></code></pre>
+</div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Made with <a href="https://tiddlyjam.com"><strong><a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlyjam.html">TiddlyJam</a></strong></a> by <a href="https://adithyab.in">Adithya Badidey</a>
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
-
