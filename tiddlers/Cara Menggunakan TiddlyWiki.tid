@@ -1,5 +1,5 @@
 created: 20221202235010007
-modified: 20221204062443307
+modified: 20221204092546767
 published: 20221204014233879
 tags: TiddlyWiki blog $:/plugins/adithyab/tiddlyjam/live
 title: Cara Menggunakan TiddlyWiki
@@ -28,3 +28,5 @@ Build:
 ```bash
 tiddlywiki . --build
 ```
+
+Kalau sudah berhasil install, langsung aja coba [[Plugin TiddlyWiki yang Aku Gunakan]].
