@@ -1,0 +1,15 @@
+created: 20221204031906686
+modified: 20221204032602759
+tags: 
+title: Satu
+type: text/vnd.tiddlywiki
+
+Backlink:
+<ol>
+<$list filter="[all[current]backlinks[]sort[title]]" emptyMessage=<<lingo
+TiddlerInfo/References/Empty>>>
+ <$link to={{!!title}}>
+  <li><$view field="title"/></li>
+ </$link>
+</$list>
+</ol>

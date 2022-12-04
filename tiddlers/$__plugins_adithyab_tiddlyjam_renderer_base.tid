@@ -1,11 +1,9 @@
 created: 20200728141157165
 creator: Adithya_
-draft.of: $:/plugins/adithyab/tiddlyjam/renderer/base
-draft.title: $:/plugins/adithyab/tiddlyjam/renderer/base
-modified: 20221204023642938
+modified: 20221204033705691
 modifier: Adithya_
 tags: $:/plugins/adithyab/tiddlyjam/internals
-title: Draft of '$:/plugins/adithyab/tiddlyjam/renderer/base'
+title: $:/plugins/adithyab/tiddlyjam/renderer/base
 type: text/vnd.tiddlywiki
 
 \whitespace trim
@@ -37,6 +35,21 @@ type: text/vnd.tiddlywiki
 `{{||$:/plugins/adithyab/tiddlyjam/renderer/base/seotags}}
   {{$:/plugins/adithyab/tiddlyjam/renderer/base/imports}}
   `
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'/>
+<style>
+a:hover {
+color: #3273dc;
+}
+a.tc-tiddlylink.tc-tiddlylink-missing {
+    font-style: italic;
+    pointer-events: none;
+}
+a.tc-tiddlylink-external {
+    text-decoration: dotted;
+    /* text-decoration: underline; */
+    text-decoration-line: underline;
+}
+</style>
 </head>
 
 <body class="tc-body">
