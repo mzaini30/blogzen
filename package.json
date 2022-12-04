@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tiddlywiki . --listen",
-    "build": "tiddlywiki . --build"
+    "build": "tiddlywiki . --build tiddlyjam"
   },
   "keywords": [],
   "author": "",
