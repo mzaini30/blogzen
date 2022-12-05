@@ -1,5 +1,5 @@
 created: 20221205050154760
-modified: 20221205050712825
+modified: 20221205080110030
 published: 20221205050712822
 tags: blog internet kapitalisme keuangan $:/plugins/adithyab/tiddlyjam/live
 title: Admob
@@ -7,16 +7,19 @@ type: text/vnd.tiddlywiki
 
 Admob adalah jaringan periklanan yang dibuat oleh Google untuk aplikasi mobile. Jadi, Admob ini bisa dipasang di aplikasi Android maupun aplikasi gawai Apple.
 
-Bentuk iklan Admob ini ada beberapa. Di antaranya adalah:
+Bentuk iklan Admob ini yaitu:
 
 * Banner
 * Interstitial
-* Video
-* Reward
-* Return
+* Pengantara berbonus
+* Iklan reward
+* Native advanced
+* Pembukaan aplikasi
 
 Tapi yang biasa kupakai hanya iklan banner untuk setiap aplikasi yang aku buat. Belum tertarik menggunakan bentuk iklan yang lain.
 
 !! Iklan Admob Mengganggu?
 
 Jawabannya adalah ''iya'' jika kalian menggunakan semua jenis iklan. Makanya kalau aku, menggunakan format banner aja.
+
+Apalagi mengganggu banget yang iklan popup, video lagi, terus nggak bisa di-skip.
