@@ -52,7 +52,7 @@
           for (let x of data) {
             let ambil = await fetch(x.link);
             ambil = await ambil.text();
-            if (ambil.toLowerCase().includes(this.teks.toLowerCase())) {
+            if (ambil.toLowerCase().includes(this.teks.trim().toLowerCase())) {
               this.ketemu.push({
                 judul: x.judul,
                 link: x.link,
