@@ -8,6 +8,12 @@
    </url>
 
    <url>
+      <loc>https://blogzen.js.org/admob</loc>
+      <lastmod>2022-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
       <loc>https://blogzen.js.org/adsense</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
@@ -22,6 +28,12 @@
    <url>
       <loc>https://blogzen.js.org/blog</loc>
       <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/bunuh-diri</loc>
+      <lastmod>2022-12-05</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
@@ -93,7 +105,7 @@
 
    <url>
       <loc>https://blogzen.js.org/kekurangan-thedev-id</loc>
-      <lastmod>2022-12-04</lastmod>
+      <lastmod>2022-12-05</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
@@ -124,6 +136,12 @@
    <url>
       <loc>https://blogzen.js.org/mengapa-harus-menulis-yang-banyak</loc>
       <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/monetize</loc>
+      <lastmod>2022-12-05</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
@@ -178,6 +196,12 @@
    <url>
       <loc>https://blogzen.js.org/tv</loc>
       <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/upload</loc>
+      <lastmod>2022-12-05</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
