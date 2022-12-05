@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 list: [[Plugin TiddlyWiki yang Aku Gunakan]] [[Kode untuk Fitur Pencarian di Website Statis]] [[Hello World...]] [[Kekurangan thedev.id]] [[Github Actions untuk Deploy PNPM]] [[Sudahkah Kita Membaca Buku Agama?]] dalil [[Limit Order]] [[Vanilla JS]] jQuery Adsense /data/data/com.termux/files/home/blogzen/tiddlers/$__StoryList_1.tid
 title: $:/StoryList
+=======
+created: 20221205023233285
+list: JavaScript PNPM [[Manfaat Membuat Aplikasi Android]] [[TiddlyJam Dashboard]] Zettelkasten [[Plugin TiddlyWiki yang Aku Gunakan]] index [[Cara Menggunakan TiddlyWiki]] [[Apa yang Harus Dilakukan pada Waktu Luang?]] [[Script untuk Mempermudah Penggunaan Git]] YouTube
+modified: 20221205023822079
+title: $:/StoryList
+type: text/vnd.tiddlywiki
+>>>>>>> 280c876860e382820e8e15ea4f67241fcd46603e
