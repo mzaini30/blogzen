@@ -1,0 +1,24 @@
+created: 20221206054733141
+modified: 20221206055407017
+published: 20221206055407016
+tags: blog [[framework JavaScript]] frontend $:/plugins/adithyab/tiddlyjam/live
+title: Vue
+type: text/vnd.tiddlywiki
+
+Vue merupakan framework JavaScript yang dibuat oleh Evan Yu yang sintaksnya itu sama seperti HTML. Contoh dari Vue adalah seperti ini:
+
+```html
+<script setup>
+import { ref } from "vue";
+
+const nama = ref("Zen");
+</script>
+
+<p>Halo {{nama}}</p>
+
+<style scoped>
+p {
+  background: blue;
+}
+</style>
+```

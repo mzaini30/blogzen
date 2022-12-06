@@ -1,0 +1,12 @@
+created: 20221206054056536
+modified: 20221206054413502
+published: 20221206054413501
+tags: blog browser $:/plugins/adithyab/tiddlyjam/live
+title: Brave
+type: text/vnd.tiddlywiki
+
+Brave merupakan browser yang berbasis Chromium dengan beberapa keunggulan yaitu:
+
+* Memblokir semua iklan, tools analytics, dan berbagai tools yang membongkar privasi pengguna browser
+* Mendapatkan reward berupa token BAT (Basic Attention Token) dan dapat disimpan di dompet Uphold dan Gemini. Sayangnya, kedua dompet itu nggak bisa dipakai jika kita mendaftar dengan KYC Indonesia
+* Karena berbasis Chromium, maka bisa menggunakan semua ekstensi Chrome
