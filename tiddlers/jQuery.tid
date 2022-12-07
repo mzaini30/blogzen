@@ -1,0 +1,29 @@
+created: 20221207083901092
+modified: 20221207084713406
+published: 20221207084713405
+tags: blog [[framework JavaScript]] JavaScript $:/plugins/adithyab/tiddlyjam/live
+title: jQuery
+type: text/vnd.tiddlywiki
+
+Mengapa ada jQuery? Mengapa banyak yang menggunakan jQuery?
+
+Itu awalnya adalah karena [[API]] dari JavaScript yang rumit pada waktu itu (pada zaman dahulu). Contohnya aja, untuk melakukan [[HTTP Request]], pada zaman dulu itu ribet banget sintaksnya. Lalu, kodenya untuk masing-masing browser berbeda-beda. Nah, itu dah alasannya kenapa ada jQuery yang memang niatnya buat memudahkan dengan satu API yang sama untuk berbagai browser bisa jalan.
+
+Kalau sekarang, semenjak adanya [[ECMA]] yang melahirkan [[ECMAScript]] (standarisasi JavaScript), akhirnya sintaksnya sekarang jadi lebih mudah. Untuk HTTP Request, sekarang bisa pakai [[Fetch API]] seperti ini:
+
+```javascript
+let data = await fetch("https://kucing.com");
+data = await data.json();
+console.log(data);
+```
+
+Kalau pakai jQuery, seingatku kayak gini:
+
+```javascript
+let data = $.get("https://kucing.com");
+console.log(data);
+```
+
+Nah, kayaknya kok lebih mudah jQuery ya?
+
+Eits, tapi jangan lupa, karena jQuery itu merupakan [[library]], berarti kan kita harus me-load file jQuery yang besarnya itu 90 kb (nggak tau kalau sekarang). Baikan kan pakai [[Vanilla JS]] yang nggak perlu me-load file library apapun.
