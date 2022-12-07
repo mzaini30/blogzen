@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+
+<head><script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149'></script>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="generator" content="TiddlyWiki" />
+  <meta name="tiddlywiki-version" content="5.2.3" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <link id="faviconLink" rel="shortcut icon" href="/icon.png">
+
+<title>jQuery ~ </title>
+<meta name="description" content="Mengapa ada jQuery? Mengapa banyak yang menggunakan jQuery?">
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blogzen.js.org/jquery" />
+<meta property="og:title" content="jQuery ~ " />
+<!--<meta property="og:image" content="" />-->
+<meta property="og:image" content="https://blogzen.js.org/cover.jpg" />
+<meta property="og:description" content="Mengapa ada jQuery? Mengapa banyak yang menggunakan jQuery?" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@zenia2020">
+<meta name="twitter:creator" content="@zenia2020">
+<meta name="twitter:title" content="jQuery ~ " />
+<meta name="twitter:description" content="Mengapa ada jQuery? Mengapa banyak yang menggunakan jQuery?" />
+<!--<meta name="twitter:image" content="" />-->
+<meta name="twitter:image" content="https://blogzen.js.org/cover.jpg" />
+
+<link rel="stylesheet" href="/css/tiddlyjam.min.css"/>
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'/>
+<style>
+a:hover {
+color: #3273dc;
+}
+a.tc-tiddlylink.tc-tiddlylink-missing {
+    font-style: italic;
+    pointer-events: none;
+}
+a.tc-tiddlylink-external {
+    text-decoration: dotted;
+    /* text-decoration: underline; */
+    text-decoration-line: underline;
+}
+</style>
+</head>
+
+<body class="tc-body">
+  
+<nav aria-label="main navigation" class="navbar is-primary is-fixed-top" role="navigation">
+        <div class="navbar-brand">
+
+            <a class="navbar-item" href="/" style="font-weight: 700;">
+        Blog Zen
+            </a>
+        </div>
+    </nav>
+<style>
+body {
+padding-top: 52px;
+}
+</style>
+<section class="section">
+        <div class="container">
+            <div class="column is-6-desktop is-offset-3-desktop is-8 is-offset-2">
+                <div>
+
+                    <div class="block content">
+                     <h2 class="title is-3">jQuery</h2>
+                        <div class="subtitle is-6">7th December, 2022</div>
+                <p>Mengapa ada jQuery? Mengapa banyak yang menggunakan jQuery?</p><p>Itu awalnya adalah karena <a class="tc-tiddlylink tc-tiddlylink-missing" href="./api.html">API</a> dari <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./javascript.html">JavaScript</a> yang rumit pada waktu itu (pada zaman dahulu). Contohnya aja, untuk melakukan <a class="tc-tiddlylink tc-tiddlylink-missing" href="./http-request.html">HTTP Request</a>, pada zaman dulu itu ribet banget sintaksnya. Lalu, kodenya untuk masing-masing browser berbeda-beda. Nah, itu dah alasannya kenapa ada jQuery yang memang niatnya buat memudahkan dengan satu API yang sama untuk berbagai browser bisa jalan.</p><p>Kalau sekarang, semenjak adanya <a class="tc-tiddlylink tc-tiddlylink-missing" href="./ecma.html">ECMA</a> yang melahirkan <a class="tc-tiddlylink tc-tiddlylink-missing" href="./ecmascript.html">ECMAScript</a> (standarisasi <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./javascript.html">JavaScript</a>), akhirnya sintaksnya sekarang jadi lebih mudah. Untuk HTTP Request, sekarang bisa pakai <a class="tc-tiddlylink tc-tiddlylink-missing" href="./fetch-api.html">Fetch API</a> seperti ini:</p><pre class="hljs"><code class="javascript hljs"><span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://kucing.com&quot;</span>);
+data = <span class="hljs-keyword">await</span> data.<span class="hljs-title function_">json</span>();
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);</code></pre><p>Kalau pakai jQuery, seingatku kayak gini:</p><pre class="hljs"><code class="javascript hljs"><span class="hljs-keyword">let</span> data = $.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;https://kucing.com&quot;</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);</code></pre><p>Nah, kayaknya kok lebih mudah jQuery ya?</p><p>Eits, tapi jangan lupa, karena jQuery itu merupakan <a class="tc-tiddlylink tc-tiddlylink-missing" href="./library.html">library</a>, berarti kan kita harus me-load file jQuery yang besarnya itu 90 kb (nggak tau kalau sekarang). Baikan kan pakai <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./vanilla-js.html">Vanilla JS</a> yang nggak perlu me-load file library apapun.</p>
+
+<p><strong>Backlink:</strong></p>
+<ol>
+
+ <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./vanilla-js.html">
+  <li>Vanilla JS</li>
+ </a>
+
+ <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./wordpress.html">
+  <li>WordPress</li>
+ </a>
+
+</ol>
+
+</div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Made with <a href="https://tiddlyjam.com"><strong><a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlyjam.html">TiddlyJam</a></strong></a> by <a href="https://adithyab.in">Adithya Badidey</a>
+•
+<a href="/acak.html">acak</a>
+•
+<a href="/cari.html">cari</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
