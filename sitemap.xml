@@ -9,13 +9,19 @@
 
    <url>
       <loc>https://blogzen.js.org/admob</loc>
-      <lastmod>2022-12-05</lastmod>
+      <lastmod>2022-12-11</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
    <url>
       <loc>https://blogzen.js.org/adsense</loc>
       <lastmod>2022-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/analisa-fundamental</loc>
+      <lastmod>2022-12-11</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
@@ -68,6 +74,12 @@
    </url>
 
    <url>
+      <loc>https://blogzen.js.org/fetch-api</loc>
+      <lastmod>2022-12-11</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
       <loc>https://blogzen.js.org/github-actions-untuk-deploy-pnpm</loc>
       <lastmod>2022-12-04</lastmod>
       <changefreq>monthly</changefreq>
@@ -88,6 +100,12 @@
    <url>
       <loc>https://blogzen.js.org/hidup-yang-sesungguhnya</loc>
       <lastmod>2022-12-04</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://blogzen.js.org/http-request</loc>
+      <lastmod>2022-12-11</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 
