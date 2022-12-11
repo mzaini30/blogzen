@@ -1,0 +1,16 @@
+created: 20221211075349211
+modified: 20221211080800860
+published: 20221211080800858
+tags: blog $:/plugins/adithyab/tiddlyjam/live
+title: HTTP Request
+type: text/vnd.tiddlywiki
+
+HTTP Request berarti melakukan [[request]] (permintaan) ke sebuah [[source]] melalui jalur HTTP. Jadi, nggak melalui jalur lain seperti melalui socket, SSH, dan jalur lainnya.
+
+Untuk melakukan HTTP Request, kita biasanya menggunakan [[Fetch API]] seperti contoh di bawah ini:
+
+```javascript
+let data = await fetch("https://source.com")
+data = await data.json()
+console.log(data)
+```

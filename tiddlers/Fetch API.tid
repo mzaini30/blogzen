@@ -1,0 +1,16 @@
+created: 20221211080435289
+modified: 20221211080759795
+published: 20221211080759792
+tags: blog $:/plugins/adithyab/tiddlyjam/live
+title: Fetch API
+type: text/vnd.tiddlywiki
+
+Fetch API adalah sebuah [[API]] dari JavaScript untuk melakukan [[HTTP Request]]. Fitur ini mulai ada sejak [[ES2015|ECMAScript]] atau ES6. Berikut ini adalah contoh Fetch API:
+
+!! GET
+
+```javascript
+let data = await fetch("https://kucing.com")
+data = await data.json()
+console.log(data)
+```
