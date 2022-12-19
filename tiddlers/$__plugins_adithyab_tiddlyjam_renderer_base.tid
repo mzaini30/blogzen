@@ -1,6 +1,6 @@
 created: 20200728141157165
 creator: Adithya_
-modified: 20221204044644857
+modified: 20221219104928962
 modifier: Adithya_
 tags: $:/plugins/adithyab/tiddlyjam/internals
 title: $:/plugins/adithyab/tiddlyjam/renderer/base
@@ -37,6 +37,9 @@ type: text/vnd.tiddlywiki
   `
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'/>
 <style>
+* {
+ word-wrap: break-word;
+}
 a:hover {
 color: #3273dc;
 }
