@@ -1,370 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-      <loc>https://blogzen.js.org/404</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/admob</loc>
-      <lastmod>2022-12-11</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/adsense</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/ajaib-kripto</loc>
-      <lastmod>2022-12-16</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/analisa-fundamental</loc>
-      <lastmod>2022-12-11</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/analisa-teknikal</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/apa-yang-harus-dilakukan-pada-waktu-luang</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/blog</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/brave</loc>
-      <lastmod>2022-12-06</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/bunuh-diri</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/cara-menggunakan-tiddlywiki</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/dakwah-adalah-kewajiban-semua-orang</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/desain-website-bagus</loc>
-      <lastmod>2022-12-19</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/domain-gratis-yang-bisa-dipasang-adsense</loc>
-      <lastmod>2022-12-19</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/exchange</loc>
-      <lastmod>2022-12-16</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/fetch-api</loc>
-      <lastmod>2022-12-11</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/github-actions-untuk-deploy-pnpm</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/github-actions-untuk-node-js-dan-gh-pages</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/hello-world</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/hidup-yang-sesungguhnya</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/http-request</loc>
-      <lastmod>2022-12-11</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/ide</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/index</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/jangan-diam-aja</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/javascript</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/jquery</loc>
-      <lastmod>2022-12-07</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/karena-hidup-begitu-sempurna</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/kekurangan-thedev-id</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/kode-untuk-fitur-pencarian-di-website-statis</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/limit-order</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/manfaat-membuat-aplikasi-android</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/manfaat-traveling-bagi-kesehatan</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/market-order</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/membuat-efek-suara-mengetik-di-keyboard-linux</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/mengapa-harus-menulis-yang-banyak</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/mengetik-10-jari</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/menghafal-quran</loc>
-      <lastmod>2022-12-06</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/monetize</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/perkenalan</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/play-store</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/plugin-tiddlywiki-yang-aku-gunakan</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/postingan-blog</loc>
-      <lastmod>2022-12-11</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/privacy-policy</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/script-untuk-mempermudah-penggunaan-git</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/shounen</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/shutterstock</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/strategi-trading-crypto</loc>
-      <lastmod>2022-12-16</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/sudah-berapa-banyak-konten-yang-dibuat</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/sudahkah-kita-membaca-buku-agama</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/tiddler</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/tiddlywiki</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/trading</loc>
-      <lastmod>2022-12-06</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/tv</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/upload</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/vanilla-js</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/versi-inggris-dakwah-adalah-kewajiban-semua-orang</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/vue</loc>
-      <lastmod>2022-12-06</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/wordpress</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/youtube</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/youtuber</loc>
-      <lastmod>2022-12-04</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
-
-   <url>
-      <loc>https://blogzen.js.org/zettelkasten</loc>
-      <lastmod>2022-12-05</lastmod>
-      <changefreq>monthly</changefreq>
-   </url>
+  <url><loc>https://blogzen.js.org/</loc></url>
+  <url><loc>https://blogzen.js.org/admob</loc></url>
+  <url><loc>https://blogzen.js.org/ajaib-kripto</loc></url>
+  <url><loc>https://blogzen.js.org/analisa-fundamental</loc></url>
+  <url><loc>https://blogzen.js.org/analisa-teknikal</loc></url>
+  <url><loc>https://blogzen.js.org/apa-yang-harus-dilakukan-pada-waktu-luang</loc></url>
+  <url><loc>https://blogzen.js.org/brave</loc></url>
+  <url><loc>https://blogzen.js.org/bunuh-diri</loc></url>
+  <url><loc>https://blogzen.js.org/cara-menggunakan-tiddlywiki</loc></url>
+  <url><loc>https://blogzen.js.org/dakwah-adalah-kewajiban-semua-orang</loc></url>
+  <url><loc>https://blogzen.js.org/desain-website-bagus</loc></url>
+  <url><loc>https://blogzen.js.org/domain-gratis-yang-bisa-dipasang-adsense</loc></url>
+  <url><loc>https://blogzen.js.org/exchange</loc></url>
+  <url><loc>https://blogzen.js.org/fetch-api</loc></url>
+  <url><loc>https://blogzen.js.org/github-actions-untuk-deploy-pnpm</loc></url>
+  <url><loc>https://blogzen.js.org/github-actions-untuk-node-js-dan-gh-pages</loc></url>
+  <url><loc>https://blogzen.js.org/hello-world</loc></url>
+  <url><loc>https://blogzen.js.org/hidup-yang-sesungguhnya</loc></url>
+  <url><loc>https://blogzen.js.org/http-request</loc></url>
+  <url><loc>https://blogzen.js.org/ide</loc></url>
+  <url><loc>https://blogzen.js.org/jangan-diam-aja</loc></url>
+  <url><loc>https://blogzen.js.org/jangan-melihat-statistik-adsense-setiap-hari...</loc></url>
+  <url><loc>https://blogzen.js.org/javascript</loc></url>
+  <url><loc>https://blogzen.js.org/jquery</loc></url>
+  <url><loc>https://blogzen.js.org/karena-hidup-begitu-sempurna</loc></url>
+  <url><loc>https://blogzen.js.org/kekurangan-thedev-dot-id</loc></url>
+  <url><loc>https://blogzen.js.org/kode-untuk-fitur-pencarian-di-website-statis</loc></url>
+  <url><loc>https://blogzen.js.org/limit-order</loc></url>
+  <url><loc>https://blogzen.js.org/manfaat-membuat-aplikasi-android</loc></url>
+  <url><loc>https://blogzen.js.org/manfaat-traveling-bagi-kesehatan</loc></url>
+  <url><loc>https://blogzen.js.org/market-order</loc></url>
+  <url><loc>https://blogzen.js.org/membuat-efek-suara-mengetik-di-keyboard-linux</loc></url>
+  <url><loc>https://blogzen.js.org/mengapa-harus-menulis-yang-banyak</loc></url>
+  <url><loc>https://blogzen.js.org/mengetik-10-jari</loc></url>
+  <url><loc>https://blogzen.js.org/menghafal-quran</loc></url>
+  <url><loc>https://blogzen.js.org/monetize</loc></url>
+  <url><loc>https://blogzen.js.org/perkenalan</loc></url>
+  <url><loc>https://blogzen.js.org/play-store</loc></url>
+  <url><loc>https://blogzen.js.org/plugin-tiddlywiki-yang-aku-gunakan</loc></url>
+  <url><loc>https://blogzen.js.org/postingan-blog</loc></url>
+  <url><loc>https://blogzen.js.org/privacy-policy</loc></url>
+  <url><loc>https://blogzen.js.org/script-untuk-mempermudah-penggunaan-git</loc></url>
+  <url><loc>https://blogzen.js.org/semua</loc></url>
+  <url><loc>https://blogzen.js.org/shounen</loc></url>
+  <url><loc>https://blogzen.js.org/shutterstock</loc></url>
+  <url><loc>https://blogzen.js.org/strategi-trading-crypto</loc></url>
+  <url><loc>https://blogzen.js.org/sudah-berapa-banyak-konten-yang-dibuat</loc></url>
+  <url><loc>https://blogzen.js.org/sudahkah-kita-membaca-buku-agama</loc></url>
+  <url><loc>https://blogzen.js.org/tiddler</loc></url>
+  <url><loc>https://blogzen.js.org/tiddlywiki</loc></url>
+  <url><loc>https://blogzen.js.org/trading</loc></url>
+  <url><loc>https://blogzen.js.org/tv</loc></url>
+  <url><loc>https://blogzen.js.org/upload</loc></url>
+  <url><loc>https://blogzen.js.org/vanilla-js</loc></url>
+  <url><loc>https://blogzen.js.org/versi-inggris-dakwah-adalah-kewajiban-semua-orang</loc></url>
+  <url><loc>https://blogzen.js.org/vue</loc></url>
+  <url><loc>https://blogzen.js.org/wordpress</loc></url>
+  <url><loc>https://blogzen.js.org/youtube</loc></url>
+  <url><loc>https://blogzen.js.org/youtuber</loc></url>
+  <url><loc>https://blogzen.js.org/zettelkasten</loc></url>
 
 </urlset>
