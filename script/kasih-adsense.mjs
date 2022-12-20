@@ -1,7 +1,7 @@
 import cup from "cup-readdir";
 import { readFileSync, writeFileSync } from "fs";
 
-let data = await cup.getAllFilePaths("output");
+let data = await cup.getAllFilePaths("dist");
 data = data.filter((x) => x.endsWith(".html"));
 for (let x of data) {
   let isi = readFileSync(x).toString();

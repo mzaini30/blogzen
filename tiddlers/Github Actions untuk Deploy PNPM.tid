@@ -1,7 +1,8 @@
 created: 20221202145257144
-modified: 20221204015114005
+modified: 20221219181459617
 published: 20221204015114004
-tags: development blog $:/plugins/adithyab/tiddlyjam/live
+published_date: 20221220021459613
+tags: $:/plugins/adithyab/tiddlyjam/live Published blog development
 title: Github Actions untuk Deploy PNPM
 type: text/vnd.tiddlywiki
 

@@ -34,28 +34,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # - run: pnpm build:klasik
-      # - run: mkdir cache
-      # - run: mv output/index.html cache/halaman-tiddlywiki.html
-
       - run: pnpm build
-      - run: node script/add-cname.mjs
+      # - run: node script/add-cname.mjs
       - run: node script/kasih-adsense.mjs
-      - run: node script/salin-file.mjs
-      - run: node script/cari.mjs
-
-      # - run: mv cache/halaman-tiddlywiki.html output/
-      # - run: rm -rf cache/
-
-      # - run: mkdir public
-      # - run: node script/sitemap.mjs
-      # - run: rm public/sitemap.xml
-      # - run: mv public/sitemap.xsl output/
-      # - run: mv public/sitemap-rumahzen.xml output/sitemap.xml
-      # - run: rm -rf public
+      # - run: node script/salin-file.mjs
+      # - run: node script/cari.mjs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: ./dist
