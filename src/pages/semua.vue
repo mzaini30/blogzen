@@ -18,7 +18,11 @@ import { gambar } from "../data/default";
     <meta name="twitter:creator" content="@zenia2020" />
   </Head>
   <div class="grid gap-4 pt-3">
-    <template v-for="x in data">
+    <template
+      v-for="x in data.sort((a, b) =>
+        a.published_date < b.published_date ? 1 : -1
+      )"
+    >
       <router-link class="bg-white p-5 rounded shadow" :to="`/${x.slug}`"
         ><h2 class="font-bold mb-3">{{ x.title }}</h2>
         <div class="text-sm">

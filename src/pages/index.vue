@@ -18,7 +18,11 @@ frontmatter.description = deskripsi;
   </Head>
   <div class="col-span-2">
     <div class="font-bold my-2">Headline</div>
-    <template v-for="(x, n) in data">
+    <template
+      v-for="(x, n) in data.sort((a, b) =>
+        a.published_date < b.published_date ? 1 : -1
+      )"
+    >
       <router-link
         v-if="n == 0"
         :to="`/${x.slug}`"
@@ -37,7 +41,11 @@ frontmatter.description = deskripsi;
     >
     <div class="font-bold my-2">Tulisan Terbaru</div>
     <div class="grid grid-cols-2 gap-3">
-      <template v-for="(x, n) in data">
+      <template
+        v-for="(x, n) in data.sort((a, b) =>
+          a.published_date < b.published_date ? 1 : -1
+        )"
+      >
         <router-link
           v-if="n > 0 && n < 11"
           class="rounded shadow overflow-hidden bg-white"
