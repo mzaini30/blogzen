@@ -1,6 +1,7 @@
 created: 20221222074905772
-modified: 20221222083420192
-tags: 
+modified: 20221222111037970
+published_date: 20221222191037968
+tags: Published
 title: Strategi Cuan Besar dari Crypto
 type: text/vnd.tiddlywiki
 
@@ -8,4 +9,16 @@ Oh iya, sebelum aku memulai artikel ini, ingat ya, tetap DYOR; do your own resea
 
 Yang pertama, adalah memilih coin yang akan dibeli. Nah, coin yang akan dibeli ini, pilih coin yang akan pump. Gimana caranya? Kita harus melihat kepada Smart Money tentang coin apa yang mereka beli. Soalnya, coin yang mereka beli berpotensi untuk pump.
 
-Cara melihatnya adalah dengan mengunjungi website [[Chain Edge|https://chainedge.io]]
+Cara melihatnya adalah dengan mengunjungi website [[Chain Edge|https://chainedge.io]]. Kemudian, di situ, pilih sort secara descending berdasarkan 1 day. Kemudian, ambil yang paling atas jika coin itu bukan stable coin. Kalau stable coin, ambil di bawahnya. Contohnya seperti ini:
+
+[img[image.png]]
+
+Pada gambar berikut, coin-coin yang paling banyak dibeli pada satu hari ini adalah Wrapped Ether, Binance USD, Wrapped BTC, dan seterusnya. Kemudian, tinggal kita beli aja coin dari yang nomor satu yaitu Wrapped Ether. Nah, tergantung exchange kita nih kira-kira dia ada jual apa nggak. Kalau nggak ada, berarti lihat yang di bawah-bawahnya. Kalau di Pluang, yang ada Aave Token.
+
+Kita beli, kemudian kita tunggu besoknya, kira-kira naik apa nggak.
+
+Kalau nggak naik, atau naiknya kurang dari 1%, berarti kita isi lagi Aave Tokennya dengan nominal yang sama dengan hari sebelumnya. Kalau di hari sebelumnya itu beli 5.000, berarti hari ini beli 5.000 rupiah lagi. Ini namanya teknik DCA (dollar cost averaging). Begitu seterusnya sampai naik di atas 1% bahkan hingga to the moon.
+
+Kalau sudah tercapai target yang diinginkan, jual aja. Lalu ulangi dari langkah pertama.
+
+Kemudian, jika aset kita sudah banyak, misalnya sudah sampai satu juta rupiah, kita harus memindahkannya keluar dari exchange ke cold wallet. Kalau aku, pakai [[Bit Address|https://bitaddress.org]] untuk generate public key dan secret key Bitcoin, lalu aku pindah ke situ. Kenapa harus dipindah ke cold wallet? Itu untuk mengamankan aset kita dari hal-hal yang nggak bisa kita kendalikan. Soalnya, kalau di exchange, berarti "not your keys, not your crypto".
