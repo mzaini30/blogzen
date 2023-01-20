@@ -70,6 +70,13 @@
 				"excerpt" : "<p>Install:</p><pre class=\"hljs\"><code class=\"bash hljs\">pnpm i -g tiddlywiki</code></pre><p>Init Project Baru:</p><pre class=\"hljs\"><code class=\"bash hljs\">tiddlywiki folder --init server</code></pre><p>Dev:</p><pre class=\"hljs\"><code class=\"bash hljs\">tiddlywiki . --listen</code></pre><p>Build:</p><pre class=\"hljs\"><code class=\"bash hljs\">tiddlywiki . --build</code></pre><p>Kalau sudah berhasil install, langsung aja coba <a class=\"tc-tiddlylink tc-tiddlylink-resolves\" href=\"./#plugin-tiddlywiki-yang-aku-gunakan\">Plugin TiddlyWiki yang Aku Gunakan</a>.</p>",
 				"cover_image" : ""
 			},{
+				"title" : "Cara Supaya Terus Semangat",
+				"published_date" : "20230120134906379",
+				"slug" : "cara-supaya-terus-semangat",
+				"text" : "<p>Semangat adalah penggerak dari setiap rencana yang kita buat. Bahkan, kita juga perlu semangat untuk menyusun rencana. Kalau udah nggak semangat, ya pengennya tidur aja sih, males ngapa-ngapain.</p><p>Lalu, gimana caranya supaya semangat itu bisa kembali?</p><p>Cara paling simpel adalah cari suasana baru. Misalnya aja, jalan-jalan ke taman, berkunjung ke tempat yang ramai, berkunjung ke tempat yang sunyi. Intinya adalah cari suasana yang berbeda dengan suasana kita sehari-hari; berbeda dengan lingkungan sehari-hari.</p><p>Kenapa kok cara ini biasanya bekerja? Itu karen ketika kita nggak semangat, sebenarnya kita sudah bosan dengan rutinitas kita sehari-hari. Otak nggak menangkap sesuatu yang seru, sesuatu yang berbeda, sehingga bosan. Atau, kalau di pekerjaan, reward yang diterima kurang dari yang diharapkan.</p><p>Setiap orang tentu saja nggak sama dalam menemukan trigger yang membuatnya semangat. Makanya, langsung saja keluar dari kamarmu, keluar dari rumahmu, mulai menyusuri jalanan, berharap nantinya akan menemukan suasana baru.</p><p>Oh iya, kalau biasanya keluar rumah langsung pakai motor, mungkin kamu bisa cara lain seperti menggunakan sepeda atau berjalan kaki. Lalu, mulailah jelajahi dunia yang baru.</p><p>Berkunjung ke perpustakaan mungkin bisa menjadi suasana baru juga. Apalagi kita yang sehari-hari nggak pernah menyentuh buku. Mungkin itu bisa menjadi kesan yang baru.</p><p>Mungkin juga, cukup dengan segelas susu hangat, bisa merilekskan pikiranmu.</p>",
+				"excerpt" : "<p>Semangat adalah penggerak dari setiap rencana yang kita buat. Bahkan, kita juga perlu semangat untuk menyusun rencana. Kalau udah nggak semangat, ya pengennya tidur aja sih, males ngapa-ngapain.</p><p>Lalu, gimana caranya</p>",
+				"cover_image" : ""
+			},{
 				"title" : "Dakwah adalah Kewajiban Semua Orang",
 				"published_date" : "20221220021443212",
 				"slug" : "dakwah-adalah-kewajiban-semua-orang",
